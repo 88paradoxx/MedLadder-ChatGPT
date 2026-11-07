@@ -114,3 +114,43 @@ Updated title and meta description tags in 20 topic landing pages:
 ### Status
 
 These edits are committed to `feature/medladder-pages-audit` only. The 19 subject landing pages were audited and left unchanged because their sampled metadata and page structure were already sound. Homepage rendered-content validation and full 740-topic/826-URL crawl remain outstanding.
+
+
+## Feature-branch implementation update — topic SEO batch 2 (2026-11-08)
+
+### Scope
+
+Updated the next 100 topic pages (topics 101–200 in the priority queue) on `seo/topic-pages-batch-2-2026`. This batch follows the first 100-topic optimization commit on `seo/topic-pages-batch-1-2026` and is isolated from production.
+
+### Metadata changes
+
+- Rewrote page titles around the specific topic and NEET PG, FMGE and INI-CET search intent.
+- Rewrote meta descriptions to remove truncated copy and give each topic a distinct, relevant summary.
+- Synchronized Open Graph and Twitter titles/descriptions with the page metadata.
+- Synchronized the Quiz JSON-LD name and description.
+- Preserved canonical URLs, question/answer content, explanations, page body, navigation and scripts.
+
+### Updated pages
+
+- `subjects/biochemistry/enzyme-kinetics-and-regulation-of-activity/index.html`
+- `subjects/biochemistry/enzymes-mechanism-of-action-clinical-importance/index.html`
+- `subjects/biochemistry/fat-soluble-vitamins/index.html`
+- `subjects/biochemistry/fatty-acid-oxidation-and-ketogenesis/index.html`
+- `subjects/biochemistry/glycogen-metabolism-and-glycogen-storage-disorders/index.html`
+- `subjects/biochemistry/glycolysis-and-gluconeogenesis/index.html`
+- `subjects/biochemistry/hmp-shunt-pathway-fructose-galactose-metabolism/index.html`
+- `subjects/biochemistry/krebs-cycle/index.html`
+- `subjects/biochemistry/lipids-basics/index.html`
+- `subjects/biochemistry/metabolism-of-acylglycerols-and-sphingolipids/index.html`
+
+### Validation
+
+- All 100 HTML files were fetched from the feature branch before editing.
+- Metadata tags and Quiz JSON-LD fields were updated in each file.
+- Title and description lengths were checked during editing; title target ≤68 characters and description target ≤160 characters.
+- Existing canonical URLs and all non-metadata page content were left unchanged by the transformation.
+- Source-level validation only; no live deployment, browser test, Search Console URL Inspection or schema validator was run.
+
+### Status
+
+Committed to `seo/topic-pages-batch-2-2026` only. No merge or production deployment performed.
