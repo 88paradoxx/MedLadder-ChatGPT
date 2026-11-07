@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="/theme-init.js"></script>
+  <title>Mock Test Admin | MedLadder</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png">
+  <link rel="stylesheet" href="/admin-mock.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js" crossorigin="anonymous" integrity="sha384-0w2KAL2YHP6wKOkUDzkCDGgVvfmHnj02DHeQ6XcHOgTfFsGyonKOpShMH1x6nk9o" defer></script>
+  <!-- Subject/topic picker data (same file the main site uses). Must load
+       before admin-mock.js so window.SYLLABUS_DATA is ready at init. -->
+  <script src="/syllabus.js" defer></script>
+  <script src="/admin-mock.js" defer></script>
+  <script src="/gtag-init.js" defer></script>
+</head>
+
+<body>
+  <div id="app">
+    <header class="am-topbar">
+      <a class="am-brand" href="/">MedLadder</a>
+      <span class="am-title">👑 Mock Test Admin</span>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">🌙</button>
+      <div id="authArea" class="am-auth"></div>
+    </header>
+
+    <main id="viewRoot">
+      <!-- access gate -->
+      <section id="gateView" class="am-view" hidden>
+        <div class="am-gate">
+          <h2>Restricted area</h2>
+          <p id="gateMsg">Checking access…</p>
+        </div>
+      </section>
+
+      <!-- tests list -->
+      <section id="testsView" class="am-view" hidden>
+        <div class="am-row">
+          <h1>Mock tests</h1>
+          <button id="bankBtn" class="am-btn">Question bank</button>
+          <button id="flaggedBtn" class="am-btn">🚩 Flagged questions</button>
+          <button id="newTestBtn" class="am-btn am-btn-primary">+ New test</button>
+        </div>
+        <div id="testList" class="am-list"></div>
+      </section>
+
+      <!-- question bank authoring (not tied to any test) -->
+      <section id="bankView" class="am-view" hidden>
+        <div class="am-row">
+          <button id="bankBackBtn" class="am-btn">← All tests</button>
+          <h1>Question bank</h1>
+        </div>
+        <p class="am-hint">New questions go live in the bank immediately — no review
+          queue. Pick a subject and topic in the form; after adding, the form stays
+          on the same topic so you can keep entering questions.</p>
+        <form id="bankQForm" class="am-card am-form">
+          <label class="am-wide">Subject <select id="bqSubj"></select></label>
+          <label class="am-wide">Topic <select id="bqTopic"></select></label>
+          <label class="am-wide">Question <textarea id="bqText" rows="3" required></textarea></label>
+          <label class="am-wide">Question image <input type="file" id="bqQImg" accept="image/*">
+            <img id="bqQImgPrev" hidden alt="Question image preview" style="max-width:160px;max-height:120px;display:block;margin-top:6px;border-radius:6px">
+            <button type="button" id="bqQImgClear" class="am-btn" hidden>Remove image</button></label>
+          <label>A <input id="bqA" required></label>
+          <label>B <input id="bqB" required></label>
+          <label>C <input id="bqC" required></label>
+          <label>D <input id="bqD" required></label>
+          <label>E <input id="bqE"></label>
+          <label>Answer
+            <select id="bqAns"><option value="a">A</option><option value="b">B</option><option value="c">C</option><option value="d">D</option><option value="e">E</option></select>
+          </label>
+          <label class="am-wide">Explanation <textarea id="bqExpl" rows="2" required></textarea></label>
+          <label class="am-wide">Explanation image <input type="file" id="bqEImg" accept="image/*">
+            <img id="bqEImgPrev" hidden alt="Explanation image preview" style="max-width:160px;max-height:120px;display:block;margin-top:6px;border-radius:6px">
+            <button type="button" id="bqEImgClear" class="am-btn" hidden>Remove image</button></label>
+          <div class="am-wide"><button class="am-btn am-btn-primary" type="submit">Add to bank</button>
+            <span id="bankInfo" class="am-hint"></span></div>
+        </form>
+        <h3>Bulk paste</h3>
+        <div class="am-card">
+          <p class="am-hint">One block per question, separated by <code>---</code>.
+            The selects below override a block's own Subject:/Topic: labels when
+            set; leave them unset to route each block from its own labels. Only
+            questions with a resolved topic, options C + D
+            and an explanation can go to the bank — the preview lists the rest as
+            skipped with the reason.
+<pre class="am-sample">Q: A 45-year-old man has…
+A: First option
+B: Second option
+C: Third option
+D: Fourth option
+Answer: B
+Explanation: Because…
+Subject: Anatomy
+Topic: Cardiovascular, Lymphatic and Nervous Systems
+---
+Q: Next question…</pre></p>
+          <div class="am-row">
+            <label>Default subject <select id="bankBulkSubj"></select></label>
+            <label>Default topic <select id="bankBulkTopic"></select></label>
+          </div>
+          <textarea id="bankBulkText" rows="10" class="am-wide" placeholder="Paste questions here…"></textarea>
+          <div class="am-row" style="margin-top:10px">
+            <button id="bankBulkParseBtn" class="am-btn">Preview</button>
+            <button id="bankBulkImportBtn" class="am-btn am-btn-primary" disabled>Import to bank</button>
+            <span id="bankBulkInfo" class="am-hint"></span>
+          </div>
+          <div id="bankBulkPreview" class="am-list" style="margin-top:10px"></div>
+        </div>
+      </section>
+
+      <!-- flagged questions review queue -->
+      <section id="flaggedView" class="am-view" hidden>
+        <div class="am-row">
+          <button id="flaggedBackBtn" class="am-btn">← All tests</button>
+          <h1>Flagged questions</h1>
+        </div>
+        <p class="am-hint">User reports that a bank question has an error. Open a flag to move
+          the question to its correct subject/topic, fix its content, resolve it,
+          or dismiss it. Fixing content does not resolve the flag — resolve or
+          dismiss it explicitly once handled.</p>
+        <div class="am-row">
+          <button class="am-btn flag-filter" data-status="open">Open</button>
+          <button class="am-btn flag-filter" data-status="resolved">Resolved</button>
+          <button class="am-btn flag-filter" data-status="dismissed">Dismissed</button>
+          <span id="flagCount" class="am-hint"></span>
+        </div>
+        <div id="flagList" class="am-list"></div>
+        <div id="flagDetail" class="am-card" hidden></div>
+      </section>
+
+      <!-- editor -->
+      <section id="editorView" class="am-view" hidden>
+        <button id="backBtn" class="am-btn">← All tests</button>
+        <h1 id="editorTitle">New test</h1>
+
+        <form id="testForm" class="am-card am-form">
+          <label>Title <input id="fTitle" required maxlength="120"></label>
+          <label>Exam
+            <select id="fExam">
+              <option>NEET PG</option><option>INI-CET</option><option>FMGE</option>
+              <option>NEET SS</option><option>USMLE</option><option>PLAB</option>
+            </select>
+          </label>
+          <label class="am-wide">Description <input id="fDesc" maxlength="300"></label>
+          <label>Starts <input id="fStarts" type="datetime-local" required></label>
+          <label>Ends <input id="fEnds" type="datetime-local" required></label>
+          <label>Duration (min) <input id="fDur" type="number" value="180" min="5" max="600" required></label>
+          <label>Questions <input id="fTotal" type="number" value="200" min="1" max="500" required></label>
+          <label>+ marks <input id="fPos" type="number" step="0.5" value="4" required></label>
+          <label>− marks <input id="fNeg" type="number" step="0.5" value="1" required></label>
+          <label>Free <select id="fFree"><option value="true">Yes — free for all</option><option value="false">No — Pro only</option></select></label>
+          <label>Status
+            <select id="fStatus"><option value="draft">Draft</option><option value="published">Published</option><option value="archived">Archived</option></select>
+          </label>
+          <div class="am-wide"><button class="am-btn am-btn-primary" type="submit">Save test</button></div>
+        </form>
+
+        <div id="qSection" hidden>
+          <div class="am-row">
+            <h2>Questions (<span id="qCount">0</span>)</h2>
+            <div class="am-actions">
+              <input id="fillCount" type="number" value="50" min="1" max="500" style="width:70px">
+              <button id="fillBtn" class="am-btn" title="Snapshot random questions from the bank">Fill from bank</button>
+            </div>
+          </div>
+
+          <div class="am-card">
+            <h3 style="margin-top:0">Fill from subjects</h3>
+            <p class="am-hint">Pick a subject, tick topics, and draw random questions from just those topics into this test.</p>
+            <div id="subjMenu" class="am-list"></div>
+            <div class="am-row">
+              <span id="subjSelInfo" class="am-hint">No topics selected.</span>
+              <div class="am-actions" style="margin-left:auto">
+                <input id="subjFillCount" type="number" value="50" min="1" max="500" style="width:70px">
+                <button id="subjFillBtn" class="am-btn" title="Snapshot random questions from the selected topics">Draw from topics</button>
+              </div>
+            </div>
+          </div>
+
+          <div id="qList" class="am-list"></div>
+
+          <h3>Add a question</h3>
+          <form id="qForm" class="am-card am-form">
+            <label class="am-wide">Question <textarea id="qText" rows="3" required></textarea></label>
+            <label>A <input id="qA" required></label>
+            <label>B <input id="qB" required></label>
+            <label>C <input id="qC"></label>
+            <label>D <input id="qD"></label>
+            <label>E <input id="qE"></label>
+            <label>Answer
+              <select id="qAns"><option value="a">A</option><option value="b">B</option><option value="c">C</option><option value="d">D</option><option value="e">E</option></select>
+            </label>
+            <label>Subject <input id="qSubj" maxlength="60"></label>
+            <label class="am-wide">Explanation <textarea id="qExpl" rows="2"></textarea></label>
+            <div class="am-wide"><button class="am-btn am-btn-primary" type="submit">Add question</button></div>
+          </form>
+
+          <h3>Bulk paste</h3>
+          <div class="am-card">
+            <p class="am-hint">One block per question, separated by <code>---</code>.
+            The selects below override a block's own Subject:/Topic: labels when
+            set; leave them unset to route each block from its own labels. Every
+            valid question goes to this mock; questions with
+            a resolved topic, options C + D and an explanation also go to the question
+            bank, live immediately.
+<pre class="am-sample">Q: A 45-year-old man has…
+A: First option
+B: Second option
+C: Third option
+D: Fourth option
+Answer: B
+Explanation: Because…
+Subject: Anatomy
+Topic: Cardiovascular, Lymphatic and Nervous Systems
+---
+Q: Next question…</pre></p>
+            <div class="am-row">
+              <label>Default subject <select id="bulkSubj"></select></label>
+              <label>Default topic <select id="bulkTopic"></select></label>
+            </div>
+            <textarea id="bulkText" rows="10" class="am-wide" placeholder="Paste questions here…"></textarea>
+            <div class="am-row" style="margin-top:10px">
+              <button id="bulkParseBtn" class="am-btn">Preview</button>
+              <button id="bulkImportBtn" class="am-btn am-btn-primary" disabled>Import</button>
+              <span id="bulkInfo" class="am-hint"></span>
+            </div>
+            <div id="bulkPreview" class="am-list" style="margin-top:10px"></div>
+          </div>
+        </div>
+      </section>
+
+      <div id="toast" class="am-toast" hidden></div>
+    </main>
+  </div>
+  <script src="/analytics-loader.js" defer></script>
+</body>
+
+</html>
