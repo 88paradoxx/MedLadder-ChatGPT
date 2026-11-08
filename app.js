@@ -1849,9 +1849,9 @@ window.addEventListener('error', function (ev) {
           '<div class="footer-directory-group"><strong>Exams</strong><div>' +
           '<a href="/neet-pg">NEET PG</a><a href="/fmge">FMGE</a><a href="/inicet">INI-CET</a><a href="/neet-ss">NEET SS</a>' +
           '</div></div>' +
-          '<div class="footer-directory-group"><strong>Subjects</strong><div>' +
+          '<div class="footer-directory-group"><details><summary>Subjects (19)</summary><div>' +
           '<a href="/subjects/anaesthesia">Anaesthesia</a><a href="/subjects/anatomy">Anatomy</a><a href="/subjects/biochemistry">Biochemistry</a><a href="/subjects/dermatology">Dermatology</a><a href="/subjects/ent">ENT</a><a href="/subjects/forensic-medicine">Forensic Medicine</a><a href="/subjects/medicine">Medicine</a><a href="/subjects/microbiology">Microbiology</a><a href="/subjects/ob-g">OB&amp;G</a><a href="/subjects/ophthalmology">Ophthalmology</a><a href="/subjects/orthopaedics">Orthopaedics</a><a href="/subjects/pathology">Pathology</a><a href="/subjects/pediatrics">Pediatrics</a><a href="/subjects/pharmacology">Pharmacology</a><a href="/subjects/physiology">Physiology</a><a href="/subjects/psm">PSM</a><a href="/subjects/psychiatry">Psychiatry</a><a href="/subjects/radiology">Radiology</a><a href="/subjects/surgery">Surgery</a>' +
-          '</div></div>' +
+          '</div></details></div>' +
           '<div class="footer-directory-group"><strong>Preparation</strong><div>' +
           '<a href="/neet-pg-syllabus">NEET PG Syllabus</a><a href="/neet-pg-high-yield-topics">High-Yield Topics</a><a href="/neet-pg-top-100-questions">Top 100 Questions</a><a href="/mock-test">Mock Tests</a><a href="/pyqs">Previous-Year Questions</a><a href="/best-free-neet-pg-question-bank">Free Question Bank</a>' +
           '</div></div>' +
