@@ -285,3 +285,38 @@ Updated topic pages 201–300 on `seo/topic-pages-batch-3-2026`, branching from 
 
 Committed to `seo/topic-pages-batch-3-2026` only. No merge or production deployment performed.
 
+
+
+## SEO pass 4 — next topic-page review
+
+### Newly optimized pages
+
+- `subjects/anatomy/abdominal-cavity-and-peritoneum/index.html`
+- `subjects/biochemistry/amino-acid-metabolism/index.html`
+- `subjects/microbiology/applied-microbiology/index.html`
+- `subjects/microbiology/arboviruses-and-picorna-viruses/index.html`
+- `subjects/microbiology/components-of-immune-system/index.html`
+- `subjects/microbiology/mixed-miscellaneous-topics/index.html`
+- `subjects/ob-g/mixed-miscellaneous-topics/index.html`
+- `subjects/ophthalmology/anatomy-and-development-of-eye/index.html`
+- `subjects/ophthalmology/astigmatism-and-errors-of-accomodation/index.html`
+- `subjects/ophthalmology/mixed-miscellaneous-topics/index.html`
+- `subjects/orthopaedics/basics-of-fracture-and-its-management/index.html`
+
+### Changes
+
+- Replaced generic page titles and descriptions with topic- and exam-specific metadata.
+- Synchronized Open Graph and Twitter title/description tags.
+- Synchronized Quiz JSON-LD name and description where the page included that Quiz object.
+- Preserved canonical URLs, MCQ data, answer keys, explanations, page content, scripts and navigation.
+- Pages already carrying specific NEET PG / FMGE / INI-CET metadata were left unchanged. Existing metadata accidentally touched during initial screening was restored from the preceding feature branch before this pass was finalized.
+
+### Validation and limitations
+
+- Source HTML was checked for the expected metadata tags before replacements.
+- This was a source-level SEO pass only; no live deployment, browser test, Lighthouse run, Search Console URL Inspection or external schema validation was performed.
+- Keyword targeting is based on topic relevance and exam intent, not verified Search Console volume data.
+
+### Status
+
+Committed to `seo/topic-pages-batch-4-2026` only. No merge or production deployment performed.
