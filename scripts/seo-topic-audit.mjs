@@ -22,7 +22,7 @@ const rel = f => path.relative(root, f).split(path.sep).join("/");
 const readAttr = (html, tag, attr) => {
   const re = new RegExp("<" + tag + "\\b([^>]*)>", "i");
   const m = html.match(re); if (!m) return "";
-  const a = m[1].match(new RegExp("\\b" + attr + "\\s*=\\s*(['\\"])(.*?)\\1", "i"));
+  const a = m[1].match(new RegExp(`\\b${attr}\\s*=\\s*([\'"])(.*?)\\1`, "i"));
   return a ? a[2].trim() : "";
 };
 const allMeta = (html, name) => {
