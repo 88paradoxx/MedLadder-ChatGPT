@@ -48,7 +48,8 @@ for(const file of files) {
   const title=(html.match(/<title\\b[^>]*>([\\s\\S]*?)<\\/title>/i)||[])[1]?.replace(/<[^>]+>/g," ").trim()||"";
   const descs=allMeta(html,"description");
   const desc=descs[0]||"";
-  const canonical=readAttr(html,"link","href");
+  const canonicalMatch=html.match(/<link\\b(?=[^>]*\\brel\\s*=\\s*(['"])canonical\\1)([^>]*)>/i);
+  const canonical=(canonicalMatch?.[2]?.match(/\\bhref\\s*=\\s*(['"])(.*?)\\1/i)||[])[2]||"";
   const h1=(html.match(/<h1\\b[^>]*>/gi)||[]).length;
   const ogTitle=readMetaProperty(html,"og:title");
   const ogDesc=readMetaProperty(html,"og:description");
