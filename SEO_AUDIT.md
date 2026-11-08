@@ -898,3 +898,41 @@ This is a confirmed three-page correction, not a complete count of all topic pag
 - Measure mobile Core Web Vitals using field data and representative lab tests.
 
 No production repository or live deployment was changed.
+
+
+## Authoritative live Supabase MCQ count reconciliation (2026-11-08)
+
+**Source supplied by the project owner:** a current Muse AI result querying the live Supabase question bank.
+
+- Total live questions: **36,219**
+- Subject/module-linked bank: **29,282**
+- PYQ bank: **6,937**
+  - FMGE: 2,923
+  - INI-CET: 1,970
+  - NEET PG: 2,044
+- Reconciliation: 29,282 + 6,937 = 36,219.
+- The supplied result reports no rows with an unset PYQ flag.
+
+### Public SEO count updates
+
+Updated the public count claims to **36,219** in the following files in this repository only:
+
+- `index.html`
+- `landing/index.html`
+- `landing.html` (legacy redirect source, kept consistent)
+- `neet-pg/index.html`
+- `fmge/index.html`
+- `inicet/index.html`
+- `best-free-neet-pg-question-bank/index.html`
+- `medladder-vs-marrow/index.html`
+- `medladder-vs-prepladder/index.html`
+- `neet-pg-high-yield-topics/index.html`
+- `neet-pg-syllabus/index.html`
+
+This replaces the previous branch-derived estimate of 36,007 and the stale public claims of 37,076 / 37,000+. The 29,282 subject count and 6,937 PYQ count are recorded here as database totals; no unsupported per-subject distribution was inferred.
+
+### Scope and deployment
+
+- Repository changed: `88paradoxx/MedLadder-ChatGPT` only.
+- No other repository was modified.
+- No live deployment was triggered. The public website will show these changes only after the owner deploys this repository through their intended deployment workflow.
