@@ -422,7 +422,7 @@ window.addEventListener('error', function (ev) {
           '<button class="pro-modal-close" id="proModalClose" aria-label="Close modal" title="Close modal (Esc)">✕</button>' +
           '<div class="pro-modal-badge">⭐ MEDLADDER PRO</div>' +
           '<h2 class="pro-modal-title" id="proModalTitle">Unlock Full Medical QBank</h2>' +
-          '<p class="pro-modal-sub" id="proModalSub">Free registered accounts get 8 topics per subject. Upgrade to Pro for unrestricted access to all 739 topics and 37,076 questions.</p>' +
+          '<p class="pro-modal-sub" id="proModalSub">Free registered accounts get 8 topics per subject. Upgrade to Pro for unrestricted access to all 739 topics and 35,489 questions.</p>' +
           '</div>' +
           '<div class="pro-modal-body">' +
           '<div class="pro-features-list">' +
@@ -436,7 +436,7 @@ window.addEventListener('error', function (ev) {
           '<div class="pro-feature-item">' +
           '<div class="pro-feature-icon">✓</div>' +
           '<div class="pro-feature-text">' +
-          '<strong>37,076 NEET PG, FMGE &amp; NEET SS MCQs</strong>' +
+          '<strong>35,489 NEET PG, FMGE &amp; NEET SS MCQs</strong>' +
           '<span>Every single question with clinical pearls, rationale &amp; tables.</span>' +
           '</div>' +
           '</div>' +
@@ -3033,10 +3033,9 @@ window.addEventListener('error', function (ev) {
       }
 
       function totalQuestions() {
-        var t = 0;
-        for (var i = 0; i < SUBJECT_INDEX.length; i++) t += SUBJECT_INDEX[i].questionCount;
-        t += 6862; // PYQ bank questions (NEET PG, FMGE, INI-CET, AIIMS, NEET SS)
-        return t;
+        // Verified production question-bank inventory. The syllabus snapshot sum
+        // includes 518 records not present in the live question bank.
+        return 35489;
       }
 
       var activeHomeCategory = 'all';
