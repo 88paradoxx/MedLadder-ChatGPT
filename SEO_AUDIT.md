@@ -953,3 +953,5 @@ This replaces the previous branch-derived estimate of 36,007 and the stale publi
 - Corrected the Acid-Base Disorders page's Open Graph and Twitter descriptions, which had a generic 65-question description unlike its meta description.
 - Re-fetched all four pages and checked title/social-title and description/social-description consistency.
 - Checked internal links on 10 representative subject, topic and exam pages against the repository tree: 0 missing local targets among 748 unique sampled internal links. This is a sample-based source check, not a live HTTP crawl or full-site link validation.
+
+- Follow-up validation caught and corrected an additional Acid-Base Disorders social-title mismatch; Open Graph and Twitter titles now match the HTML title as well.
