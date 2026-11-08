@@ -70,11 +70,11 @@ for(const file of files) {
   records.push({file:p,title,description:desc,canonical,h1,descriptionLength:desc.length,ogTitle,ogDesc,twTitle,twDesc,schemaCount:schemas.length,schemaValid:schemas.every(x=>x.valid),internalLinkCount:(html.match(/<a\b[^>]*\bhref\s*=\s*(['"])(?!#|https?:|mailto:|tel:|javascript:|data:)[^'"]+\1/gi)||[]).length});
 }
 function readMetaProperty(html, prop) {
-  const re=/<meta\\b([^>]*)>/gi; let m;
+  const re=/<meta\b([^>]*)>/gi; let m;
   while ((m=re.exec(html))) {
-    const p=m[1].match(/\\bproperty\\s*=\\s*(['"])(.*?)\\1/i);
+    const p=m[1].match(/\bproperty\s*=\s*(['"])(.*?)\1/i);
     if(p && p[2].toLowerCase()===prop) {
-      const c=m[1].match(/\\bcontent\\s*=\\s*(['"])(.*?)\\1/i);
+      const c=m[1].match(/\bcontent\s*=\s*(['"])(.*?)\1/i);
       return (c?.[2]||"").trim();
     }
   }
