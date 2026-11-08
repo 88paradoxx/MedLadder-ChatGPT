@@ -7,6 +7,7 @@ on:
     paths:
       - 'scripts/seo-topic-audit.mjs'
       - '.github/workflows/topic-seo-audit.yml'
+      - 'subjects/**/*.html'
 
 permissions:
   contents: write
