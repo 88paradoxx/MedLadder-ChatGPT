@@ -936,3 +936,11 @@ This replaces the previous branch-derived estimate of 36,007 and the stale publi
 - Repository changed: `88paradoxx/MedLadder-ChatGPT` only.
 - No other repository was modified.
 - No live deployment was triggered. The public website will show these changes only after the owner deploys this repository through their intended deployment workflow.
+
+
+## Additional title-tag refinements (2026-11-08)
+
+- Shortened the Cardiac Cycle and Cardiac Output topic title to `Cardiac Cycle and Cardiac Output MCQs | NEET PG &amp; FMGE`; synchronized the Open Graph and Twitter titles.
+- Refined the Apgar Score and Neonatal Resuscitation topic title to `Apgar Score &amp; Neonatal Resuscitation MCQs | NEET PG, FMGE`; synchronized the Open Graph and Twitter titles.
+- Re-fetched both pages and verified their title, Open Graph title and Twitter title match.
+- These are targeted title refinements, not a substitute for reviewing every page's search intent, uniqueness and performance data.
