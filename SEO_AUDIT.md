@@ -463,3 +463,130 @@ Updated SEO title and meta description tags on the next 100 topic pages, continu
 
 ### Status
 Committed to `seo/topic-pages-batch-6-2026` only. No merge or production deployment performed.
+
+
+## Implementation update — Batch 7 (2026-11-08)
+
+### Scope
+Updated SEO titles and meta descriptions on 100 additional topic pages, continuing from `seo/topic-pages-batch-6-2026` on the isolated `seo/topic-pages-batch-7-2026` branch.
+
+- Pharmacology: 38 topic pages
+- Physiology: 38 topic pages
+- PSM / Community Medicine: 24 topic pages
+
+### Changes made
+- Rewrote titles around the specific topic and NEET PG, FMGE and INI-CET exam search intent.
+- Replaced clipped, generic or overlong meta descriptions with concise topic-specific summaries.
+- Preserved canonical URLs, H1 headings, question banks, answer keys, explanations, page body, scripts, structured data, navigation and layout.
+- No sitemap, redirects, deployment configuration or production branch was changed.
+
+### Validation and limitations
+- GitHub compare confirms exactly 100 distinct subject-topic HTML files changed relative to Batch 6.
+- Updated only the document title and meta description in each selected page; the rest of each HTML document was carried forward unchanged.
+- Source-level validation only. No live deployment, browser regression, Lighthouse, Google Search Console URL Inspection or external structured-data validation was performed.
+- Keyword targeting is based on topic relevance and exam intent, not verified Search Console query-volume data.
+
+### Updated pages
+- `subjects/pharmacology/anti-protozoal-agents-and-anthelmintic-drugs/index.html`
+- `subjects/pharmacology/anti-rheumatoid-drugs/index.html`
+- `subjects/pharmacology/anti-virals-non-retroviral/index.html`
+- `subjects/pharmacology/anticoagulants/index.html`
+- `subjects/pharmacology/antidepressant-and-antianxiety-drugs/index.html`
+- `subjects/pharmacology/antifungal-agents/index.html`
+- `subjects/pharmacology/antihypertensive-drugs/index.html`
+- `subjects/pharmacology/antimalarial-drugs/index.html`
+- `subjects/pharmacology/antiplatelets-fibrinolytics-and-antifibrinolytics/index.html`
+- `subjects/pharmacology/antiretroviral-drugs/index.html`
+- `subjects/pharmacology/cell-cycle-specific-cytotoxic-drugs/index.html`
+- `subjects/pharmacology/cephalosporins-vancomycin-and-carbapenems/index.html`
+- `subjects/pharmacology/clinical-trials-and-miscellaneous/index.html`
+- `subjects/pharmacology/corticosteroids/index.html`
+- `subjects/pharmacology/diuretics/index.html`
+- `subjects/pharmacology/drugs-acting-on-uterus/index.html`
+- `subjects/pharmacology/drugs-for-glaucoma/index.html`
+- `subjects/pharmacology/heart-failure-drugs/index.html`
+- `subjects/pharmacology/hypolipidemic-drugs/index.html`
+- `subjects/pharmacology/hypothalamus-and-pituitary/index.html`
+- `subjects/pharmacology/interleukins-growth-factors-and-targeted-therapies/index.html`
+- `subjects/pharmacology/mixed-miscellaneous-topics/index.html`
+- `subjects/pharmacology/monoclonal-antibodies/index.html`
+- `subjects/pharmacology/nsaids/index.html`
+- `subjects/pharmacology/ocps-estrogens-and-progestins/index.html`
+- `subjects/pharmacology/opioid-antagonists/index.html`
+- `subjects/pharmacology/opioids-functions-and-classification/index.html`
+- `subjects/pharmacology/osteoporosis-and-calcium-metabolism/index.html`
+- `subjects/pharmacology/parasympathomimetics-cholinergic-agonists/index.html`
+- `subjects/pharmacology/penicillins/index.html`
+- `subjects/pharmacology/pharmacokinetics/index.html`
+- `subjects/pharmacology/renin-angiotensin-aldosterone-system/index.html`
+- `subjects/pharmacology/respiratory-system/index.html`
+- `subjects/pharmacology/second-line-drugs-for-tuberculosis/index.html`
+- `subjects/pharmacology/sulfonamides-quinolones-and-urinary-antiseptics/index.html`
+- `subjects/pharmacology/sympathomimetics/index.html`
+- `subjects/pharmacology/synthetic-opioids/index.html`
+- `subjects/pharmacology/thyroid-and-antithyroid-agents/index.html`
+- `subjects/physiology/acid-base-balance-renal-hormones-and-micturition-reflex/index.html`
+- `subjects/physiology/alveolar-gas-exchange/index.html`
+- `subjects/physiology/basal-ganglia-and-cerebellum/index.html`
+- `subjects/physiology/blood-pressure-and-regulation/index.html`
+- `subjects/physiology/body-fluids/index.html`
+- `subjects/physiology/calcium-homeostasis/index.html`
+- `subjects/physiology/cardiac-cycle-and-cardiac-output/index.html`
+- `subjects/physiology/cellular-messengers-receptors/index.html`
+- `subjects/physiology/digestion-absorption/index.html`
+- `subjects/physiology/electrophysiology-of-the-heart/index.html`
+- `subjects/physiology/exercise-physiology/index.html`
+- `subjects/physiology/female-reproductive-physiology/index.html`
+- `subjects/physiology/functional-anatomy/index.html`
+- `subjects/physiology/gas-transport-in-blood/index.html`
+- `subjects/physiology/gastrointestinal-secretion-and-gastrointestinal-hormones/index.html`
+- `subjects/physiology/gi-peristalsis-and-motility/index.html`
+- `subjects/physiology/higher-mental-functions/index.html`
+- `subjects/physiology/homeostasis-and-cellular-physiology/index.html`
+- `subjects/physiology/hypothalamus-and-limbic-system/index.html`
+- `subjects/physiology/lung-mechanics/index.html`
+- `subjects/physiology/lung-volumes-and-lung-function-tests/index.html`
+- `subjects/physiology/male-reproductive-physiology/index.html`
+- `subjects/physiology/membrane-potentials/index.html`
+- `subjects/physiology/mixed-miscellaneous-topics/index.html`
+- `subjects/physiology/motor-physiology-1/index.html`
+- `subjects/physiology/muscle-physiology-i/index.html`
+- `subjects/physiology/neurotransmitters/index.html`
+- `subjects/physiology/physiology-of-nerve/index.html`
+- `subjects/physiology/pituitary-and-thyroid/index.html`
+- `subjects/physiology/regulation-of-respiration/index.html`
+- `subjects/physiology/renal-tubular-functions-urine-concentration-and-dilution/index.html`
+- `subjects/physiology/sensory-receptors/index.html`
+- `subjects/physiology/somatosensory-pathways/index.html`
+- `subjects/physiology/special-senses/index.html`
+- `subjects/physiology/synapse-and-junctional-transmission/index.html`
+- `subjects/physiology/the-pancreas/index.html`
+- `subjects/physiology/transport-across-cell-membrane/index.html`
+- `subjects/physiology/vascular-system-and-regional-circulation-i/index.html`
+- `subjects/psm/analytical-epidemiology/index.html`
+- `subjects/psm/arthropod-borne-infections/index.html`
+- `subjects/psm/bacterial-respiratory-infections/index.html`
+- `subjects/psm/basic-definitions-in-infectious-disease-epidemiology/index.html`
+- `subjects/psm/biomedical-waste-management/index.html`
+- `subjects/psm/communication-for-health-education/index.html`
+- `subjects/psm/concepts-of-disease-and-prevention/index.html`
+- `subjects/psm/concepts-of-sociology-and-psychology/index.html`
+- `subjects/psm/correlational-and-predictive-techniques/index.html`
+- `subjects/psm/demography-i-demographic-cycle-annual-growth-rate-and-age-pyramid/index.html`
+- `subjects/psm/demography-ii-demographic-indicators/index.html`
+- `subjects/psm/descriptive-statistics-i-probability-and-data/index.html`
+- `subjects/psm/descriptive-statistics-ii-measures-of-location/index.html`
+- `subjects/psm/descriptive-statistics-iii-measures-of-dispersion/index.html`
+- `subjects/psm/disaster-management/index.html`
+- `subjects/psm/dynamics-of-disease-transmission/index.html`
+- `subjects/psm/experimental-epidemiology/index.html`
+- `subjects/psm/facets-of-clinical-research-and-biostatistics/index.html`
+- `subjects/psm/family-planning/index.html`
+- `subjects/psm/food-quality-and-processing/index.html`
+- `subjects/psm/health-determinants-and-indicators/index.html`
+- `subjects/psm/health-planning-and-management/index.html`
+- `subjects/psm/healthcare-in-india/index.html`
+- `subjects/psm/history-of-medicine/index.html`
+
+### Status
+Committed to `seo/topic-pages-batch-7-2026` only. No merge or production deployment performed.
