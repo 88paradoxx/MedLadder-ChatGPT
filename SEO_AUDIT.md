@@ -944,3 +944,12 @@ This replaces the previous branch-derived estimate of 36,007 and the stale publi
 - Refined the Apgar Score and Neonatal Resuscitation topic title to `Apgar Score &amp; Neonatal Resuscitation MCQs | NEET PG, FMGE`; synchronized the Open Graph and Twitter titles.
 - Re-fetched both pages and verified their title, Open Graph title and Twitter title match.
 - These are targeted title refinements, not a substitute for reviewing every page's search intent, uniqueness and performance data.
+
+
+## Continued topic-page SEO refinements (2026-11-08)
+
+- Identified two Ischemic Heart Disease pages sharing an identical title despite targeting different subtopics. Differentiated titles for complications/management versus presentation/diagnosis and synchronized social titles.
+- Shortened and clarified the Enzyme Mechanism & Clinical Importance title to distinguish its target topic and improve title length.
+- Corrected the Acid-Base Disorders page's Open Graph and Twitter descriptions, which had a generic 65-question description unlike its meta description.
+- Re-fetched all four pages and checked title/social-title and description/social-description consistency.
+- Checked internal links on 10 representative subject, topic and exam pages against the repository tree: 0 missing local targets among 748 unique sampled internal links. This is a sample-based source check, not a live HTTP crawl or full-site link validation.
