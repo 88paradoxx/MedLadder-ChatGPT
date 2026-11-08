@@ -5438,6 +5438,29 @@ window.addEventListener('error', function (ev) {
           };
         }
 
+        // Topic visitors often arrive directly from search. Show the size of the
+        // complete subject bank and give them a clear next step beyond the sample.
+        if (topic && subj && !document.getElementById('seoFullBankCta')) {
+          var topicHero = document.querySelector('.seo-main .hero-wrap');
+          if (topicHero) {
+            var bankCta = document.createElement('section');
+            bankCta.id = 'seoFullBankCta';
+            bankCta.className = 'seo-full-bank-cta';
+            bankCta.setAttribute('aria-label', 'Explore the complete subject question bank');
+            bankCta.innerHTML =
+              '<div class="seo-full-bank-copy"><span class="seo-full-bank-eyebrow">MORE TO PRACTISE</span>' +
+              '<h2>Explore the complete ' + esc(subj.name) + ' question bank</h2>' +
+              '<p>This is one topic from a larger bank of <strong>' + Number(subj.questionCount || 0).toLocaleString() +
+              ' MCQs across ' + Number(subj.moduleCount || (Array.isArray(subj.modules) ? subj.modules.length : 0)).toLocaleString() +
+              ' topics</strong>, with explanations and exam-focused practice.</p></div>' +
+              '<div class="seo-full-bank-actions"><a class="btn seo-full-bank-primary" href="' + subjectPath(subj) +
+              '">Explore all ' + esc(subj.name) + ' topics</a><button type="button" class="btn secondary seo-full-bank-signin" id="seoFullBankSignin">Sign in to MedLadder</button></div>';
+            topicHero.insertAdjacentElement('afterend', bankCta);
+            var bankSignin = document.getElementById('seoFullBankSignin');
+            if (bankSignin) bankSignin.addEventListener('click', function () { openAuthModal('signin'); });
+          }
+        }
+
         // Static SEO pages keep their pre-rendered content. Inject the same
         // context-aware directory used by SPA-rendered pages into their existing footer.
         // The old keyword/footer link walls are removed separately at startup.
