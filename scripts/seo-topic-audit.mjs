@@ -26,7 +26,7 @@ const readAttr = (html, tag, attr) => {
   return a ? a[2].trim() : "";
 };
 const allMeta = (html, name) => {
-  const out=[]; const re=/<meta\\b([^>]*)>/gi; let m;
+  const out=[]; const re=/<meta\b([^>]*)>/gi; let m;
   while ((m=re.exec(html))) {
     const n=m[1].match(/\\bname\\s*=\\s*(['"])(.*?)\\1/i);
     const c=m[1].match(/\\bcontent\\s*=\\s*(['"])(.*?)\\1/i);
@@ -45,33 +45,33 @@ const schemaIssues=[];
 const missingMeta=[];
 for(const file of files) {
   const html=fs.readFileSync(file,"utf8"), p=rel(file);
-  const title=(html.match(/<title\\b[^>]*>([\\s\\S]*?)<\\/title>/i)||[])[1]?.replace(/<[^>]+>/g," ").trim()||"";
+  const title=(html.match(/<title\b[^>]*>([\s\S]*?)<\/title>/i)||[])[1]?.replace(/<[^>]+>/g," ").trim()||"";
   const descs=allMeta(html,"description");
   const desc=descs[0]||"";
-  const canonicalMatch=html.match(/<link\\b(?=[^>]*\\brel\\s*=\\s*(['"])canonical\\1)([^>]*)>/i);
-  const canonical=(canonicalMatch?.[2]?.match(/\\bhref\\s*=\\s*(['"])(.*?)\\1/i)||[])[2]||"";
-  const h1=(html.match(/<h1\\b[^>]*>/gi)||[]).length;
+  const canonicalMatch=html.match(/<link\b(?=[^>]*\brel\s*=\s*(['"])canonical\1)([^>]*)>/i);
+  const canonical=(canonicalMatch?.[2]?.match(/\bhref\s*=\s*(['"])(.*?)\1/i)||[])[2]||"";
+  const h1=(html.match(/<h1\b[^>]*>/gi)||[]).length;
   const ogTitle=readMetaProperty(html,"og:title");
   const ogDesc=readMetaProperty(html,"og:description");
   const twTitle=allMeta(html,"twitter:title")[0]||"";
   const twDesc=allMeta(html,"twitter:description")[0]||"";
-  const schemas=[]; const sr=/<script\\b[^>]*type\\s*=\\s*(['"])application\\/ld\\+json\\1[^>]*>([\\s\\S]*?)<\\/script>/gi; let sm;
+  const schemas=[]; const sr=/<script\b[^>]*type\s*=\s*(['"])application\/ld\+json\1[^>]*>([\s\S]*?)<\/script>/gi; let sm;
   while((sm=sr.exec(html))) { try { JSON.parse(sm[2].trim()); schemas.push({valid:true}); } catch(e) { schemas.push({valid:false,error:String(e.message).slice(0,120)}); schemaIssues.push({file:p,error:String(e.message).slice(0,120)}); } }
   if(!title||!desc||!canonical||h1!==1||!descs.length) missingMeta.push({file:p,title:!!title,description:!!desc,canonical:!!canonical,h1,descriptionTagCount:descs.length});
-  const hrefRe=/<a\\b[^>]*\\bhref\\s*=\\s*(['"])(.*?)\\1/gi; let lm;
+  const hrefRe=/<a\b[^>]*\bhref\s*=\s*(['"])(.*?)\1/gi; let lm;
   while((lm=hrefRe.exec(html))) {
     const href=lm[2].trim();
     if(!href||href.startsWith("#")||/^(https?:|mailto:|tel:|javascript:|data:)/i.test(href)) continue;
     let target;
-    try { const u=new URL(href,"https://audit.invalid/"+p); if(u.origin!=="https://audit.invalid") continue; let pathname=decodeURIComponent(u.pathname).replace(/^\\//,""); if(!pathname) pathname="index.html"; if(pathname.endsWith("/")) pathname+="index.html"; target=path.resolve(root,pathname); if(!path.extname(target)) target=path.join(target,"index.html"); }
+    try { const u=new URL(href,"https://audit.invalid/"+p); if(u.origin!=="https://audit.invalid") continue; let pathname=decodeURIComponent(u.pathname).replace(/^\//,""); if(!pathname) pathname="index.html"; if(pathname.endsWith("/")) pathname+="index.html"; target=path.resolve(root,pathname); if(!path.extname(target)) target=path.join(target,"index.html"); }
     catch { localLinkIssues.push({file:p,href,reason:"unparseable"}); continue; }
     if(!target.startsWith(root+path.sep)||!fs.existsSync(target)||!fs.statSync(target).isFile()) localLinkIssues.push({file:p,href,reason:"target-not-found"});
   }
   records.push({file:p,title,description:desc,canonical,h1,descriptionLength:desc.length,ogTitle,ogDesc,twTitle,twDesc,schemaCount:schemas.length,schemaValid:schemas.every(x=>x.valid),internalLinkCount:(html.match(/<a\\b[^>]*\\bhref\\s*=\\s*(['"])(?!#|https?:|mailto:|tel:|javascript:|data:)[^'"]+\\1/gi)||[]).length});
 }
 function readMetaProperty(html, prop) {
-  const re=/<meta\\b([^>]*)>/gi; let m;
-  while((m=re.exec(html))) { const p=m[1].match(/\\bproperty\\s*=\\s*(['"])(.*?)\\1/i); if(p&&p[2].toLowerCase()===prop) { const c=m[1].match(/\\bcontent\\s*=\\s*(['"])(.*?)\\1/i); return (c?.[2]||"").trim(); } }
+  const re=/<meta\b([^>]*)>/gi; let m;
+  while((m=re.exec(html))) { const p=m[1].match(/\bproperty\s*=\s*(['"])(.*?)\1/i); if(p&&p[2].toLowerCase()===prop) { const c=m[1].match(/\bcontent\s*=\s*(['"])(.*?)\1/i); return (c?.[2]||"").trim(); } }
   return "";
 }
 const titleGroups=new Map(), descGroups=new Map();
