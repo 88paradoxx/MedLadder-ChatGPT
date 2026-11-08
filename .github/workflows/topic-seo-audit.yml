@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - 'scripts/seo-topic-audit.mjs'
+      - 'scripts/sync-social-metadata.mjs'
       - '.github/workflows/topic-seo-audit.yml'
       - 'subjects/**/*.html'
 
@@ -22,6 +23,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+      - name: Synchronize social metadata
+        run: node scripts/sync-social-metadata.mjs
       - name: Run repository-wide SEO audit
         run: node scripts/seo-topic-audit.mjs
       - name: Commit audit reports to working repository
