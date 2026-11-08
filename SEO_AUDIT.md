@@ -409,3 +409,31 @@ Committed to `seo/topic-pages-batch-3-2026` only. No merge or production deploym
 ### Status
 
 Committed to `seo/topic-pages-batch-4-2026` only. No merge or production deployment performed.
+
+
+## Feature-branch implementation update — Batch 5 (2026-11-08)
+
+### Scope
+Updated SEO title and meta description tags on 100 additional topic pages, continuing from `seo/topic-pages-batch-4-2026`:
+
+- Medicine: 23 topic pages
+- Obstetrics & Gynaecology: 12 topic pages
+- Ophthalmology: 26 topic pages
+- Orthopaedics: 30 topic pages
+- Pathology: 9 topic pages
+
+### Changes made
+- Replaced truncated, generic or less descriptive titles with concise topic-specific MCQ titles aligned to NEET PG, FMGE and INI-CET search intent.
+- Rewrote meta descriptions to describe the actual topic and its exam-relevant concepts, avoiding ellipses and repetitive keyword lists.
+- Preserved page URLs, canonical tags, H1 headings, question content, explanations, scripts, structured data, navigation and page layout.
+- No sitemap, redirects, deployment settings or production files were changed.
+
+### Validation
+- GitHub compare confirms exactly 100 subject-topic HTML files changed relative to the Batch 4 branch.
+- All 100 page files were fetched and updated; the title and description tags were present in each.
+- Sample-checked 10 updated pages for non-empty titles/descriptions, description length, canonical presence and exactly one H1; no issues found in that sample.
+- Source-only checks; no live deployment, browser regression, Lighthouse, Search Console URL Inspection or live structured-data validation was performed.
+- Keyword targeting is based on topic relevance and exam intent, not verified Search Console volume data.
+
+### Status
+Committed to `seo/topic-pages-batch-5-2026` only. No merge or production deployment performed.
