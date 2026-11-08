@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T16:29:00.004Z",
+  "generatedAt": "2026-11-08T16:33:37.658Z",
   "subjectHtmlPages": 759,
   "topicPages": 740,
   "subjectLandingPages": 19,
@@ -990,27 +990,6 @@
     },
     {
       "similarity": 0.83,
-      "a": "subjects/pathology/large-intestine-non-neoplastic-conditions/index.html",
-      "b": "subjects/pathology/small-intestine/index.html",
-      "descriptionA": "Practice Large Intestine - MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
-      "descriptionB": "Practice Small Intestine MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "similarity": 0.83,
-      "a": "subjects/pathology/lung-tumors/index.html",
-      "b": "subjects/pathology/renal-tumors/index.html",
-      "descriptionA": "Practice Lung Tumors MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
-      "descriptionB": "Practice Renal Tumors MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "similarity": 0.83,
-      "a": "subjects/pathology/lung-tumors/index.html",
-      "b": "subjects/pathology/vascular-tumors/index.html",
-      "descriptionA": "Practice Lung Tumors MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
-      "descriptionB": "Practice Vascular Tumors MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "similarity": 0.83,
       "a": "subjects/pathology/platelet-disorders/index.html",
       "b": "subjects/pediatrics/chromosomal-disorders/index.html",
       "descriptionA": "Practice Platelet Disorders MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
@@ -1057,13 +1036,6 @@
       "b": "subjects/pediatrics/surgical-gi-disorders/index.html",
       "descriptionA": "Practice Platelet Disorders MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
       "descriptionB": "Practice Surgical GI Disorders MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "similarity": 0.83,
-      "a": "subjects/pathology/renal-tumors/index.html",
-      "b": "subjects/pathology/vascular-tumors/index.html",
-      "descriptionA": "Practice Renal Tumors MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
-      "descriptionB": "Practice Vascular Tumors MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
     },
     {
       "similarity": 0.83,
@@ -1790,51 +1762,6 @@
   "missingMeta": [],
   "metadataSocialMismatches": [],
   "descriptionLengthOutliers": [
-    {
-      "file": "subjects/medicine/heart-failure/index.html",
-      "length": 118,
-      "description": "Practice Heart Failure MCQs for NEET PG, FMGE and INI-CET. Revise medicine with answers and explanations on MedLadder."
-    },
-    {
-      "file": "subjects/medicine/pneumonia/index.html",
-      "length": 114,
-      "description": "Practice Pneumonia MCQs for NEET PG, FMGE and INI-CET. Revise medicine with answers and explanations on MedLadder."
-    },
-    {
-      "file": "subjects/ob-g/cardiovascular-conditions-in-pregnancy/index.html",
-      "length": 118,
-      "description": "Cardiovascular Conditions in Pregnancy MCQs for NEET PG, FMGE and INI-CET, with answers and explanations on MedLadder."
-    },
-    {
-      "file": "subjects/pathology/cell-death/index.html",
-      "length": 112,
-      "description": "Practice Cell Death MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "file": "subjects/pathology/esophagus/index.html",
-      "length": 111,
-      "description": "Practice Esophagus MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "file": "subjects/pathology/large-intestine-non-neoplastic-conditions/index.html",
-      "length": 119,
-      "description": "Practice Large Intestine - MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "file": "subjects/pathology/lung-tumors/index.html",
-      "length": 113,
-      "description": "Practice Lung Tumors MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "file": "subjects/pathology/microcytic-anemia/index.html",
-      "length": 119,
-      "description": "Practice Microcytic Anemia MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "file": "subjects/pathology/renal-tumors/index.html",
-      "length": 114,
-      "description": "Practice Renal Tumors MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
     {
       "file": "subjects/pathology/skin-pathology/index.html",
       "length": 116,
@@ -5330,14 +5257,14 @@
     {
       "file": "subjects/medicine/heart-failure/index.html",
       "title": "Heart Failure MCQs | NEET PG, FMGE &amp; INI-CET 2027",
-      "description": "Practice Heart Failure MCQs for NEET PG, FMGE and INI-CET. Revise medicine with answers and explanations on MedLadder.",
+      "description": "Practice heart failure MCQs for NEET PG, FMGE and INI-CET. Revise ejection fraction, clinical features, diagnosis and treatment with explained answers.",
       "canonical": "https://medladder.top/subjects/medicine/heart-failure",
       "h1": 1,
-      "descriptionLength": 118,
+      "descriptionLength": 151,
       "ogTitle": "Heart Failure MCQs | NEET PG, FMGE &amp; INI-CET 2027",
-      "ogDesc": "Practice Heart Failure MCQs for NEET PG, FMGE and INI-CET. Revise medicine with answers and explanations on MedLadder.",
+      "ogDesc": "Practice heart failure MCQs for NEET PG, FMGE and INI-CET. Revise ejection fraction, clinical features, diagnosis and treatment with explained answers.",
       "twTitle": "Heart Failure MCQs | NEET PG, FMGE &amp; INI-CET 2027",
-      "twDesc": "Practice Heart Failure MCQs for NEET PG, FMGE and INI-CET. Revise medicine with answers and explanations on MedLadder.",
+      "twDesc": "Practice heart failure MCQs for NEET PG, FMGE and INI-CET. Revise ejection fraction, clinical features, diagnosis and treatment with explained answers.",
       "schemaCount": 3,
       "schemaValid": true,
       "internalLinkCount": 92
@@ -5645,14 +5572,14 @@
     {
       "file": "subjects/medicine/pneumonia/index.html",
       "title": "Pneumonia MCQs | NEET PG, FMGE &amp; INI-CET 2027",
-      "description": "Practice Pneumonia MCQs for NEET PG, FMGE and INI-CET. Revise medicine with answers and explanations on MedLadder.",
+      "description": "Practice pneumonia MCQs for NEET PG, FMGE and INI-CET. Test community-acquired, hospital-acquired and atypical pneumonia with clinical explanations.",
       "canonical": "https://medladder.top/subjects/medicine/pneumonia",
       "h1": 1,
-      "descriptionLength": 114,
+      "descriptionLength": 148,
       "ogTitle": "Pneumonia MCQs | NEET PG, FMGE &amp; INI-CET 2027",
-      "ogDesc": "Practice Pneumonia MCQs for NEET PG, FMGE and INI-CET. Revise medicine with answers and explanations on MedLadder.",
+      "ogDesc": "Practice pneumonia MCQs for NEET PG, FMGE and INI-CET. Test community-acquired, hospital-acquired and atypical pneumonia with clinical explanations.",
       "twTitle": "Pneumonia MCQs | NEET PG, FMGE &amp; INI-CET 2027",
-      "twDesc": "Practice Pneumonia MCQs for NEET PG, FMGE and INI-CET. Revise medicine with answers and explanations on MedLadder.",
+      "twDesc": "Practice pneumonia MCQs for NEET PG, FMGE and INI-CET. Test community-acquired, hospital-acquired and atypical pneumonia with clinical explanations.",
       "schemaCount": 3,
       "schemaValid": true,
       "internalLinkCount": 90
@@ -6560,14 +6487,14 @@
     {
       "file": "subjects/ob-g/cardiovascular-conditions-in-pregnancy/index.html",
       "title": "Cardiovascular Conditions in MCQs | NEET PG, FMGE &amp; INI-CET",
-      "description": "Cardiovascular Conditions in Pregnancy MCQs for NEET PG, FMGE and INI-CET, with answers and explanations on MedLadder.",
+      "description": "Revise cardiovascular disease in pregnancy with NEET PG, FMGE and INI-CET MCQs on valvular lesions, cardiomyopathy, risk assessment and management.",
       "canonical": "https://medladder.top/subjects/ob-g/cardiovascular-conditions-in-pregnancy",
       "h1": 1,
-      "descriptionLength": 118,
+      "descriptionLength": 147,
       "ogTitle": "Cardiovascular Conditions in MCQs | NEET PG, FMGE &amp; INI-CET",
-      "ogDesc": "Cardiovascular Conditions in Pregnancy MCQs for NEET PG, FMGE and INI-CET, with answers and explanations on MedLadder.",
+      "ogDesc": "Revise cardiovascular disease in pregnancy with NEET PG, FMGE and INI-CET MCQs on valvular lesions, cardiomyopathy, risk assessment and management.",
       "twTitle": "Cardiovascular Conditions in MCQs | NEET PG, FMGE &amp; INI-CET",
-      "twDesc": "Cardiovascular Conditions in Pregnancy MCQs for NEET PG, FMGE and INI-CET, with answers and explanations on MedLadder.",
+      "twDesc": "Revise cardiovascular disease in pregnancy with NEET PG, FMGE and INI-CET MCQs on valvular lesions, cardiomyopathy, risk assessment and management.",
       "schemaCount": 3,
       "schemaValid": true,
       "internalLinkCount": 90
@@ -8120,14 +8047,14 @@
     {
       "file": "subjects/pathology/cell-death/index.html",
       "title": "Cell Death MCQs | NEET PG &amp; FMGE",
-      "description": "Practice Cell Death MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "description": "Practice cell death MCQs for NEET PG, FMGE and INI-CET. Review apoptosis, necrosis, cellular injury pathways and key histopathology concepts.",
       "canonical": "https://medladder.top/subjects/pathology/cell-death",
       "h1": 1,
-      "descriptionLength": 112,
+      "descriptionLength": 141,
       "ogTitle": "Cell Death MCQs | NEET PG &amp; FMGE",
-      "ogDesc": "Practice Cell Death MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "ogDesc": "Practice cell death MCQs for NEET PG, FMGE and INI-CET. Review apoptosis, necrosis, cellular injury pathways and key histopathology concepts.",
       "twTitle": "Cell Death MCQs | NEET PG &amp; FMGE",
-      "twDesc": "Practice Cell Death MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "twDesc": "Practice cell death MCQs for NEET PG, FMGE and INI-CET. Review apoptosis, necrosis, cellular injury pathways and key histopathology concepts.",
       "schemaCount": 3,
       "schemaValid": true,
       "internalLinkCount": 90
@@ -8270,14 +8197,14 @@
     {
       "file": "subjects/pathology/esophagus/index.html",
       "title": "Esophagus MCQs | NEET PG &amp; FMGE",
-      "description": "Practice Esophagus MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "description": "Prepare esophageal pathology with NEET PG, FMGE and INI-CET MCQs on esophagitis, Barrett esophagus, motility disorders and tumors.",
       "canonical": "https://medladder.top/subjects/pathology/esophagus",
       "h1": 1,
-      "descriptionLength": 111,
+      "descriptionLength": 130,
       "ogTitle": "Esophagus MCQs | NEET PG &amp; FMGE",
-      "ogDesc": "Practice Esophagus MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "ogDesc": "Prepare esophageal pathology with NEET PG, FMGE and INI-CET MCQs on esophagitis, Barrett esophagus, motility disorders and tumors.",
       "twTitle": "Esophagus MCQs | NEET PG &amp; FMGE",
-      "twDesc": "Practice Esophagus MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "twDesc": "Prepare esophageal pathology with NEET PG, FMGE and INI-CET MCQs on esophagitis, Barrett esophagus, motility disorders and tumors.",
       "schemaCount": 3,
       "schemaValid": true,
       "internalLinkCount": 92
@@ -8495,14 +8422,14 @@
     {
       "file": "subjects/pathology/large-intestine-non-neoplastic-conditions/index.html",
       "title": "Large Intestine - MCQs | NEET PG &amp; FMGE",
-      "description": "Practice Large Intestine - MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "description": "Revise non-neoplastic large intestine pathology through NEET PG, FMGE and INI-CET MCQs on colitis, polyps, diverticular disease and IBD.",
       "canonical": "https://medladder.top/subjects/pathology/large-intestine-non-neoplastic-conditions",
       "h1": 1,
-      "descriptionLength": 119,
+      "descriptionLength": 136,
       "ogTitle": "Large Intestine - MCQs | NEET PG &amp; FMGE",
-      "ogDesc": "Practice Large Intestine - MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "ogDesc": "Revise non-neoplastic large intestine pathology through NEET PG, FMGE and INI-CET MCQs on colitis, polyps, diverticular disease and IBD.",
       "twTitle": "Large Intestine - MCQs | NEET PG &amp; FMGE",
-      "twDesc": "Practice Large Intestine - MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "twDesc": "Revise non-neoplastic large intestine pathology through NEET PG, FMGE and INI-CET MCQs on colitis, polyps, diverticular disease and IBD.",
       "schemaCount": 2,
       "schemaValid": true,
       "internalLinkCount": 92
@@ -8540,14 +8467,14 @@
     {
       "file": "subjects/pathology/lung-tumors/index.html",
       "title": "Lung Tumors MCQs | NEET PG &amp; FMGE",
-      "description": "Practice Lung Tumors MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "description": "Practice lung tumor pathology MCQs for NEET PG, FMGE and INI-CET. Compare small-cell and non-small-cell cancers, markers and histologic patterns.",
       "canonical": "https://medladder.top/subjects/pathology/lung-tumors",
       "h1": 1,
-      "descriptionLength": 113,
+      "descriptionLength": 145,
       "ogTitle": "Lung Tumors MCQs | NEET PG &amp; FMGE",
-      "ogDesc": "Practice Lung Tumors MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "ogDesc": "Practice lung tumor pathology MCQs for NEET PG, FMGE and INI-CET. Compare small-cell and non-small-cell cancers, markers and histologic patterns.",
       "twTitle": "Lung Tumors MCQs | NEET PG &amp; FMGE",
-      "twDesc": "Practice Lung Tumors MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "twDesc": "Practice lung tumor pathology MCQs for NEET PG, FMGE and INI-CET. Compare small-cell and non-small-cell cancers, markers and histologic patterns.",
       "schemaCount": 3,
       "schemaValid": true,
       "internalLinkCount": 90
@@ -8585,14 +8512,14 @@
     {
       "file": "subjects/pathology/microcytic-anemia/index.html",
       "title": "Microcytic Anemia MCQs | NEET PG &amp; FMGE",
-      "description": "Practice Microcytic Anemia MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "description": "Test microcytic anemia concepts with NEET PG, FMGE and INI-CET pathology MCQs on iron deficiency, thalassemia and sideroblastic anemia.",
       "canonical": "https://medladder.top/subjects/pathology/microcytic-anemia",
       "h1": 1,
-      "descriptionLength": 119,
+      "descriptionLength": 135,
       "ogTitle": "Microcytic Anemia MCQs | NEET PG &amp; FMGE",
-      "ogDesc": "Practice Microcytic Anemia MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "ogDesc": "Test microcytic anemia concepts with NEET PG, FMGE and INI-CET pathology MCQs on iron deficiency, thalassemia and sideroblastic anemia.",
       "twTitle": "Microcytic Anemia MCQs | NEET PG &amp; FMGE",
-      "twDesc": "Practice Microcytic Anemia MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "twDesc": "Test microcytic anemia concepts with NEET PG, FMGE and INI-CET pathology MCQs on iron deficiency, thalassemia and sideroblastic anemia.",
       "schemaCount": 3,
       "schemaValid": true,
       "internalLinkCount": 92
@@ -8795,14 +8722,14 @@
     {
       "file": "subjects/pathology/renal-tumors/index.html",
       "title": "Renal Tumors MCQs | NEET PG &amp; FMGE",
-      "description": "Practice Renal Tumors MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "description": "Revise renal tumors with NEET PG, FMGE and INI-CET MCQs covering renal cell carcinoma, Wilms tumor, pathology and diagnostic features.",
       "canonical": "https://medladder.top/subjects/pathology/renal-tumors",
       "h1": 1,
-      "descriptionLength": 114,
+      "descriptionLength": 134,
       "ogTitle": "Renal Tumors MCQs | NEET PG &amp; FMGE",
-      "ogDesc": "Practice Renal Tumors MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "ogDesc": "Revise renal tumors with NEET PG, FMGE and INI-CET MCQs covering renal cell carcinoma, Wilms tumor, pathology and diagnostic features.",
       "twTitle": "Renal Tumors MCQs | NEET PG &amp; FMGE",
-      "twDesc": "Practice Renal Tumors MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "twDesc": "Revise renal tumors with NEET PG, FMGE and INI-CET MCQs covering renal cell carcinoma, Wilms tumor, pathology and diagnostic features.",
       "schemaCount": 3,
       "schemaValid": true,
       "internalLinkCount": 90
