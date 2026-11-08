@@ -1837,7 +1837,7 @@ window.addEventListener('error', function (ev) {
           '<span>Latest</span>' +
           '</span>' +
           '</a>';
-        var pathParts = (window.location.pathname || '/').replace(/\\/index\\.html$/i, '').split('/').filter(Boolean);
+        var pathParts = (window.location.pathname || '/').replace(/\/index\.html$/i, '').split('/').filter(Boolean);
         var currentSubject = null;
         var currentModules = [];
         var currentModuleIndex = -1;
@@ -1848,8 +1848,15 @@ window.addEventListener('error', function (ev) {
             if (pathParts[2]) currentModuleIndex = currentModules.findIndex(function (m) { return slugifySeo(m.name) === pathParts[2]; });
           }
         }
+        if (!currentSubject && state && state.subjectId && Array.isArray(SUBJECT_INDEX)) {
+          currentSubject = SUBJECT_INDEX.find(function (s) { return s.subjectId === state.subjectId; }) || null;
+          if (currentSubject) {
+            currentModules = getSubjectModules(currentSubject.subjectId) || [];
+            if (state.moduleId && state.moduleId !== 'all') currentModuleIndex = currentModules.findIndex(function (m) { return String(m.moduleId) === String(state.moduleId); });
+          }
+        }
         var isHomeDirectory = pathParts.length === 0 && state && state.screen === 'home';
-        var isTopicDirectory = !!(currentSubject && pathParts.length >= 3);
+        var isTopicDirectory = !!(currentSubject && (pathParts.length >= 3 || (pathParts.length === 0 && state && state.moduleId && state.moduleId !== 'all')));
         var isSubjectDirectory = !!(currentSubject && !isTopicDirectory);
         var directoryHtml = '';
         if (isHomeDirectory) {
