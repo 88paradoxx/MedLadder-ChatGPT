@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T16:35:09.351Z",
+  "generatedAt": "2026-11-08T16:40:18.689Z",
   "subjectHtmlPages": 759,
   "topicPages": 740,
   "subjectLandingPages": 19,
@@ -79,125 +79,6 @@
   "exactDescriptionDuplicates": [],
   "nearDescriptionPairs": [
     {
-      "similarity": 1,
-      "a": "subjects/pathology/chromosomal-disorders-and-other-genetic-diseases/index.html",
-      "b": "subjects/pediatrics/chromosomal-disorders/index.html",
-      "descriptionA": "Practice Chromosomal Disorders and MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
-      "descriptionB": "Practice Chromosomal Disorders MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "similarity": 0.92,
-      "a": "subjects/anatomy/embryonic-phase-of-development/index.html",
-      "b": "subjects/anatomy/pre-embryonic-phase-of-development/index.html",
-      "descriptionA": "Practise Embryonic Phase of Development MCQs for NEET PG, FMGE and INI-CET, with answers and explanations for focused Anatomy revision on MedLadder.",
-      "descriptionB": "Practise Pre-Embryonic Phase of Development MCQs for NEET PG, FMGE and INI-CET, with answers and explanations for focused Anatomy revision on MedLadder."
-    },
-    {
-      "similarity": 0.91,
-      "a": "subjects/microbiology/general-microbiology/index.html",
-      "b": "subjects/microbiology/general-parasitology/index.html",
-      "descriptionA": "Practise General Microbiology MCQs for NEET PG, FMGE and INI-CET, with answers and explanations for focused Microbiology revision on MedLadder.",
-      "descriptionB": "Practise General Parasitology MCQs for NEET PG, FMGE and INI-CET, with answers and explanations for focused Microbiology revision on MedLadder."
-    },
-    {
-      "similarity": 0.87,
-      "a": "subjects/pathology/non-hodgkin-lymphomas-high-grade/index.html",
-      "b": "subjects/pathology/non-hodgkin-lymphomas-low-grade/index.html",
-      "descriptionA": "Practice Non Hodgkin Lymphomas: High Grade MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
-      "descriptionB": "Practice Non Hodgkin Lymphomas: Low Grade MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "similarity": 0.87,
-      "a": "subjects/psm/bacterial-respiratory-infections/index.html",
-      "b": "subjects/psm/viral-respiratory-infections/index.html",
-      "descriptionA": "Practise Bacterial Respiratory Infections MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield community medicine revision on MedLadder.",
-      "descriptionB": "Practise Viral Respiratory Infections MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield community medicine revision on MedLadder."
-    },
-    {
-      "similarity": 0.87,
-      "a": "subjects/psm/viral-respiratory-infections/index.html",
-      "b": "subjects/psm/zoonotic-infections-viral/index.html",
-      "descriptionA": "Practise Viral Respiratory Infections MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield community medicine revision on MedLadder.",
-      "descriptionB": "Practise Zoonotic Infections - Viral MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield community medicine revision on MedLadder."
-    },
-    {
-      "similarity": 0.86,
-      "a": "subjects/pediatrics/acyanotic-congenital-heart-diseases/index.html",
-      "b": "subjects/pediatrics/cyanotic-congenital-heart-diseases/index.html",
-      "descriptionA": "Practice Acyanotic Congenital Heart Diseases MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
-      "descriptionB": "Practice Cyanotic Congenital Heart Diseases MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "similarity": 0.86,
-      "a": "subjects/pharmacology/mixed-miscellaneous-topics/index.html",
-      "b": "subjects/physiology/mixed-miscellaneous-topics/index.html",
-      "descriptionA": "Practise Mixed / Miscellaneous Topics MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield pharmacology revision on MedLadder.",
-      "descriptionB": "Practise Mixed / Miscellaneous Topics MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield physiology revision on MedLadder."
-    },
-    {
-      "similarity": 0.86,
-      "a": "subjects/pharmacology/mixed-miscellaneous-topics/index.html",
-      "b": "subjects/psychiatry/mixed-miscellaneous-topics/index.html",
-      "descriptionA": "Practise Mixed / Miscellaneous Topics MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield pharmacology revision on MedLadder.",
-      "descriptionB": "Practise Mixed / Miscellaneous Topics MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield psychiatry revision on MedLadder."
-    },
-    {
-      "similarity": 0.86,
-      "a": "subjects/pharmacology/mixed-miscellaneous-topics/index.html",
-      "b": "subjects/radiology/mixed-miscellaneous-topics/index.html",
-      "descriptionA": "Practise Mixed / Miscellaneous Topics MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield pharmacology revision on MedLadder.",
-      "descriptionB": "Practise Mixed / Miscellaneous Topics MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield radiology revision on MedLadder."
-    },
-    {
-      "similarity": 0.86,
-      "a": "subjects/pharmacology/mixed-miscellaneous-topics/index.html",
-      "b": "subjects/surgery/mixed-miscellaneous-topics/index.html",
-      "descriptionA": "Practise Mixed / Miscellaneous Topics MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield pharmacology revision on MedLadder.",
-      "descriptionB": "Practise Mixed / Miscellaneous Topics MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield surgery revision on MedLadder."
-    },
-    {
-      "similarity": 0.86,
-      "a": "subjects/physiology/mixed-miscellaneous-topics/index.html",
-      "b": "subjects/psychiatry/mixed-miscellaneous-topics/index.html",
-      "descriptionA": "Practise Mixed / Miscellaneous Topics MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield physiology revision on MedLadder.",
-      "descriptionB": "Practise Mixed / Miscellaneous Topics MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield psychiatry revision on MedLadder."
-    },
-    {
-      "similarity": 0.86,
-      "a": "subjects/physiology/mixed-miscellaneous-topics/index.html",
-      "b": "subjects/radiology/mixed-miscellaneous-topics/index.html",
-      "descriptionA": "Practise Mixed / Miscellaneous Topics MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield physiology revision on MedLadder.",
-      "descriptionB": "Practise Mixed / Miscellaneous Topics MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield radiology revision on MedLadder."
-    },
-    {
-      "similarity": 0.86,
-      "a": "subjects/physiology/mixed-miscellaneous-topics/index.html",
-      "b": "subjects/surgery/mixed-miscellaneous-topics/index.html",
-      "descriptionA": "Practise Mixed / Miscellaneous Topics MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield physiology revision on MedLadder.",
-      "descriptionB": "Practise Mixed / Miscellaneous Topics MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield surgery revision on MedLadder."
-    },
-    {
-      "similarity": 0.86,
-      "a": "subjects/psm/analytical-epidemiology/index.html",
-      "b": "subjects/psm/experimental-epidemiology/index.html",
-      "descriptionA": "Practise Analytical Epidemiology MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield community medicine revision on MedLadder.",
-      "descriptionB": "Practise Experimental Epidemiology MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield community medicine revision on MedLadder."
-    },
-    {
-      "similarity": 0.86,
-      "a": "subjects/psm/analytical-epidemiology/index.html",
-      "b": "subjects/psm/principles-of-epidemiology/index.html",
-      "descriptionA": "Practise Analytical Epidemiology MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield community medicine revision on MedLadder.",
-      "descriptionB": "Practise Principles of Epidemiology MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield community medicine revision on MedLadder."
-    },
-    {
-      "similarity": 0.86,
-      "a": "subjects/psm/experimental-epidemiology/index.html",
-      "b": "subjects/psm/principles-of-epidemiology/index.html",
-      "descriptionA": "Practise Experimental Epidemiology MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield community medicine revision on MedLadder.",
-      "descriptionB": "Practise Principles of Epidemiology MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield community medicine revision on MedLadder."
-    },
-    {
       "similarity": 0.86,
       "a": "subjects/psm/international-health/index.html",
       "b": "subjects/psm/mental-health/index.html",
@@ -224,27 +105,6 @@
       "b": "subjects/psychiatry/bipolar-and-related-disorders/index.html",
       "descriptionA": "Practise Alcohol-Related Disorders MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield psychiatry revision on MedLadder.",
       "descriptionB": "Practise Bipolar and Related Disorders MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield psychiatry revision on MedLadder."
-    },
-    {
-      "similarity": 0.86,
-      "a": "subjects/psychiatry/mixed-miscellaneous-topics/index.html",
-      "b": "subjects/radiology/mixed-miscellaneous-topics/index.html",
-      "descriptionA": "Practise Mixed / Miscellaneous Topics MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield psychiatry revision on MedLadder.",
-      "descriptionB": "Practise Mixed / Miscellaneous Topics MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield radiology revision on MedLadder."
-    },
-    {
-      "similarity": 0.86,
-      "a": "subjects/psychiatry/mixed-miscellaneous-topics/index.html",
-      "b": "subjects/surgery/mixed-miscellaneous-topics/index.html",
-      "descriptionA": "Practise Mixed / Miscellaneous Topics MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield psychiatry revision on MedLadder.",
-      "descriptionB": "Practise Mixed / Miscellaneous Topics MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield surgery revision on MedLadder."
-    },
-    {
-      "similarity": 0.86,
-      "a": "subjects/radiology/mixed-miscellaneous-topics/index.html",
-      "b": "subjects/surgery/mixed-miscellaneous-topics/index.html",
-      "descriptionA": "Practise Mixed / Miscellaneous Topics MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield radiology revision on MedLadder.",
-      "descriptionB": "Practise Mixed / Miscellaneous Topics MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield surgery revision on MedLadder."
     },
     {
       "similarity": 0.85,
@@ -850,13 +710,6 @@
     },
     {
       "similarity": 0.83,
-      "a": "subjects/microbiology/general-microbiology/index.html",
-      "b": "subjects/microbiology/general-properties-of-viruses/index.html",
-      "descriptionA": "Practise General Microbiology MCQs for NEET PG, FMGE and INI-CET, with answers and explanations for focused Microbiology revision on MedLadder.",
-      "descriptionB": "Practise General Properties of Viruses MCQs for NEET PG, FMGE and INI-CET, with answers and explanations for focused Microbiology revision on MedLadder."
-    },
-    {
-      "similarity": 0.83,
       "a": "subjects/ob-g/anemia-in-pregnancy/index.html",
       "b": "subjects/ob-g/diabetes-in-pregnancy/index.html",
       "descriptionA": "Practice Anemia in Pregnancy MCQs for NEET PG, FMGE and INI-CET. Revise obstetrics and gynaecology with answers and explanations on MedLadder.",
@@ -906,55 +759,6 @@
     },
     {
       "similarity": 0.83,
-      "a": "subjects/pathology/chromosomal-disorders-and-other-genetic-diseases/index.html",
-      "b": "subjects/pathology/platelet-disorders/index.html",
-      "descriptionA": "Practice Chromosomal Disorders and MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
-      "descriptionB": "Practice Platelet Disorders MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "similarity": 0.83,
-      "a": "subjects/pathology/chromosomal-disorders-and-other-genetic-diseases/index.html",
-      "b": "subjects/pediatrics/disorders-of-puberty/index.html",
-      "descriptionA": "Practice Chromosomal Disorders and MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
-      "descriptionB": "Practice Disorders of Puberty MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "similarity": 0.83,
-      "a": "subjects/pathology/chromosomal-disorders-and-other-genetic-diseases/index.html",
-      "b": "subjects/pediatrics/disorders-of-the-liver/index.html",
-      "descriptionA": "Practice Chromosomal Disorders and MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
-      "descriptionB": "Practice Disorders of the Liver MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "similarity": 0.83,
-      "a": "subjects/pathology/chromosomal-disorders-and-other-genetic-diseases/index.html",
-      "b": "subjects/pediatrics/disorders-of-thyroid/index.html",
-      "descriptionA": "Practice Chromosomal Disorders and MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
-      "descriptionB": "Practice Disorders of Thyroid MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "similarity": 0.83,
-      "a": "subjects/pathology/chromosomal-disorders-and-other-genetic-diseases/index.html",
-      "b": "subjects/pediatrics/medical-gi-disorders/index.html",
-      "descriptionA": "Practice Chromosomal Disorders and MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
-      "descriptionB": "Practice Medical GI Disorders MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "similarity": 0.83,
-      "a": "subjects/pathology/chromosomal-disorders-and-other-genetic-diseases/index.html",
-      "b": "subjects/pediatrics/metabolic-disorders-of-urea-cycle-complex-molecules-and-carbohydrates/index.html",
-      "descriptionA": "Practice Chromosomal Disorders and MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
-      "descriptionB": "Practice Metabolic Disorders of MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "similarity": 0.83,
-      "a": "subjects/pathology/chromosomal-disorders-and-other-genetic-diseases/index.html",
-      "b": "subjects/pediatrics/surgical-gi-disorders/index.html",
-      "descriptionA": "Practice Chromosomal Disorders and MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
-      "descriptionB": "Practice Surgical GI Disorders MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "similarity": 0.83,
       "a": "subjects/pathology/glomerular-diseases/index.html",
       "b": "subjects/pediatrics/diseases-in-neonates-requiring-special-care/index.html",
       "descriptionA": "Practice Glomerular Diseases MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
@@ -963,13 +767,6 @@
     {
       "similarity": 0.83,
       "a": "subjects/pathology/platelet-disorders/index.html",
-      "b": "subjects/pediatrics/chromosomal-disorders/index.html",
-      "descriptionA": "Practice Platelet Disorders MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
-      "descriptionB": "Practice Chromosomal Disorders MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "similarity": 0.83,
-      "a": "subjects/pathology/platelet-disorders/index.html",
       "b": "subjects/pediatrics/disorders-of-puberty/index.html",
       "descriptionA": "Practice Platelet Disorders MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
       "descriptionB": "Practice Disorders of Puberty MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
@@ -1007,48 +804,6 @@
       "a": "subjects/pathology/platelet-disorders/index.html",
       "b": "subjects/pediatrics/surgical-gi-disorders/index.html",
       "descriptionA": "Practice Platelet Disorders MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
-      "descriptionB": "Practice Surgical GI Disorders MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "similarity": 0.83,
-      "a": "subjects/pediatrics/chromosomal-disorders/index.html",
-      "b": "subjects/pediatrics/disorders-of-puberty/index.html",
-      "descriptionA": "Practice Chromosomal Disorders MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
-      "descriptionB": "Practice Disorders of Puberty MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "similarity": 0.83,
-      "a": "subjects/pediatrics/chromosomal-disorders/index.html",
-      "b": "subjects/pediatrics/disorders-of-the-liver/index.html",
-      "descriptionA": "Practice Chromosomal Disorders MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
-      "descriptionB": "Practice Disorders of the Liver MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "similarity": 0.83,
-      "a": "subjects/pediatrics/chromosomal-disorders/index.html",
-      "b": "subjects/pediatrics/disorders-of-thyroid/index.html",
-      "descriptionA": "Practice Chromosomal Disorders MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
-      "descriptionB": "Practice Disorders of Thyroid MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "similarity": 0.83,
-      "a": "subjects/pediatrics/chromosomal-disorders/index.html",
-      "b": "subjects/pediatrics/medical-gi-disorders/index.html",
-      "descriptionA": "Practice Chromosomal Disorders MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
-      "descriptionB": "Practice Medical GI Disorders MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "similarity": 0.83,
-      "a": "subjects/pediatrics/chromosomal-disorders/index.html",
-      "b": "subjects/pediatrics/metabolic-disorders-of-urea-cycle-complex-molecules-and-carbohydrates/index.html",
-      "descriptionA": "Practice Chromosomal Disorders MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
-      "descriptionB": "Practice Metabolic Disorders of MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "similarity": 0.83,
-      "a": "subjects/pediatrics/chromosomal-disorders/index.html",
-      "b": "subjects/pediatrics/surgical-gi-disorders/index.html",
-      "descriptionA": "Practice Chromosomal Disorders MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
       "descriptionB": "Practice Surgical GI Disorders MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
     },
     {
@@ -1712,7 +1467,13 @@
   ],
   "missingMeta": [],
   "metadataSocialMismatches": [],
-  "descriptionLengthOutliers": [],
+  "descriptionLengthOutliers": [
+    {
+      "file": "subjects/pathology/chromosomal-disorders-and-other-genetic-diseases/index.html",
+      "length": 173,
+      "description": "Practice pathology MCQs on chromosomal disorders and genetic diseases for NEET PG, FMGE and INI-CET. Revise karyotypes, syndromes and molecular mechanisms with explanations."
+    }
+  ],
   "brokenInternalLinks": [],
   "schemaParseErrors": [],
   "pagesWithoutValidJsonLd": [],
@@ -2427,14 +2188,14 @@
     {
       "file": "subjects/anatomy/embryonic-phase-of-development/index.html",
       "title": "Embryonic Phase of Development MCQs | NEET PG, FMGE &amp; INI-CET",
-      "description": "Practise Embryonic Phase of Development MCQs for NEET PG, FMGE and INI-CET, with answers and explanations for focused Anatomy revision on MedLadder.",
+      "description": "Test embryology with MCQs on the embryonic period, germ layer differentiation, organogenesis and developmental milestones for NEET PG, FMGE and INI-CET.",
       "canonical": "https://medladder.top/subjects/anatomy/embryonic-phase-of-development",
       "h1": 1,
-      "descriptionLength": 148,
+      "descriptionLength": 152,
       "ogTitle": "Embryonic Phase of Development MCQs | NEET PG, FMGE &amp; INI-CET",
-      "ogDesc": "Practise Embryonic Phase of Development MCQs for NEET PG, FMGE and INI-CET, with answers and explanations for focused Anatomy revision on MedLadder.",
+      "ogDesc": "Test embryology with MCQs on the embryonic period, germ layer differentiation, organogenesis and developmental milestones for NEET PG, FMGE and INI-CET.",
       "twTitle": "Embryonic Phase of Development MCQs | NEET PG, FMGE &amp; INI-CET",
-      "twDesc": "Practise Embryonic Phase of Development MCQs for NEET PG, FMGE and INI-CET, with answers and explanations for focused Anatomy revision on MedLadder.",
+      "twDesc": "Test embryology with MCQs on the embryonic period, germ layer differentiation, organogenesis and developmental milestones for NEET PG, FMGE and INI-CET.",
       "schemaCount": 3,
       "schemaValid": true,
       "internalLinkCount": 89
@@ -2862,14 +2623,14 @@
     {
       "file": "subjects/anatomy/pre-embryonic-phase-of-development/index.html",
       "title": "Pre-Embryonic Phase of MCQs | NEET PG, FMGE &amp; INI-CET",
-      "description": "Practise Pre-Embryonic Phase of Development MCQs for NEET PG, FMGE and INI-CET, with answers and explanations for focused Anatomy revision on MedLadder.",
+      "description": "Revise pre-embryonic development through MCQs on fertilization, cleavage, blastocyst formation and implantation for NEET PG, FMGE and INI-CET.",
       "canonical": "https://medladder.top/subjects/anatomy/pre-embryonic-phase-of-development",
       "h1": 1,
-      "descriptionLength": 152,
+      "descriptionLength": 142,
       "ogTitle": "Pre-Embryonic Phase of MCQs | NEET PG, FMGE &amp; INI-CET",
-      "ogDesc": "Practise Pre-Embryonic Phase of Development MCQs for NEET PG, FMGE and INI-CET, with answers and explanations for focused Anatomy revision on MedLadder.",
+      "ogDesc": "Revise pre-embryonic development through MCQs on fertilization, cleavage, blastocyst formation and implantation for NEET PG, FMGE and INI-CET.",
       "twTitle": "Pre-Embryonic Phase of MCQs | NEET PG, FMGE &amp; INI-CET",
-      "twDesc": "Practise Pre-Embryonic Phase of Development MCQs for NEET PG, FMGE and INI-CET, with answers and explanations for focused Anatomy revision on MedLadder.",
+      "twDesc": "Revise pre-embryonic development through MCQs on fertilization, cleavage, blastocyst formation and implantation for NEET PG, FMGE and INI-CET.",
       "schemaCount": 3,
       "schemaValid": true,
       "internalLinkCount": 88
@@ -5847,14 +5608,14 @@
     {
       "file": "subjects/microbiology/general-microbiology/index.html",
       "title": "General Microbiology MCQs | NEET PG, FMGE &amp; INI-CET",
-      "description": "Practise General Microbiology MCQs for NEET PG, FMGE and INI-CET, with answers and explanations for focused Microbiology revision on MedLadder.",
+      "description": "Practice general microbiology MCQs for NEET PG, FMGE and INI-CET. Cover bacterial structure, growth, genetics, sterilization and laboratory diagnosis.",
       "canonical": "https://medladder.top/subjects/microbiology/general-microbiology",
       "h1": 1,
-      "descriptionLength": 143,
+      "descriptionLength": 150,
       "ogTitle": "General Microbiology MCQs | NEET PG, FMGE &amp; INI-CET",
-      "ogDesc": "Practise General Microbiology MCQs for NEET PG, FMGE and INI-CET, with answers and explanations for focused Microbiology revision on MedLadder.",
+      "ogDesc": "Practice general microbiology MCQs for NEET PG, FMGE and INI-CET. Cover bacterial structure, growth, genetics, sterilization and laboratory diagnosis.",
       "twTitle": "General Microbiology MCQs | NEET PG, FMGE &amp; INI-CET",
-      "twDesc": "Practise General Microbiology MCQs for NEET PG, FMGE and INI-CET, with answers and explanations for focused Microbiology revision on MedLadder.",
+      "twDesc": "Practice general microbiology MCQs for NEET PG, FMGE and INI-CET. Cover bacterial structure, growth, genetics, sterilization and laboratory diagnosis.",
       "schemaCount": 3,
       "schemaValid": true,
       "internalLinkCount": 86
@@ -5862,14 +5623,14 @@
     {
       "file": "subjects/microbiology/general-parasitology/index.html",
       "title": "General Parasitology MCQs | NEET PG, FMGE &amp; INI-CET",
-      "description": "Practise General Parasitology MCQs for NEET PG, FMGE and INI-CET, with answers and explanations for focused Microbiology revision on MedLadder.",
+      "description": "Revise general parasitology with NEET PG, FMGE and INI-CET MCQs on parasite life cycles, host relationships, transmission and diagnostic methods.",
       "canonical": "https://medladder.top/subjects/microbiology/general-parasitology",
       "h1": 1,
-      "descriptionLength": 143,
+      "descriptionLength": 145,
       "ogTitle": "General Parasitology MCQs | NEET PG, FMGE &amp; INI-CET",
-      "ogDesc": "Practise General Parasitology MCQs for NEET PG, FMGE and INI-CET, with answers and explanations for focused Microbiology revision on MedLadder.",
+      "ogDesc": "Revise general parasitology with NEET PG, FMGE and INI-CET MCQs on parasite life cycles, host relationships, transmission and diagnostic methods.",
       "twTitle": "General Parasitology MCQs | NEET PG, FMGE &amp; INI-CET",
-      "twDesc": "Practise General Parasitology MCQs for NEET PG, FMGE and INI-CET, with answers and explanations for focused Microbiology revision on MedLadder.",
+      "twDesc": "Revise general parasitology with NEET PG, FMGE and INI-CET MCQs on parasite life cycles, host relationships, transmission and diagnostic methods.",
       "schemaCount": 3,
       "schemaValid": true,
       "internalLinkCount": 90
@@ -7977,14 +7738,14 @@
     {
       "file": "subjects/pathology/chromosomal-disorders-and-other-genetic-diseases/index.html",
       "title": "Chromosomal Disorders and MCQs | NEET PG &amp; FMGE",
-      "description": "Practice Chromosomal Disorders and MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "description": "Practice pathology MCQs on chromosomal disorders and genetic diseases for NEET PG, FMGE and INI-CET. Revise karyotypes, syndromes and molecular mechanisms with explanations.",
       "canonical": "https://medladder.top/subjects/pathology/chromosomal-disorders-and-other-genetic-diseases",
       "h1": 1,
-      "descriptionLength": 127,
+      "descriptionLength": 173,
       "ogTitle": "Chromosomal Disorders and MCQs | NEET PG &amp; FMGE",
-      "ogDesc": "Practice Chromosomal Disorders and MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "ogDesc": "Practice pathology MCQs on chromosomal disorders and genetic diseases for NEET PG, FMGE and INI-CET. Revise karyotypes, syndromes and molecular mechanisms with explanations.",
       "twTitle": "Chromosomal Disorders and MCQs | NEET PG &amp; FMGE",
-      "twDesc": "Practice Chromosomal Disorders and MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "twDesc": "Practice pathology MCQs on chromosomal disorders and genetic diseases for NEET PG, FMGE and INI-CET. Revise karyotypes, syndromes and molecular mechanisms with explanations.",
       "schemaCount": 3,
       "schemaValid": true,
       "internalLinkCount": 91
@@ -8517,14 +8278,14 @@
     {
       "file": "subjects/pathology/non-hodgkin-lymphomas-high-grade/index.html",
       "title": "Non Hodgkin Lymphomas: High Grade MCQs | NEET PG &amp; FMGE",
-      "description": "Practice Non Hodgkin Lymphomas: High Grade MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "description": "Practice high-grade non-Hodgkin lymphoma MCQs for NEET PG, FMGE and INI-CET. Focus on diffuse large B-cell lymphoma, Burkitt lymphoma and aggressive disease patterns.",
       "canonical": "https://medladder.top/subjects/pathology/non-hodgkin-lymphomas-high-grade",
       "h1": 1,
-      "descriptionLength": 135,
+      "descriptionLength": 166,
       "ogTitle": "Non Hodgkin Lymphomas: High Grade MCQs | NEET PG &amp; FMGE",
-      "ogDesc": "Practice Non Hodgkin Lymphomas: High Grade MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "ogDesc": "Practice high-grade non-Hodgkin lymphoma MCQs for NEET PG, FMGE and INI-CET. Focus on diffuse large B-cell lymphoma, Burkitt lymphoma and aggressive disease patterns.",
       "twTitle": "Non Hodgkin Lymphomas: High Grade MCQs | NEET PG &amp; FMGE",
-      "twDesc": "Practice Non Hodgkin Lymphomas: High Grade MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "twDesc": "Practice high-grade non-Hodgkin lymphoma MCQs for NEET PG, FMGE and INI-CET. Focus on diffuse large B-cell lymphoma, Burkitt lymphoma and aggressive disease patterns.",
       "schemaCount": 3,
       "schemaValid": true,
       "internalLinkCount": 90
@@ -8532,14 +8293,14 @@
     {
       "file": "subjects/pathology/non-hodgkin-lymphomas-low-grade/index.html",
       "title": "Non Hodgkin Lymphomas: Low Grade MCQs | NEET PG &amp; FMGE",
-      "description": "Practice Non Hodgkin Lymphomas: Low Grade MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "description": "Study indolent non-Hodgkin lymphomas with NEET PG, FMGE and INI-CET MCQs on follicular, marginal zone and small lymphocytic lymphoma.",
       "canonical": "https://medladder.top/subjects/pathology/non-hodgkin-lymphomas-low-grade",
       "h1": 1,
-      "descriptionLength": 134,
+      "descriptionLength": 133,
       "ogTitle": "Non Hodgkin Lymphomas: Low Grade MCQs | NEET PG &amp; FMGE",
-      "ogDesc": "Practice Non Hodgkin Lymphomas: Low Grade MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "ogDesc": "Study indolent non-Hodgkin lymphomas with NEET PG, FMGE and INI-CET MCQs on follicular, marginal zone and small lymphocytic lymphoma.",
       "twTitle": "Non Hodgkin Lymphomas: Low Grade MCQs | NEET PG &amp; FMGE",
-      "twDesc": "Practice Non Hodgkin Lymphomas: Low Grade MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "twDesc": "Study indolent non-Hodgkin lymphomas with NEET PG, FMGE and INI-CET MCQs on follicular, marginal zone and small lymphocytic lymphoma.",
       "schemaCount": 3,
       "schemaValid": true,
       "internalLinkCount": 90
@@ -8757,14 +8518,14 @@
     {
       "file": "subjects/pediatrics/acyanotic-congenital-heart-diseases/index.html",
       "title": "Acyanotic Congenital Heart Diseases MCQs | NEET PG &amp; FMGE",
-      "description": "Practice Acyanotic Congenital Heart Diseases MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "description": "Practice acyanotic congenital heart disease MCQs for NEET PG, FMGE and INI-CET. Review ASD, VSD, PDA, left-to-right shunts and clinical findings.",
       "canonical": "https://medladder.top/subjects/pediatrics/acyanotic-congenital-heart-diseases",
       "h1": 1,
-      "descriptionLength": 137,
+      "descriptionLength": 145,
       "ogTitle": "Acyanotic Congenital Heart Diseases MCQs | NEET PG &amp; FMGE",
-      "ogDesc": "Practice Acyanotic Congenital Heart Diseases MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "ogDesc": "Practice acyanotic congenital heart disease MCQs for NEET PG, FMGE and INI-CET. Review ASD, VSD, PDA, left-to-right shunts and clinical findings.",
       "twTitle": "Acyanotic Congenital Heart Diseases MCQs | NEET PG &amp; FMGE",
-      "twDesc": "Practice Acyanotic Congenital Heart Diseases MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "twDesc": "Practice acyanotic congenital heart disease MCQs for NEET PG, FMGE and INI-CET. Review ASD, VSD, PDA, left-to-right shunts and clinical findings.",
       "schemaCount": 3,
       "schemaValid": true,
       "internalLinkCount": 92
@@ -8817,14 +8578,14 @@
     {
       "file": "subjects/pediatrics/chromosomal-disorders/index.html",
       "title": "Chromosomal Disorders MCQs | NEET PG &amp; FMGE",
-      "description": "Practice Chromosomal Disorders MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "description": "Prepare pediatric genetics with MCQs on Down, Turner, Klinefelter and other chromosomal disorders for NEET PG, FMGE and INI-CET, with clinical clues and explanations.",
       "canonical": "https://medladder.top/subjects/pediatrics/chromosomal-disorders",
       "h1": 1,
-      "descriptionLength": 123,
+      "descriptionLength": 166,
       "ogTitle": "Chromosomal Disorders MCQs | NEET PG &amp; FMGE",
-      "ogDesc": "Practice Chromosomal Disorders MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "ogDesc": "Prepare pediatric genetics with MCQs on Down, Turner, Klinefelter and other chromosomal disorders for NEET PG, FMGE and INI-CET, with clinical clues and explanations.",
       "twTitle": "Chromosomal Disorders MCQs | NEET PG &amp; FMGE",
-      "twDesc": "Practice Chromosomal Disorders MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "twDesc": "Prepare pediatric genetics with MCQs on Down, Turner, Klinefelter and other chromosomal disorders for NEET PG, FMGE and INI-CET, with clinical clues and explanations.",
       "schemaCount": 3,
       "schemaValid": true,
       "internalLinkCount": 92
@@ -8847,14 +8608,14 @@
     {
       "file": "subjects/pediatrics/cyanotic-congenital-heart-diseases/index.html",
       "title": "Cyanotic Congenital Heart Diseases MCQs | NEET PG &amp; FMGE",
-      "description": "Practice Cyanotic Congenital Heart Diseases MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "description": "Test cyanotic congenital heart disease with NEET PG, FMGE and INI-CET MCQs on tetralogy of Fallot, transposition, clinical signs and management.",
       "canonical": "https://medladder.top/subjects/pediatrics/cyanotic-congenital-heart-diseases",
       "h1": 1,
-      "descriptionLength": 136,
+      "descriptionLength": 144,
       "ogTitle": "Cyanotic Congenital Heart Diseases MCQs | NEET PG &amp; FMGE",
-      "ogDesc": "Practice Cyanotic Congenital Heart Diseases MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "ogDesc": "Test cyanotic congenital heart disease with NEET PG, FMGE and INI-CET MCQs on tetralogy of Fallot, transposition, clinical signs and management.",
       "twTitle": "Cyanotic Congenital Heart Diseases MCQs | NEET PG &amp; FMGE",
-      "twDesc": "Practice Cyanotic Congenital Heart Diseases MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "twDesc": "Test cyanotic congenital heart disease with NEET PG, FMGE and INI-CET MCQs on tetralogy of Fallot, transposition, clinical signs and management.",
       "schemaCount": 3,
       "schemaValid": true,
       "internalLinkCount": 92
@@ -9822,14 +9583,14 @@
     {
       "file": "subjects/pharmacology/mixed-miscellaneous-topics/index.html",
       "title": "Pharmacology: Mixed Topics MCQs | NEET PG, FMGE &amp; INI-CET",
-      "description": "Practise Mixed / Miscellaneous Topics MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield pharmacology revision on MedLadder.",
+      "description": "Solve mixed pharmacology MCQs for NEET PG, FMGE and INI-CET. Consolidate drug mechanisms, indications, contraindications and adverse effects.",
       "canonical": "https://medladder.top/subjects/pharmacology/mixed-miscellaneous-topics",
       "h1": 1,
-      "descriptionLength": 150,
+      "descriptionLength": 141,
       "ogTitle": "Pharmacology: Mixed Topics MCQs | NEET PG, FMGE &amp; INI-CET",
-      "ogDesc": "Practise Mixed / Miscellaneous Topics MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield pharmacology revision on MedLadder.",
+      "ogDesc": "Solve mixed pharmacology MCQs for NEET PG, FMGE and INI-CET. Consolidate drug mechanisms, indications, contraindications and adverse effects.",
       "twTitle": "Pharmacology: Mixed Topics MCQs | NEET PG, FMGE &amp; INI-CET",
-      "twDesc": "Practise Mixed / Miscellaneous Topics MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield pharmacology revision on MedLadder.",
+      "twDesc": "Solve mixed pharmacology MCQs for NEET PG, FMGE and INI-CET. Consolidate drug mechanisms, indications, contraindications and adverse effects.",
       "schemaCount": 3,
       "schemaValid": true,
       "internalLinkCount": 88
@@ -10452,14 +10213,14 @@
     {
       "file": "subjects/physiology/mixed-miscellaneous-topics/index.html",
       "title": "Physiology: Mixed Topics MCQs | NEET PG, FMGE &amp; INI-CET",
-      "description": "Practise Mixed / Miscellaneous Topics MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield physiology revision on MedLadder.",
+      "description": "Revise integrated physiology with mixed MCQs for NEET PG, FMGE and INI-CET, covering organ systems, regulatory mechanisms and applied concepts.",
       "canonical": "https://medladder.top/subjects/physiology/mixed-miscellaneous-topics",
       "h1": 1,
-      "descriptionLength": 148,
+      "descriptionLength": 143,
       "ogTitle": "Physiology: Mixed Topics MCQs | NEET PG, FMGE &amp; INI-CET",
-      "ogDesc": "Practise Mixed / Miscellaneous Topics MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield physiology revision on MedLadder.",
+      "ogDesc": "Revise integrated physiology with mixed MCQs for NEET PG, FMGE and INI-CET, covering organ systems, regulatory mechanisms and applied concepts.",
       "twTitle": "Physiology: Mixed Topics MCQs | NEET PG, FMGE &amp; INI-CET",
-      "twDesc": "Practise Mixed / Miscellaneous Topics MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield physiology revision on MedLadder.",
+      "twDesc": "Revise integrated physiology with mixed MCQs for NEET PG, FMGE and INI-CET, covering organ systems, regulatory mechanisms and applied concepts.",
       "schemaCount": 3,
       "schemaValid": true,
       "internalLinkCount": 88
@@ -10692,14 +10453,14 @@
     {
       "file": "subjects/psm/analytical-epidemiology/index.html",
       "title": "Analytical Epidemiology MCQs | NEET PG, FMGE &amp; INI-CET",
-      "description": "Practise Analytical Epidemiology MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield community medicine revision on MedLadder.",
+      "description": "Study analytical epidemiology with NEET PG, FMGE and INI-CET MCQs on cohort and case-control studies, association measures and bias.",
       "canonical": "https://medladder.top/subjects/psm/analytical-epidemiology",
       "h1": 1,
-      "descriptionLength": 151,
+      "descriptionLength": 132,
       "ogTitle": "Analytical Epidemiology MCQs | NEET PG, FMGE &amp; INI-CET",
-      "ogDesc": "Practise Analytical Epidemiology MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield community medicine revision on MedLadder.",
+      "ogDesc": "Study analytical epidemiology with NEET PG, FMGE and INI-CET MCQs on cohort and case-control studies, association measures and bias.",
       "twTitle": "Analytical Epidemiology MCQs | NEET PG, FMGE &amp; INI-CET",
-      "twDesc": "Practise Analytical Epidemiology MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield community medicine revision on MedLadder.",
+      "twDesc": "Study analytical epidemiology with NEET PG, FMGE and INI-CET MCQs on cohort and case-control studies, association measures and bias.",
       "schemaCount": 3,
       "schemaValid": true,
       "internalLinkCount": 90
@@ -10722,14 +10483,14 @@
     {
       "file": "subjects/psm/bacterial-respiratory-infections/index.html",
       "title": "Bacterial Respiratory Infections MCQs | NEET PG, FMGE &amp; INI-CET",
-      "description": "Practise Bacterial Respiratory Infections MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield community medicine revision on MedLadder.",
+      "description": "Prepare community medicine MCQs on bacterial respiratory infections for NEET PG, FMGE and INI-CET. Review tuberculosis, diphtheria, pertussis and prevention.",
       "canonical": "https://medladder.top/subjects/psm/bacterial-respiratory-infections",
       "h1": 1,
-      "descriptionLength": 160,
+      "descriptionLength": 157,
       "ogTitle": "Bacterial Respiratory Infections MCQs | NEET PG, FMGE &amp; INI-CET",
-      "ogDesc": "Practise Bacterial Respiratory Infections MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield community medicine revision on MedLadder.",
+      "ogDesc": "Prepare community medicine MCQs on bacterial respiratory infections for NEET PG, FMGE and INI-CET. Review tuberculosis, diphtheria, pertussis and prevention.",
       "twTitle": "Bacterial Respiratory Infections MCQs | NEET PG, FMGE &amp; INI-CET",
-      "twDesc": "Practise Bacterial Respiratory Infections MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield community medicine revision on MedLadder.",
+      "twDesc": "Prepare community medicine MCQs on bacterial respiratory infections for NEET PG, FMGE and INI-CET. Review tuberculosis, diphtheria, pertussis and prevention.",
       "schemaCount": 3,
       "schemaValid": true,
       "internalLinkCount": 92
@@ -10932,14 +10693,14 @@
     {
       "file": "subjects/psm/experimental-epidemiology/index.html",
       "title": "Experimental Epidemiology MCQs | NEET PG, FMGE &amp; INI-CET",
-      "description": "Practise Experimental Epidemiology MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield community medicine revision on MedLadder.",
+      "description": "Practice experimental epidemiology MCQs for NEET PG, FMGE and INI-CET. Revise clinical trials, randomization, blinding and intervention study designs.",
       "canonical": "https://medladder.top/subjects/psm/experimental-epidemiology",
       "h1": 1,
-      "descriptionLength": 153,
+      "descriptionLength": 150,
       "ogTitle": "Experimental Epidemiology MCQs | NEET PG, FMGE &amp; INI-CET",
-      "ogDesc": "Practise Experimental Epidemiology MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield community medicine revision on MedLadder.",
+      "ogDesc": "Practice experimental epidemiology MCQs for NEET PG, FMGE and INI-CET. Revise clinical trials, randomization, blinding and intervention study designs.",
       "twTitle": "Experimental Epidemiology MCQs | NEET PG, FMGE &amp; INI-CET",
-      "twDesc": "Practise Experimental Epidemiology MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield community medicine revision on MedLadder.",
+      "twDesc": "Practice experimental epidemiology MCQs for NEET PG, FMGE and INI-CET. Revise clinical trials, randomization, blinding and intervention study designs.",
       "schemaCount": 2,
       "schemaValid": true,
       "internalLinkCount": 90
@@ -11442,14 +11203,14 @@
     {
       "file": "subjects/psm/viral-respiratory-infections/index.html",
       "title": "Viral Respiratory Infections MCQs | NEET PG, FMGE &amp; INI-CET",
-      "description": "Practise Viral Respiratory Infections MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield community medicine revision on MedLadder.",
+      "description": "Practice viral respiratory infection MCQs for NEET PG, FMGE and INI-CET. Revise influenza, measles, RSV, COVID-19 and public health prevention.",
       "canonical": "https://medladder.top/subjects/psm/viral-respiratory-infections",
       "h1": 1,
-      "descriptionLength": 156,
+      "descriptionLength": 143,
       "ogTitle": "Viral Respiratory Infections MCQs | NEET PG, FMGE &amp; INI-CET",
-      "ogDesc": "Practise Viral Respiratory Infections MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield community medicine revision on MedLadder.",
+      "ogDesc": "Practice viral respiratory infection MCQs for NEET PG, FMGE and INI-CET. Revise influenza, measles, RSV, COVID-19 and public health prevention.",
       "twTitle": "Viral Respiratory Infections MCQs | NEET PG, FMGE &amp; INI-CET",
-      "twDesc": "Practise Viral Respiratory Infections MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield community medicine revision on MedLadder.",
+      "twDesc": "Practice viral respiratory infection MCQs for NEET PG, FMGE and INI-CET. Revise influenza, measles, RSV, COVID-19 and public health prevention.",
       "schemaCount": 2,
       "schemaValid": true,
       "internalLinkCount": 92
@@ -11532,14 +11293,14 @@
     {
       "file": "subjects/psm/zoonotic-infections-viral/index.html",
       "title": "Zoonotic Infections - Viral MCQs | NEET PG, FMGE &amp; INI-CET",
-      "description": "Practise Zoonotic Infections - Viral MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield community medicine revision on MedLadder.",
+      "description": "Revise viral zoonoses with NEET PG, FMGE and INI-CET community medicine MCQs on rabies, Japanese encephalitis and other zoonotic viral diseases.",
       "canonical": "https://medladder.top/subjects/psm/zoonotic-infections-viral",
       "h1": 1,
-      "descriptionLength": 155,
+      "descriptionLength": 144,
       "ogTitle": "Zoonotic Infections - Viral MCQs | NEET PG, FMGE &amp; INI-CET",
-      "ogDesc": "Practise Zoonotic Infections - Viral MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield community medicine revision on MedLadder.",
+      "ogDesc": "Revise viral zoonoses with NEET PG, FMGE and INI-CET community medicine MCQs on rabies, Japanese encephalitis and other zoonotic viral diseases.",
       "twTitle": "Zoonotic Infections - Viral MCQs | NEET PG, FMGE &amp; INI-CET",
-      "twDesc": "Practise Zoonotic Infections - Viral MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield community medicine revision on MedLadder.",
+      "twDesc": "Revise viral zoonoses with NEET PG, FMGE and INI-CET community medicine MCQs on rabies, Japanese encephalitis and other zoonotic viral diseases.",
       "schemaCount": 3,
       "schemaValid": true,
       "internalLinkCount": 92
@@ -11802,14 +11563,14 @@
     {
       "file": "subjects/psychiatry/mixed-miscellaneous-topics/index.html",
       "title": "Psychiatry: Mixed Topics MCQs | NEET PG, FMGE &amp; INI-CET",
-      "description": "Practise Mixed / Miscellaneous Topics MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield psychiatry revision on MedLadder.",
+      "description": "Practice mixed psychiatry MCQs for NEET PG, FMGE and INI-CET. Review diagnosis, psychopathology, psychopharmacology and clinical scenarios.",
       "canonical": "https://medladder.top/subjects/psychiatry/mixed-miscellaneous-topics",
       "h1": 1,
-      "descriptionLength": 148,
+      "descriptionLength": 139,
       "ogTitle": "Psychiatry: Mixed Topics MCQs | NEET PG, FMGE &amp; INI-CET",
-      "ogDesc": "Practise Mixed / Miscellaneous Topics MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield psychiatry revision on MedLadder.",
+      "ogDesc": "Practice mixed psychiatry MCQs for NEET PG, FMGE and INI-CET. Review diagnosis, psychopathology, psychopharmacology and clinical scenarios.",
       "twTitle": "Psychiatry: Mixed Topics MCQs | NEET PG, FMGE &amp; INI-CET",
-      "twDesc": "Practise Mixed / Miscellaneous Topics MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield psychiatry revision on MedLadder.",
+      "twDesc": "Practice mixed psychiatry MCQs for NEET PG, FMGE and INI-CET. Review diagnosis, psychopathology, psychopharmacology and clinical scenarios.",
       "schemaCount": 3,
       "schemaValid": true,
       "internalLinkCount": 88
@@ -12237,14 +11998,14 @@
     {
       "file": "subjects/radiology/mixed-miscellaneous-topics/index.html",
       "title": "Radiology: Mixed Topics MCQs | NEET PG, FMGE &amp; INI-CET",
-      "description": "Practise Mixed / Miscellaneous Topics MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield radiology revision on MedLadder.",
+      "description": "Test radiology knowledge with mixed MCQs for NEET PG, FMGE and INI-CET, including imaging signs, modalities and pattern recognition.",
       "canonical": "https://medladder.top/subjects/radiology/mixed-miscellaneous-topics",
       "h1": 1,
-      "descriptionLength": 147,
+      "descriptionLength": 132,
       "ogTitle": "Radiology: Mixed Topics MCQs | NEET PG, FMGE &amp; INI-CET",
-      "ogDesc": "Practise Mixed / Miscellaneous Topics MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield radiology revision on MedLadder.",
+      "ogDesc": "Test radiology knowledge with mixed MCQs for NEET PG, FMGE and INI-CET, including imaging signs, modalities and pattern recognition.",
       "twTitle": "Radiology: Mixed Topics MCQs | NEET PG, FMGE &amp; INI-CET",
-      "twDesc": "Practise Mixed / Miscellaneous Topics MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield radiology revision on MedLadder.",
+      "twDesc": "Test radiology knowledge with mixed MCQs for NEET PG, FMGE and INI-CET, including imaging signs, modalities and pattern recognition.",
       "schemaCount": 3,
       "schemaValid": true,
       "internalLinkCount": 88
@@ -12852,14 +12613,14 @@
     {
       "file": "subjects/surgery/mixed-miscellaneous-topics/index.html",
       "title": "Surgery: Mixed Topics MCQs | NEET PG, FMGE &amp; INI-CET",
-      "description": "Practise Mixed / Miscellaneous Topics MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield surgery revision on MedLadder.",
+      "description": "Prepare surgery with mixed MCQs for NEET PG, FMGE and INI-CET. Revise perioperative care, trauma, clinical decision-making and core surgical principles.",
       "canonical": "https://medladder.top/subjects/surgery/mixed-miscellaneous-topics",
       "h1": 1,
-      "descriptionLength": 145,
+      "descriptionLength": 152,
       "ogTitle": "Surgery: Mixed Topics MCQs | NEET PG, FMGE &amp; INI-CET",
-      "ogDesc": "Practise Mixed / Miscellaneous Topics MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield surgery revision on MedLadder.",
+      "ogDesc": "Prepare surgery with mixed MCQs for NEET PG, FMGE and INI-CET. Revise perioperative care, trauma, clinical decision-making and core surgical principles.",
       "twTitle": "Surgery: Mixed Topics MCQs | NEET PG, FMGE &amp; INI-CET",
-      "twDesc": "Practise Mixed / Miscellaneous Topics MCQs with answers and explanations for NEET PG, FMGE and INI-CET. High-yield surgery revision on MedLadder.",
+      "twDesc": "Prepare surgery with mixed MCQs for NEET PG, FMGE and INI-CET. Revise perioperative care, trauma, clinical decision-making and core surgical principles.",
       "schemaCount": 3,
       "schemaValid": true,
       "internalLinkCount": 88
