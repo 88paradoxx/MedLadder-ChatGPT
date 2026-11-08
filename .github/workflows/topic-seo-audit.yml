@@ -31,7 +31,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add audit-output/topic-seo-audit.json audit-output/topic-seo-audit.md
+          git add subjects/ audit-output/topic-seo-audit.json audit-output/topic-seo-audit.md
           git commit -m 'Add repository-wide topic SEO audit report' || echo 'No report changes to commit'
           git push
       - name: Upload audit reports
