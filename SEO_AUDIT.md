@@ -779,3 +779,20 @@ Applied a metadata consistency correction on `seo/final-technical-quality-2026-1
 - This pass did not validate every one of the 740 topic pages individually. Batches 5–9 changed document titles and meta descriptions without recording corresponding Open Graph/Twitter updates, so the remaining pages from those batches still require a complete metadata synchronization audit.
 - A full 826-URL HTTP crawl, rendered-homepage check, live structured-data validation, Core Web Vitals measurement, Cloudflare build-output verification, and Google Search Console inspection require external/live deployment or account access and were not performed.
 - No production repository was accessed or modified. No deployment or merge to production was performed.
+
+
+## Social metadata follow-up — 2026-11-08
+
+### Confirmed and corrected on `seo/final-technical-quality-2026-11-08`
+
+The following topic pages had Open Graph and Twitter title/description values that did not match their document title and meta description. All four social tags on each page were synchronized to the existing page metadata; canonical URLs, H1s, question content, scripts and structured data were not intentionally changed.
+
+- `subjects/physiology/cardiac-cycle-and-cardiac-output/index.html`
+- `subjects/psm/housing-and-ventilation/index.html`
+- `subjects/psychiatry/anxiety-disorders/index.html`
+
+Each updated file was re-fetched from the branch and the four social metadata values were verified against the page title and meta description.
+
+### Remaining limitation
+
+This is a confirmed three-page correction, not a complete count of all topic pages with stale social metadata. The previously stated estimate of 415 remaining pages has not been independently established by a full repository-wide scan. A full inventory and automated per-page validation are still required before this item can be marked complete. No merge or deployment was performed.
