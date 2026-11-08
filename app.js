@@ -1837,6 +1837,55 @@ window.addEventListener('error', function (ev) {
           '<span>Latest</span>' +
           '</span>' +
           '</a>';
+        var pathParts = (window.location.pathname || '/').replace(/\\/index\\.html$/i, '').split('/').filter(Boolean);
+        var currentSubject = null;
+        var currentModules = [];
+        var currentModuleIndex = -1;
+        if (pathParts[0] === 'subjects' && pathParts[1] && Array.isArray(SUBJECT_INDEX)) {
+          currentSubject = SUBJECT_INDEX.find(function (s) { return slugifySeo(s.name) === pathParts[1]; }) || null;
+          if (currentSubject) {
+            currentModules = getSubjectModules(currentSubject.subjectId) || [];
+            if (pathParts[2]) currentModuleIndex = currentModules.findIndex(function (m) { return slugifySeo(m.name) === pathParts[2]; });
+          }
+        }
+        var isHomeDirectory = pathParts.length === 0 && state && state.screen === 'home';
+        var isTopicDirectory = !!(currentSubject && pathParts.length >= 3);
+        var isSubjectDirectory = !!(currentSubject && !isTopicDirectory);
+        var directoryHtml = '';
+        if (isHomeDirectory) {
+          directoryHtml =
+            '<nav class="footer-directory" aria-label="Explore MedLadder">' +
+            '<div class="footer-directory-group"><strong>Exams</strong><div><a href="/neet-pg">NEET PG</a><a href="/fmge">FMGE</a><a href="/inicet">INI-CET</a><a href="/neet-ss">NEET SS</a></div></div>' +
+            '<div class="footer-directory-group"><details><summary>Subjects (19)</summary><div>' +
+            SUBJECT_INDEX.map(function (s) { return '<a href="' + subjectPath(s) + '">' + esc(s.name) + '</a>'; }).join('') +
+            '</div></details></div>' +
+            '<div class="footer-directory-group"><strong>Preparation</strong><div><a href="/neet-pg-syllabus">NEET PG Syllabus</a><a href="/neet-pg-high-yield-topics">High-Yield Topics</a><a href="/neet-pg-top-100-questions">Top 100 Questions</a><a href="/mock-test">Mock Tests</a><a href="/pyqs">Previous-Year Questions</a><a href="/best-free-neet-pg-question-bank">Free Question Bank</a></div></div>' +
+            '<div class="footer-directory-group"><strong>About &amp; policies</strong><div><a href="/medladder-vs-marrow">MedLadder vs Marrow</a><a href="/medladder-vs-prepladder">MedLadder vs PrepLadder</a><a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Service</a><a href="/terms#cancellation-refund">Refund Policy</a>' +
+            (isAdmin(currentUser) ? '<a href="#" class="admin-footer-link">👑 Admin Access</a>' : '') +
+            '</div></div></nav>';
+        } else if (isSubjectDirectory) {
+          var relatedSubjects = SUBJECT_INDEX.filter(function (s) { return s.subjectId !== currentSubject.subjectId && s.cat === currentSubject.cat; }).slice(0, 5);
+          directoryHtml =
+            '<nav class="footer-directory footer-directory-medium" aria-label="Related MedLadder links">' +
+            '<div class="footer-directory-group"><strong>Subject</strong><div><a href="/">All subjects</a><a href="' + subjectPath(currentSubject) + '">' + esc(currentSubject.name) + ' topics</a></div></div>' +
+            '<div class="footer-directory-group"><strong>Related subjects</strong><div>' + relatedSubjects.map(function (s) { return '<a href="' + subjectPath(s) + '">' + esc(s.name) + '</a>'; }).join('') + '</div></div>' +
+            '<div class="footer-directory-group"><strong>Exams &amp; PYQs</strong><div><a href="/neet-pg">NEET PG</a><a href="/fmge">FMGE</a><a href="/inicet">INI-CET</a><a href="/neet-ss">NEET SS</a><a href="/pyqs">All PYQs</a></div></div>' +
+            '<div class="footer-directory-group"><strong>Policies</strong><div><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/terms#cancellation-refund">Refunds</a></div></div></nav>';
+        } else if (isTopicDirectory) {
+          var nearbyModules = [];
+          for (var offset = -2; offset <= 2; offset++) {
+            if (!offset) continue;
+            var nearbyModule = currentModules[currentModuleIndex + offset];
+            if (nearbyModule) nearbyModules.push(nearbyModule);
+          }
+          directoryHtml =
+            '<nav class="footer-directory footer-directory-minimal" aria-label="Topic navigation">' +
+            '<div class="footer-directory-group"><strong>Explore ' + esc(currentSubject.name) + '</strong><div><a href="' + subjectPath(currentSubject) + '">All ' + esc(currentSubject.name) + ' topics</a>' +
+            nearbyModules.map(function (m) { return '<a href="' + topicPath(currentSubject, m) + '">' + esc(m.name) + '</a>'; }).join('') +
+            '</div></div><div class="footer-directory-group"><strong>Site information</strong><div><a href="/">Home</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div></div></nav>';
+        } else {
+          directoryHtml = '<nav class="footer-directory footer-directory-minimal" aria-label="Site information"><div class="footer-directory-group"><strong>MedLadder</strong><div><a href="/">Home</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div></div></nav>';
+        }
         return '<footer class="credit">' +
           '<div class="footer-content">' +
           apkBtnHtml +
@@ -1854,21 +1903,7 @@ window.addEventListener('error', function (ev) {
           '<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.46-1.901-.903-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.329-.913.489-1.302.481-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.477-1.635.099-.002.321.023.465.14.121.099.155.232.164.333-.008.068.002.193-.006.31z"/></svg>' +
           '</a>' +
           '</div>' +
-          '<nav class="footer-directory" aria-label="Explore MedLadder">' +
-          '<div class="footer-directory-group"><strong>Exams</strong><div>' +
-          '<a href="/neet-pg">NEET PG</a><a href="/fmge">FMGE</a><a href="/inicet">INI-CET</a><a href="/neet-ss">NEET SS</a>' +
-          '</div></div>' +
-          '<div class="footer-directory-group"><details><summary>Subjects (19)</summary><div>' +
-          '<a href="/subjects/anaesthesia">Anaesthesia</a><a href="/subjects/anatomy">Anatomy</a><a href="/subjects/biochemistry">Biochemistry</a><a href="/subjects/dermatology">Dermatology</a><a href="/subjects/ent">ENT</a><a href="/subjects/forensic-medicine">Forensic Medicine</a><a href="/subjects/medicine">Medicine</a><a href="/subjects/microbiology">Microbiology</a><a href="/subjects/ob-g">OB&amp;G</a><a href="/subjects/ophthalmology">Ophthalmology</a><a href="/subjects/orthopaedics">Orthopaedics</a><a href="/subjects/pathology">Pathology</a><a href="/subjects/pediatrics">Pediatrics</a><a href="/subjects/pharmacology">Pharmacology</a><a href="/subjects/physiology">Physiology</a><a href="/subjects/psm">PSM</a><a href="/subjects/psychiatry">Psychiatry</a><a href="/subjects/radiology">Radiology</a><a href="/subjects/surgery">Surgery</a>' +
-          '</div></details></div>' +
-          '<div class="footer-directory-group"><strong>Preparation</strong><div>' +
-          '<a href="/neet-pg-syllabus">NEET PG Syllabus</a><a href="/neet-pg-high-yield-topics">High-Yield Topics</a><a href="/neet-pg-top-100-questions">Top 100 Questions</a><a href="/mock-test">Mock Tests</a><a href="/pyqs">Previous-Year Questions</a><a href="/best-free-neet-pg-question-bank">Free Question Bank</a>' +
-          '</div></div>' +
-          '<div class="footer-directory-group"><strong>About &amp; policies</strong><div>' +
-          '<a href="/medladder-vs-marrow">MedLadder vs Marrow</a><a href="/medladder-vs-prepladder">MedLadder vs PrepLadder</a><a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Service</a><a href="/terms#cancellation-refund">Refund Policy</a>' +
-          (isAdmin(currentUser) ? '<a href="#" class="admin-footer-link">👑 Admin Access</a>' : '') +
-          '</div></div>' +
-          '</nav>' +
+          directoryHtml +
           '<div class="footer-copy"><strong>MedLadder</strong> · Medical Entrance Exam Question Bank</div>' +
           '<div class="footer-subcopy">MBBS · FMGE · NEET PG · INI-CET · NEET SS · USMLE · MCAT · PLAB · MRCS · MRCP · State PG</div>' +
           '</div>' +          '</footer>';
