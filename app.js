@@ -1806,6 +1806,15 @@ window.addEventListener('error', function (ev) {
           if (!appEl.contains(f)) f.style.display = 'none';
         });
       }
+
+      // Remove repeated keyword-stuffed footer blocks from static SEO pages.
+      // The subject/topic pages retain their page-specific content and contextual links;
+      // this only removes the generic "Popular searches" keyword list and global link wall.
+      (function cleanStaticSeoFooter() {
+        document.querySelectorAll('.popular-searches, nav[aria-label="Browse MedLadder"]').forEach(function (node) {
+          node.remove();
+        });
+      }());
       function footerHtml() {
         var isNative = !!(
           (window.MedLadderNative && window.MedLadderNative.isNative) ||
