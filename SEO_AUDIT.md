@@ -805,3 +805,12 @@ This is a confirmed three-page correction, not a complete count of all topic pag
 - Re-fetched the committed file and verified: zero remaining `&amp;amp;` occurrences; the three description fields now match exactly.
 - Commit: `315589db6b2bc060cfe61cddaccded7faa176f8a`.
 - Scope remains the isolated feature branch; no production merge or deployment performed.
+
+
+## Live search-index consistency observation (2026-11-08)
+
+- A current web search surfaced the live root URL `https://medladder.top/` with a rendered total of **35,489 MCQs**, while `https://medladder.top/landing` reports **37,076 MCQs** and 739 topic modules.
+- The feature-branch root `index.html` metadata also advertises 37,076 MCQs, but its initial source `<main>` is an app-loading shell. Search rendering may execute the application and display live data; source inspection alone does not establish the final rendered count.
+- This is a production content/count consistency issue, not a safe metadata-only correction. Do not hard-code either count or redirect/remove `/landing` until the authoritative question-bank total and intended canonical landing URL are confirmed.
+- Recommended verification: reconcile the published MCQ total against the live question-bank source, then ensure root and `/landing` expose consistent totals, canonical signals and internal links. Search snippets can be stale, so verify with live rendered pages and Search Console URL Inspection before changing production.
+- Evidence: web search results for the root and `/landing` returned different totals on 2026-11-08.
