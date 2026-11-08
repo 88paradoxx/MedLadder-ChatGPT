@@ -28,13 +28,13 @@ const readAttr = (html, tag, attr) => {
 const allMeta = (html, name) => {
   const out=[]; const re=/<meta\b([^>]*)>/gi; let m;
   while ((m=re.exec(html))) {
-    const n=m[1].match(/\\bname\\s*=\\s*(['"])(.*?)\\1/i);
-    const c=m[1].match(/\\bcontent\\s*=\\s*(['"])(.*?)\\1/i);
+    const n=m[1].match(/\bname\s*=\s*(['"])(.*?)\1/i);
+    const c=m[1].match(/\bcontent\s*=\s*(['"])(.*?)\1/i);
     if(n && n[2].toLowerCase()===name.toLowerCase()) out.push((c?.[2]||"").trim());
   }
   return out;
 };
-const norm = s => (s||"").replace(/&amp;/g,"&").replace(/&#39;|&apos;/g,"'").replace(/&quot;/g,'"').replace(/<[^>]+>/g," ").replace(/\\s+/g," ").trim().toLowerCase();
+const norm = s => (s||"").replace(/&amp;/g,"&").replace(/&#39;|&apos;/g,"'").replace(/&quot;/g,'"').replace(/<[^>]+>/g," ").replace(/\s+/g," ").trim().toLowerCase();
 const tokens = s => new Set(norm(s).replace(/[^a-z0-9]+/g," ").split(" ").filter(x=>x.length>2 && !["mcq","mcqs","neet","pg","fmge","inicet","with","for","and","the"].includes(x)));
 const similarity = (a,b) => { const A=tokens(a), B=tokens(b); if(!A.size||!B.size)return 0; let n=0; for(const x of A)if(B.has(x))n++; return n/(A.size+B.size-n); };
 const files = htmlFiles.sort();
@@ -67,11 +67,11 @@ for(const file of files) {
     catch { localLinkIssues.push({file:p,href,reason:"unparseable"}); continue; }
     if(!target.startsWith(root+path.sep)||!fs.existsSync(target)||!fs.statSync(target).isFile()) localLinkIssues.push({file:p,href,reason:"target-not-found"});
   }
-  records.push({file:p,title,description:desc,canonical,h1,descriptionLength:desc.length,ogTitle,ogDesc,twTitle,twDesc,schemaCount:schemas.length,schemaValid:schemas.every(x=>x.valid),internalLinkCount:(html.match(/<a\\b[^>]*\\bhref\\s*=\\s*(['"])(?!#|https?:|mailto:|tel:|javascript:|data:)[^'"]+\\1/gi)||[]).length});
+  records.push({file:p,title,description:desc,canonical,h1,descriptionLength:desc.length,ogTitle,ogDesc,twTitle,twDesc,schemaCount:schemas.length,schemaValid:schemas.every(x=>x.valid),internalLinkCount:(html.match(/<a\b[^>]*\bhref\s*=\s*(['"])(?!#|https?:|mailto:|tel:|javascript:|data:)[^'"]+\1/gi)||[]).length});
 }
 function readMetaProperty(html, prop) {
   const re=/<meta\b([^>]*)>/gi; let m;
-  while((m=re.exec(html))) { const p=m[1].match(/\bproperty\s*=\s*(['"])(.*?)\1/i); if(p&&p[2].toLowerCase()===prop) { const c=m[1].match(/\bcontent\s*=\s*(['"])(.*?)\1/i); return (c?.[2]||"").trim(); } }
+    const c=m[1].match(/\bcontent\s*=\s*(['"])(.*?)\1/i);
   return "";
 }
 const titleGroups=new Map(), descGroups=new Map();
