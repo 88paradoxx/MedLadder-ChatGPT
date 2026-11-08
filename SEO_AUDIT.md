@@ -590,3 +590,131 @@ Updated SEO titles and meta descriptions on 100 additional topic pages, continui
 
 ### Status
 Committed to `seo/topic-pages-batch-7-2026` only. No merge or production deployment performed.
+
+
+## Implementation update — Batch 8 (2026-11-08)
+
+### Scope
+Updated SEO titles and meta descriptions on 100 additional subject-topic pages, continuing from `seo/topic-pages-batch-7-2026` on the isolated `seo/topic-pages-batch-8-2026` branch.
+
+- PSM / Community Medicine: 32 topic pages
+- Psychiatry: 33 topic pages
+- Radiology: 20 topic pages
+- Surgery: 15 topic pages
+
+### Changes made
+- Rewrote document titles around the specific topic and NEET PG, FMGE and INI-CET exam search intent.
+- Replaced generic or clipped meta descriptions with concise topic-specific summaries.
+- Preserved canonical URLs, H1 headings, question banks, answer keys, explanations, page body, scripts, structured data, navigation and layout.
+- No sitemap, redirects, deployment configuration or production branch was changed.
+
+### Validation and limitations
+- GitHub compare confirms exactly 100 distinct subject-topic HTML files changed relative to Batch 7.
+- Titles and descriptions were updated in-place; the rest of each HTML document was carried forward unchanged.
+- Source-level spot checks only. No live deployment, browser regression, Lighthouse, Google Search Console URL Inspection or external structured-data validation was performed.
+- Keyword targeting is based on topic relevance and exam intent, not verified Search Console query-volume data.
+
+### Updated pages
+- `subjects/psm/housing-and-ventilation/index.html`
+- `subjects/psm/international-health/index.html`
+- `subjects/psm/intestinal-infections/index.html`
+- `subjects/psm/light-sound-and-radiation/index.html`
+- `subjects/psm/medical-entomology-mosquitoes-and-flies/index.html`
+- `subjects/psm/medical-entomology-ticks-fleas-and-mites/index.html`
+- `subjects/psm/mental-health/index.html`
+- `subjects/psm/methods-of-pest-control/index.html`
+- `subjects/psm/micronutrients-and-water/index.html`
+- `subjects/psm/mixed-miscellaneous-topics/index.html`
+- `subjects/psm/national-health-programmes-i-nvbdcp/index.html`
+- `subjects/psm/national-health-programmes-ii-nlep-ntep-naco/index.html`
+- `subjects/psm/national-health-programmes-iii-nis-jsy-rbsk-and-others/index.html`
+- `subjects/psm/non-communicable-diseases-cancer-obesity-and-blindness/index.html`
+- `subjects/psm/non-communicable-diseases-cardiovascular-diseases-and-diabetes/index.html`
+- `subjects/psm/occupational-health-diseases/index.html`
+- `subjects/psm/preventive-obstetrics-paediatrics-and-geriatrics/index.html`
+- `subjects/psm/principles-of-epidemiology/index.html`
+- `subjects/psm/principles-of-immunization-and-vaccination/index.html`
+- `subjects/psm/screening/index.html`
+- `subjects/psm/social-organization-and-economics/index.html`
+- `subjects/psm/stds-and-surface-infections/index.html`
+- `subjects/psm/sterilization-and-disinfection/index.html`
+- `subjects/psm/tests-of-significance/index.html`
+- `subjects/psm/vaccine-production-and-storage/index.html`
+- `subjects/psm/viral-respiratory-infections/index.html`
+- `subjects/psm/waste-and-sewage-disposal/index.html`
+- `subjects/psm/water-i-sources-and-purification-of-water/index.html`
+- `subjects/psm/water-ii-disinfection-of-water/index.html`
+- `subjects/psm/water-iii-water-quality-and-standards/index.html`
+- `subjects/psm/zoonotic-infections-bacterial-parasitic/index.html`
+- `subjects/psm/zoonotic-infections-viral/index.html`
+- `subjects/psychiatry/alcohol-related-disorders/index.html`
+- `subjects/psychiatry/amnestic-disorders-and-other-neurocognitive-disorders/index.html`
+- `subjects/psychiatry/anxiety-disorders/index.html`
+- `subjects/psychiatry/assessment-in-psychiatry/index.html`
+- `subjects/psychiatry/attention-deficit-disorders-and-disruptive-behaviour/index.html`
+- `subjects/psychiatry/autism-spectrum-disorder/index.html`
+- `subjects/psychiatry/bipolar-and-related-disorders/index.html`
+- `subjects/psychiatry/delirium/index.html`
+- `subjects/psychiatry/dementia/index.html`
+- `subjects/psychiatry/depressive-disorders/index.html`
+- `subjects/psychiatry/dissociative-disorders/index.html`
+- `subjects/psychiatry/eating-disorders/index.html`
+- `subjects/psychiatry/factitious-disorders-malingering-and-criminality/index.html`
+- `subjects/psychiatry/forensic-psychiatry/index.html`
+- `subjects/psychiatry/impulse-control-disorders/index.html`
+- `subjects/psychiatry/intellectual-disability-specific-learning-disorders/index.html`
+- `subjects/psychiatry/mixed-miscellaneous-topics/index.html`
+- `subjects/psychiatry/neuropsychiatric-aspects-of-systemic-disorders/index.html`
+- `subjects/psychiatry/normal-sexuality-and-sexual-dysfunction/index.html`
+- `subjects/psychiatry/obsessive-compulsive-and-related-disorders/index.html`
+- `subjects/psychiatry/other-psychotic-disorders/index.html`
+- `subjects/psychiatry/other-substance-use-disorders/index.html`
+- `subjects/psychiatry/personality-disorders/index.html`
+- `subjects/psychiatry/psychiatric-emergencies/index.html`
+- `subjects/psychiatry/schizophrenia/index.html`
+- `subjects/psychiatry/sexual-disorders-and-sexual-abuse/index.html`
+- `subjects/psychiatry/sleep-disorders/index.html`
+- `subjects/psychiatry/somatoform-disorders/index.html`
+- `subjects/psychiatry/special-areas-of-childhood-mental-health/index.html`
+- `subjects/psychiatry/specific-treatment-modalities/index.html`
+- `subjects/psychiatry/symptoms-and-clinical-manifestations-in-psychiatry/index.html`
+- `subjects/psychiatry/theories-of-personality-defense-mechanisms/index.html`
+- `subjects/psychiatry/trauma-and-stress-related-disorders/index.html`
+- `subjects/radiology/basics-of-chest-imaging/index.html`
+- `subjects/radiology/chest-imaging-lung-diseases/index.html`
+- `subjects/radiology/chest-imaging-pleural-and-mediastinal-conditions/index.html`
+- `subjects/radiology/contrast-media-and-patient-preparation/index.html`
+- `subjects/radiology/emergency-and-interventional-radiology/index.html`
+- `subjects/radiology/fundamentals-of-imaging/index.html`
+- `subjects/radiology/gi-imaging-lower-gi-disorders/index.html`
+- `subjects/radiology/gi-imaging-upper-gi-disorders-pneumoperitoneum/index.html`
+- `subjects/radiology/head-and-neck-imaging/index.html`
+- `subjects/radiology/hepatobiliary-and-pancreatic-imaging/index.html`
+- `subjects/radiology/imaging-modalities-identification/index.html`
+- `subjects/radiology/mixed-miscellaneous-topics/index.html`
+- `subjects/radiology/musculoskeletal-imaging/index.html`
+- `subjects/radiology/neuroimaging-cns-tumors-infections-neurocutaneous-syndromes/index.html`
+- `subjects/radiology/neuroimaging-mri-brain-in-neurodegenerative-other-cns-disorders/index.html`
+- `subjects/radiology/neuroimaging-neurovascular-disorders-trauma-ct-brain/index.html`
+- `subjects/radiology/radiation-exposure-and-protection/index.html`
+- `subjects/radiology/radiotherapy/index.html`
+- `subjects/radiology/renal-imaging/index.html`
+- `subjects/radiology/women-s-imaging/index.html`
+- `subjects/surgery/anus-and-anal-canal/index.html`
+- `subjects/surgery/appendix/index.html`
+- `subjects/surgery/arterial-aneurysms-dissections-and-malformations/index.html`
+- `subjects/surgery/bile-duct/index.html`
+- `subjects/surgery/burns/index.html`
+- `subjects/surgery/chronic-pancreatitis/index.html`
+- `subjects/surgery/congenital-anomalies-and-acute-pancreatitis/index.html`
+- `subjects/surgery/endocrine-pancreas/index.html`
+- `subjects/surgery/esophagus-congenital-motility-inflammatory-disorders/index.html`
+- `subjects/surgery/fluids-electrolytes-nutrition/index.html`
+- `subjects/surgery/gall-bladder/index.html`
+- `subjects/surgery/head-injury/index.html`
+- `subjects/surgery/instruments-sutures/index.html`
+- `subjects/surgery/large-intestine/index.html`
+- `subjects/surgery/metabolic-bariatric-surgery/index.html`
+
+### Status
+Committed to `seo/topic-pages-batch-8-2026` only. No merge or production deployment performed.
