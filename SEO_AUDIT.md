@@ -718,3 +718,35 @@ Updated SEO titles and meta descriptions on 100 additional subject-topic pages, 
 
 ### Status
 Committed to `seo/topic-pages-batch-8-2026` only. No merge or production deployment performed.
+
+
+## Batch 9 — final 15 remaining topic pages
+
+- Updated exactly 15 previously untouched Surgery topic pages.
+- Scope: topic-specific HTML `<title>` and meta description only, aligned to NEET PG, FMGE and INI-CET search intent.
+- Kept canonical URLs, H1 content, MCQ/question content, answer keys, explanations, scripts, structured data, navigation and page layout unchanged.
+- No sitemap, redirect, deployment configuration, or production branch changes.
+- Validation: source-level spot checks confirm title and description metadata, canonical tags, one H1, and retained MCQ content. This is not a full browser, Lighthouse, or Search Console validation.
+- Keyword phrasing is based on topic relevance and exam intent; Search Console query-volume data was not available for this pass.
+
+### Updated files
+
+- `subjects/surgery/mixed-miscellaneous-topics/index.html`
+- `subjects/surgery/oral-cavity-salivary-glands/index.html`
+- `subjects/surgery/paediatric-surgery/index.html`
+- `subjects/surgery/prostate/index.html`
+- `subjects/surgery/reconstructive-surgery/index.html`
+- `subjects/surgery/rectum/index.html`
+- `subjects/surgery/skin-malignancies/index.html`
+- `subjects/surgery/small-intestine/index.html`
+- `subjects/surgery/spleen/index.html`
+- `subjects/surgery/stomach-and-duodenum/index.html`
+- `subjects/surgery/testes-and-scrotum/index.html`
+- `subjects/surgery/urethra-and-penis/index.html`
+- `subjects/surgery/urinary-bladder-and-ureters/index.html`
+- `subjects/surgery/venous-diseases/index.html`
+- `subjects/surgery/wound-healing-tissue-repair-and-scar/index.html`
+
+### Status
+
+Committed to `seo/topic-pages-batch-9-2026` only. No merge or production deployment performed.
