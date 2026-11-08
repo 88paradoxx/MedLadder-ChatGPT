@@ -796,3 +796,12 @@ Each updated file was re-fetched from the branch and the four social metadata va
 ### Remaining limitation
 
 This is a confirmed three-page correction, not a complete count of all topic pages with stale social metadata. The previously stated estimate of 415 remaining pages has not been independently established by a full repository-wide scan. A full inventory and automated per-page validation are still required before this item can be marked complete. No merge or deployment was performed.
+
+
+## Additional technical QA correction (2026-11-08)
+
+- Found a double-encoded ampersand (`&amp;amp;`) in the meta description, Open Graph description and Twitter description on `subjects/physiology/cellular-messengers-receptors/index.html`.
+- Corrected all three instances to the properly HTML-encoded `&amp;` without changing the visible page content, title, canonical URL, question bank or structured data.
+- Re-fetched the committed file and verified: zero remaining `&amp;amp;` occurrences; the three description fields now match exactly.
+- Commit: `315589db6b2bc060cfe61cddaccded7faa176f8a`.
+- Scope remains the isolated feature branch; no production merge or deployment performed.
