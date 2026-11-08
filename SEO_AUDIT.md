@@ -845,3 +845,56 @@ This is a confirmed three-page correction, not a complete count of all topic pag
 - Re-fetched root `index.html`, landing `index.html`, and `syllabus.js` from this feature branch after commits.
 - Confirmed root and landing no longer contain `37,076`; all 19 landing subject counts equal the 19 branch syllabus counts; their sum is 29,145; and the app formula yields 36,007.
 - Confirmed root and landing retain their distinct self-canonical URLs.
+
+
+## Post-merge SEO validation (2026-11-08)
+
+**Scope:** Read-only audit and one metadata correction in `88paradoxx/MedLadder-ChatGPT` only. No other repository was modified, and no deployment was triggered.
+
+### Sitemap and crawl controls
+
+- Audited the repository tree: 835 HTML files are present.
+- `sitemap.xml` contains 826 unique URLs, with zero duplicate `<loc>` entries.
+- All 826 sitemap URLs map to existing HTML files in this repository.
+- The nine HTML files not listed in the sitemap are expected non-indexable/redirect targets: `404.html`, the two admin mock files, the Google verification file, and the legacy `.html` aliases for landing, mock-test, NEET SS books, privacy and terms.
+- `robots.txt` allows public crawling, disallows `/supabase/` and `/tools/`, and references the sitemap. Confirm that no public SEO landing pages are placed under `/tools/` before treating that disallow as permanently safe.
+- Sitemap lastmod values are concentrated on 2026-10-27 (728 URLs) and 2026-11-07 (98 URLs). These dates should represent actual meaningful page updates, not simply sitemap regeneration.
+
+### Page-level validation samples
+
+- Checked representative home, exam, subject, topic and marketing pages for title, description, canonical, H1 and social metadata.
+- Sampled topic/subject pages had one self-canonical URL and one H1; 11 additional representative pages had valid JSON-LD syntax in every inspected structured-data script.
+- The 826-URL sitemap-to-file mapping is complete, but this was not a live HTTP crawl and does not prove status codes, rendered content, redirect chains, or Google indexing.
+- A complete automated per-file audit of all 826 indexable URLs for title/description uniqueness, canonical correctness, JSON-LD semantics, internal-link destinations and indexability remains outstanding.
+
+### Confirmed issues
+
+1. **Stale MCQ claims remain outside the homepage/landing pair.**
+   - `neet-pg/index.html` still advertises 37,000+ in its description and 37,076 in visible statistics and structured data.
+   - The following pages still display a 37,076 MCQ statistic: `best-free-neet-pg-question-bank/index.html`, `medladder-vs-marrow/index.html`, `medladder-vs-prepladder/index.html`, `neet-pg-high-yield-topics/index.html`, and `neet-pg-syllabus/index.html`.
+   - Legacy `landing.html` also retains 37,076, but it is excluded from the sitemap and redirected to `/landing`.
+   - The current repository's own data formula calculates 36,007, while the live root was observed displaying 35,489. Do not replace the remaining claims with an exact number until the production question-bank source of truth is confirmed. A conservative shared public claim can be selected after reconciliation.
+
+2. **FMGE social metadata mismatch corrected.**
+   - The Open Graph and Twitter descriptions said “10 sessions” while the meta description did not.
+   - Updated the two social descriptions to match the page meta description.
+   - File: `fmge/index.html`.
+   - Commit: `91a0c408843ab6496defc2f688d4e38a7bbd7d94`.
+
+3. **Cloudflare output-directory configuration remains unverified.**
+   - `wrangler.jsonc` points static assets to `./dist`, while the README describes a root-level static export and does not document a build/copy step into `dist`.
+   - This repository is an independent working copy and is not connected to the production Cloudflare deployment. Do not change the output directory without checking the actual Cloudflare Pages build/output settings and deployed artifact.
+
+4. **Not-found and special-route behavior remains unverified.**
+   - `_redirects` documents a known limitation for special `.well-known` catalog paths, which may fall through to the SPA shell.
+   - Verify representative unknown paths and special paths return the intended HTTP status and content before changing routing.
+
+### Still required before calling the SEO audit complete
+
+- Reconcile the authoritative production MCQ total and update every stale count consistently.
+- Run a full crawler against all 826 sitemap URLs for HTTP status, redirect chains, canonical target, robots/indexability, title/description uniqueness, H1 count, JSON-LD validation and internal-link status.
+- Confirm Cloudflare Pages build/output settings and test the deployed artifact; do not infer deployment behavior from `wrangler.jsonc` alone.
+- Review Google Search Console indexing, query impressions, CTR and page-level performance, then prioritize content improvements based on actual search data.
+- Measure mobile Core Web Vitals using field data and representative lab tests.
+
+No production repository or live deployment was changed.
