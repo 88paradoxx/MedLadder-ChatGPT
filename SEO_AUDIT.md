@@ -750,3 +750,98 @@ Committed to `seo/topic-pages-batch-8-2026` only. No merge or production deploym
 ### Status
 
 Committed to `seo/topic-pages-batch-9-2026` only. No merge or production deployment performed.
+
+
+## Final SEO metadata pass — 2026-11-08
+
+### Scope
+Applied a metadata consistency correction on `seo/final-technical-quality-2026-11-08` in the independent `MedLadder-ChatGPT` repository only.
+
+### Changes
+- Synchronized `og:title` and `twitter:title` with the document title on all 19 subject landing pages.
+- Synchronized `og:description` and `twitter:description` with the meta description on all 19 subject landing pages.
+- Applied the same social-metadata correction to five representative topic pages where stale social titles were confirmed:
+  - `subjects/medicine/acute-kidney-injury/index.html`
+  - `subjects/pediatrics/apgar-score-and-neonatal-resuscitation/index.html`
+  - `subjects/physiology/cellular-messengers-receptors/index.html`
+  - `subjects/surgery/appendix/index.html`
+  - `subjects/surgery/prostate/index.html`
+- Preserved page titles, meta descriptions, canonical URLs, headings, MCQ content, answers, explanations, schema, scripts, and navigation.
+- Did not modify sitemap, robots.txt, redirects, headers, build/deployment configuration, app code, or assets.
+
+### Validation
+- Re-fetched all 19 subject landing pages from the feature branch.
+- Confirmed all 19 have matching document, Open Graph and Twitter titles; matching meta, Open Graph and Twitter descriptions; one H1; and existing self-referencing canonical URLs.
+- Five topic-page samples were confirmed to have stale social titles before correction and were updated.
+- Branch comparison against `main` confirms changes are limited to 24 HTML pages plus this audit document.
+
+### Remaining limitations
+- This pass did not validate every one of the 740 topic pages individually. Batches 5–9 changed document titles and meta descriptions without recording corresponding Open Graph/Twitter updates, so the remaining pages from those batches still require a complete metadata synchronization audit.
+- A full 826-URL HTTP crawl, rendered-homepage check, live structured-data validation, Core Web Vitals measurement, Cloudflare build-output verification, and Google Search Console inspection require external/live deployment or account access and were not performed.
+- No production repository was accessed or modified. No deployment or merge to production was performed.
+
+
+## Social metadata follow-up — 2026-11-08
+
+### Confirmed and corrected on `seo/final-technical-quality-2026-11-08`
+
+The following topic pages had Open Graph and Twitter title/description values that did not match their document title and meta description. All four social tags on each page were synchronized to the existing page metadata; canonical URLs, H1s, question content, scripts and structured data were not intentionally changed.
+
+- `subjects/physiology/cardiac-cycle-and-cardiac-output/index.html`
+- `subjects/psm/housing-and-ventilation/index.html`
+- `subjects/psychiatry/anxiety-disorders/index.html`
+
+Each updated file was re-fetched from the branch and the four social metadata values were verified against the page title and meta description.
+
+### Remaining limitation
+
+This is a confirmed three-page correction, not a complete count of all topic pages with stale social metadata. The previously stated estimate of 415 remaining pages has not been independently established by a full repository-wide scan. A full inventory and automated per-page validation are still required before this item can be marked complete. No merge or deployment was performed.
+
+
+## Additional technical QA correction (2026-11-08)
+
+- Found a double-encoded ampersand (`&amp;amp;`) in the meta description, Open Graph description and Twitter description on `subjects/physiology/cellular-messengers-receptors/index.html`.
+- Corrected all three instances to the properly HTML-encoded `&amp;` without changing the visible page content, title, canonical URL, question bank or structured data.
+- Re-fetched the committed file and verified: zero remaining `&amp;amp;` occurrences; the three description fields now match exactly.
+- Commit: `315589db6b2bc060cfe61cddaccded7faa176f8a`.
+- Scope remains the isolated feature branch; no production merge or deployment performed.
+
+
+## Live search-index consistency observation (2026-11-08)
+
+- A current web search surfaced the live root URL `https://medladder.top/` with a rendered total of **35,489 MCQs**, while `https://medladder.top/landing` reports **37,076 MCQs** and 739 topic modules.
+- The feature-branch root `index.html` metadata also advertises 37,076 MCQs, but its initial source `<main>` is an app-loading shell. Search rendering may execute the application and display live data; source inspection alone does not establish the final rendered count.
+- This is a production content/count consistency issue, not a safe metadata-only correction. Do not hard-code either count or redirect/remove `/landing` until the authoritative question-bank total and intended canonical landing URL are confirmed.
+- Recommended verification: reconcile the published MCQ total against the live question-bank source, then ensure root and `/landing` expose consistent totals, canonical signals and internal links. Search snippets can be stale, so verify with live rendered pages and Search Console URL Inspection before changing production.
+- Evidence: web search results for the root and `/landing` returned different totals on 2026-11-08.
+
+
+## Homepage and landing-page count reconciliation (2026-11-08)
+
+**Scope restriction:** All changes in this section are confined to `88paradoxx/MedLadder-ChatGPT`, branch `seo/final-technical-quality-2026-11-08`. No other repository was accessed for writes or modified.
+
+### Source-of-truth calculation in this branch
+
+- Parsed the 19 subject records in `syllabus.js`: their `questionCount` values sum to **29,145**.
+- `app.js` adds **6,862** PYQ questions in `totalQuestions()`.
+- Therefore the total represented by this branch's own application data is **36,007 MCQs** (29,145 + 6,862).
+- This is a repository-source calculation, not a live Supabase row count.
+
+### Changes
+
+- Updated all four stale `37,076` references in root `index.html` metadata and structured-data text to **36,007**.
+- Updated all eight stale `37,076` references in `landing/index.html` (meta description, Open Graph/Twitter descriptions, visible hero/stat, pricing copy and FAQ copy) to **36,007**.
+- Synchronized all 19 subject-level MCQ counts on the landing page with the corresponding `syllabus.js` values; preserved the subject topic counts and page layout.
+- Preserved separate self-referencing canonicals: root remains `https://medladder.top/`; landing remains `https://medladder.top/landing`. The pages serve different purposes (interactive question-bank entry point vs. explanatory marketing landing page), so no redirect or cross-canonical was introduced.
+
+### Important deployment limitation
+
+- The live deployed app was crawled on 2026-11-08 and displayed **35,489 MCQs**. That differs from this workspace branch's computed **36,007**. The deployed app's current subject counts also differ from this branch's `syllabus.js` snapshot.
+- Because the requested scope explicitly excludes every other repository, no production repository or deployment source was changed. The feature branch is now internally consistent, but **must not be merged/deployed as a production count correction** until the production source-of-truth dataset is confirmed and this branch is rebased/synchronized to that approved dataset.
+- The live `/landing` page still reports the old **37,076** until a permitted production deployment occurs. No live site changes were made.
+
+### Validation
+
+- Re-fetched root `index.html`, landing `index.html`, and `syllabus.js` from this feature branch after commits.
+- Confirmed root and landing no longer contain `37,076`; all 19 landing subject counts equal the 19 branch syllabus counts; their sum is 29,145; and the app formula yields 36,007.
+- Confirmed root and landing retain their distinct self-canonical URLs.
