@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T16:33:37.658Z",
+  "generatedAt": "2026-11-08T16:35:09.351Z",
   "subjectHtmlPages": 759,
   "topicPages": 740,
   "subjectLandingPages": 19,
@@ -514,13 +514,6 @@
     },
     {
       "similarity": 0.85,
-      "a": "subjects/pharmacology/anti-anginal-drugs/index.html",
-      "b": "subjects/pharmacology/anti-manic-drugs/index.html",
-      "descriptionA": "Practice Anti-Anginal Drugs MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
-      "descriptionB": "Practice Anti-manic Drugs MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "similarity": 0.85,
       "a": "subjects/pharmacology/anti-arrhythmic-drugs/index.html",
       "b": "subjects/pharmacology/anti-emetics-and-drugs-affecting-gastrointestinal-motility/index.html",
       "descriptionA": "Practice Anti-Arrhythmic Drugs MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
@@ -535,31 +528,10 @@
     },
     {
       "similarity": 0.85,
-      "a": "subjects/pharmacology/anti-arrhythmic-drugs/index.html",
-      "b": "subjects/pharmacology/anti-manic-drugs/index.html",
-      "descriptionA": "Practice Anti-Arrhythmic Drugs MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
-      "descriptionB": "Practice Anti-manic Drugs MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "similarity": 0.85,
       "a": "subjects/pharmacology/anti-emetics-and-drugs-affecting-gastrointestinal-motility/index.html",
       "b": "subjects/pharmacology/anti-leprosy-drugs/index.html",
       "descriptionA": "Practice Anti-emetics and Drugs MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
       "descriptionB": "Practice Anti-leprosy Drugs MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "similarity": 0.85,
-      "a": "subjects/pharmacology/anti-emetics-and-drugs-affecting-gastrointestinal-motility/index.html",
-      "b": "subjects/pharmacology/anti-manic-drugs/index.html",
-      "descriptionA": "Practice Anti-emetics and Drugs MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
-      "descriptionB": "Practice Anti-manic Drugs MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "similarity": 0.85,
-      "a": "subjects/pharmacology/anti-leprosy-drugs/index.html",
-      "b": "subjects/pharmacology/anti-manic-drugs/index.html",
-      "descriptionA": "Practice Anti-leprosy Drugs MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
-      "descriptionB": "Practice Anti-manic Drugs MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
     },
     {
       "similarity": 0.85,
@@ -1039,20 +1011,6 @@
     },
     {
       "similarity": 0.83,
-      "a": "subjects/pathology/thyroid-glands/index.html",
-      "b": "subjects/pediatrics/disorders-of-thyroid/index.html",
-      "descriptionA": "Practice Thyroid Glands MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
-      "descriptionB": "Practice Disorders of Thyroid MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "similarity": 0.83,
-      "a": "subjects/pathology/tubulointerstitial-vascular-and-cystic-diseases/index.html",
-      "b": "subjects/pathology/vascular-tumors/index.html",
-      "descriptionA": "Practice Tubulointerstitial, Vascular and MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
-      "descriptionB": "Practice Vascular Tumors MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "similarity": 0.83,
       "a": "subjects/pediatrics/chromosomal-disorders/index.html",
       "b": "subjects/pediatrics/disorders-of-puberty/index.html",
       "descriptionA": "Practice Chromosomal Disorders MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
@@ -1267,13 +1225,6 @@
       "b": "subjects/pediatrics/paediatric-rheumatology/index.html",
       "descriptionA": "Practice Paediatric Nephrology MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
       "descriptionB": "Practice Paediatric Rheumatology MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "similarity": 0.83,
-      "a": "subjects/pharmacology/anti-diuretics/index.html",
-      "b": "subjects/pharmacology/anti-epileptics-i/index.html",
-      "descriptionA": "Practice Anti-diuretics MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
-      "descriptionB": "Practice Anti-epileptics I MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
     },
     {
       "similarity": 0.83,
@@ -1761,73 +1712,7 @@
   ],
   "missingMeta": [],
   "metadataSocialMismatches": [],
-  "descriptionLengthOutliers": [
-    {
-      "file": "subjects/pathology/skin-pathology/index.html",
-      "length": 116,
-      "description": "Practice Skin Pathology MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "file": "subjects/pathology/small-intestine/index.html",
-      "length": 117,
-      "description": "Practice Small Intestine MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "file": "subjects/pathology/stomach/index.html",
-      "length": 109,
-      "description": "Practice Stomach MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "file": "subjects/pathology/the-breast/index.html",
-      "length": 112,
-      "description": "Practice The Breast MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "file": "subjects/pathology/thyroid-glands/index.html",
-      "length": 116,
-      "description": "Practice Thyroid Glands MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "file": "subjects/pathology/tissue-repair/index.html",
-      "length": 115,
-      "description": "Practice Tissue Repair MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "file": "subjects/pathology/vascular-tumors/index.html",
-      "length": 117,
-      "description": "Practice Vascular Tumors MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "file": "subjects/pediatrics/fetal-circulation/index.html",
-      "length": 119,
-      "description": "Practice Fetal Circulation MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "file": "subjects/pediatrics/polio-and-aids/index.html",
-      "length": 116,
-      "description": "Practice Polio and AIDS MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "file": "subjects/pharmacology/anti-diuretics/index.html",
-      "length": 116,
-      "description": "Practice Anti-diuretics MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "file": "subjects/pharmacology/anti-epileptics-i/index.html",
-      "length": 119,
-      "description": "Practice Anti-epileptics I MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "file": "subjects/pharmacology/anti-manic-drugs/index.html",
-      "length": 118,
-      "description": "Practice Anti-manic Drugs MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder."
-    },
-    {
-      "file": "subjects/surgery/hernia/index.html",
-      "length": 110,
-      "description": "Practice Hernia MCQs for NEET PG, FMGE and INI-CET. Revise surgery with answers and explanations on MedLadder."
-    }
-  ],
+  "descriptionLengthOutliers": [],
   "brokenInternalLinks": [],
   "schemaParseErrors": [],
   "pagesWithoutValidJsonLd": [],
@@ -8752,14 +8637,14 @@
     {
       "file": "subjects/pathology/skin-pathology/index.html",
       "title": "Skin Pathology MCQs | NEET PG &amp; FMGE",
-      "description": "Practice Skin Pathology MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "description": "Practice skin pathology MCQs for NEET PG, FMGE and INI-CET. Review inflammatory dermatoses, blistering disorders, infections and skin tumors.",
       "canonical": "https://medladder.top/subjects/pathology/skin-pathology",
       "h1": 1,
-      "descriptionLength": 116,
+      "descriptionLength": 141,
       "ogTitle": "Skin Pathology MCQs | NEET PG &amp; FMGE",
-      "ogDesc": "Practice Skin Pathology MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "ogDesc": "Practice skin pathology MCQs for NEET PG, FMGE and INI-CET. Review inflammatory dermatoses, blistering disorders, infections and skin tumors.",
       "twTitle": "Skin Pathology MCQs | NEET PG &amp; FMGE",
-      "twDesc": "Practice Skin Pathology MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "twDesc": "Practice skin pathology MCQs for NEET PG, FMGE and INI-CET. Review inflammatory dermatoses, blistering disorders, infections and skin tumors.",
       "schemaCount": 3,
       "schemaValid": true,
       "internalLinkCount": 89
@@ -8767,14 +8652,14 @@
     {
       "file": "subjects/pathology/small-intestine/index.html",
       "title": "Small Intestine MCQs | NEET PG &amp; FMGE",
-      "description": "Practice Small Intestine MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "description": "Practice small intestine pathology MCQs for NEET PG, FMGE and INI-CET. Revise malabsorption, celiac disease, infections, tumors and key lesions.",
       "canonical": "https://medladder.top/subjects/pathology/small-intestine",
       "h1": 1,
-      "descriptionLength": 117,
+      "descriptionLength": 144,
       "ogTitle": "Small Intestine MCQs | NEET PG &amp; FMGE",
-      "ogDesc": "Practice Small Intestine MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "ogDesc": "Practice small intestine pathology MCQs for NEET PG, FMGE and INI-CET. Revise malabsorption, celiac disease, infections, tumors and key lesions.",
       "twTitle": "Small Intestine MCQs | NEET PG &amp; FMGE",
-      "twDesc": "Practice Small Intestine MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "twDesc": "Practice small intestine pathology MCQs for NEET PG, FMGE and INI-CET. Revise malabsorption, celiac disease, infections, tumors and key lesions.",
       "schemaCount": 3,
       "schemaValid": true,
       "internalLinkCount": 92
@@ -8782,14 +8667,14 @@
     {
       "file": "subjects/pathology/stomach/index.html",
       "title": "Stomach MCQs | NEET PG &amp; FMGE",
-      "description": "Practice Stomach MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "description": "Prepare gastric pathology with NEET PG, FMGE and INI-CET MCQs on gastritis, peptic ulcer disease, gastric carcinoma and associated histology.",
       "canonical": "https://medladder.top/subjects/pathology/stomach",
       "h1": 1,
-      "descriptionLength": 109,
+      "descriptionLength": 141,
       "ogTitle": "Stomach MCQs | NEET PG &amp; FMGE",
-      "ogDesc": "Practice Stomach MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "ogDesc": "Prepare gastric pathology with NEET PG, FMGE and INI-CET MCQs on gastritis, peptic ulcer disease, gastric carcinoma and associated histology.",
       "twTitle": "Stomach MCQs | NEET PG &amp; FMGE",
-      "twDesc": "Practice Stomach MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "twDesc": "Prepare gastric pathology with NEET PG, FMGE and INI-CET MCQs on gastritis, peptic ulcer disease, gastric carcinoma and associated histology.",
       "schemaCount": 3,
       "schemaValid": true,
       "internalLinkCount": 92
@@ -8797,14 +8682,14 @@
     {
       "file": "subjects/pathology/the-breast/index.html",
       "title": "The Breast MCQs | NEET PG &amp; FMGE",
-      "description": "Practice The Breast MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "description": "Practice breast pathology MCQs for NEET PG, FMGE and INI-CET. Compare benign breast lesions, proliferative disease, carcinoma and prognostic markers.",
       "canonical": "https://medladder.top/subjects/pathology/the-breast",
       "h1": 1,
-      "descriptionLength": 112,
+      "descriptionLength": 149,
       "ogTitle": "The Breast MCQs | NEET PG &amp; FMGE",
-      "ogDesc": "Practice The Breast MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "ogDesc": "Practice breast pathology MCQs for NEET PG, FMGE and INI-CET. Compare benign breast lesions, proliferative disease, carcinoma and prognostic markers.",
       "twTitle": "The Breast MCQs | NEET PG &amp; FMGE",
-      "twDesc": "Practice The Breast MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "twDesc": "Practice breast pathology MCQs for NEET PG, FMGE and INI-CET. Compare benign breast lesions, proliferative disease, carcinoma and prognostic markers.",
       "schemaCount": 3,
       "schemaValid": true,
       "internalLinkCount": 90
@@ -8812,14 +8697,14 @@
     {
       "file": "subjects/pathology/thyroid-glands/index.html",
       "title": "Thyroid Glands MCQs | NEET PG &amp; FMGE",
-      "description": "Practice Thyroid Glands MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "description": "Revise thyroid pathology through NEET PG, FMGE and INI-CET MCQs on thyroiditis, goiter, adenomas, carcinomas and diagnostic histology.",
       "canonical": "https://medladder.top/subjects/pathology/thyroid-glands",
       "h1": 1,
-      "descriptionLength": 116,
+      "descriptionLength": 134,
       "ogTitle": "Thyroid Glands MCQs | NEET PG &amp; FMGE",
-      "ogDesc": "Practice Thyroid Glands MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "ogDesc": "Revise thyroid pathology through NEET PG, FMGE and INI-CET MCQs on thyroiditis, goiter, adenomas, carcinomas and diagnostic histology.",
       "twTitle": "Thyroid Glands MCQs | NEET PG &amp; FMGE",
-      "twDesc": "Practice Thyroid Glands MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "twDesc": "Revise thyroid pathology through NEET PG, FMGE and INI-CET MCQs on thyroiditis, goiter, adenomas, carcinomas and diagnostic histology.",
       "schemaCount": 3,
       "schemaValid": true,
       "internalLinkCount": 90
@@ -8827,14 +8712,14 @@
     {
       "file": "subjects/pathology/tissue-repair/index.html",
       "title": "Tissue Repair MCQs | NEET PG &amp; FMGE",
-      "description": "Practice Tissue Repair MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "description": "Test tissue repair and wound healing with NEET PG, FMGE and INI-CET pathology MCQs on regeneration, fibrosis, granulation tissue and healing factors.",
       "canonical": "https://medladder.top/subjects/pathology/tissue-repair",
       "h1": 1,
-      "descriptionLength": 115,
+      "descriptionLength": 149,
       "ogTitle": "Tissue Repair MCQs | NEET PG &amp; FMGE",
-      "ogDesc": "Practice Tissue Repair MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "ogDesc": "Test tissue repair and wound healing with NEET PG, FMGE and INI-CET pathology MCQs on regeneration, fibrosis, granulation tissue and healing factors.",
       "twTitle": "Tissue Repair MCQs | NEET PG &amp; FMGE",
-      "twDesc": "Practice Tissue Repair MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "twDesc": "Test tissue repair and wound healing with NEET PG, FMGE and INI-CET pathology MCQs on regeneration, fibrosis, granulation tissue and healing factors.",
       "schemaCount": 3,
       "schemaValid": true,
       "internalLinkCount": 92
@@ -8857,14 +8742,14 @@
     {
       "file": "subjects/pathology/vascular-tumors/index.html",
       "title": "Vascular Tumors MCQs | NEET PG &amp; FMGE",
-      "description": "Practice Vascular Tumors MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "description": "Practice vascular tumor pathology MCQs for NEET PG, FMGE and INI-CET. Review hemangioma, vascular malformations, angiosarcoma and key markers.",
       "canonical": "https://medladder.top/subjects/pathology/vascular-tumors",
       "h1": 1,
-      "descriptionLength": 117,
+      "descriptionLength": 142,
       "ogTitle": "Vascular Tumors MCQs | NEET PG &amp; FMGE",
-      "ogDesc": "Practice Vascular Tumors MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "ogDesc": "Practice vascular tumor pathology MCQs for NEET PG, FMGE and INI-CET. Review hemangioma, vascular malformations, angiosarcoma and key markers.",
       "twTitle": "Vascular Tumors MCQs | NEET PG &amp; FMGE",
-      "twDesc": "Practice Vascular Tumors MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "twDesc": "Practice vascular tumor pathology MCQs for NEET PG, FMGE and INI-CET. Review hemangioma, vascular malformations, angiosarcoma and key markers.",
       "schemaCount": 3,
       "schemaValid": true,
       "internalLinkCount": 90
@@ -9112,14 +8997,14 @@
     {
       "file": "subjects/pediatrics/fetal-circulation/index.html",
       "title": "Fetal Circulation MCQs | NEET PG &amp; FMGE",
-      "description": "Practice Fetal Circulation MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "description": "Revise fetal circulation with NEET PG, FMGE and INI-CET pediatrics MCQs on fetal shunts, transitional circulation and congenital heart physiology.",
       "canonical": "https://medladder.top/subjects/pediatrics/fetal-circulation",
       "h1": 1,
-      "descriptionLength": 119,
+      "descriptionLength": 146,
       "ogTitle": "Fetal Circulation MCQs | NEET PG &amp; FMGE",
-      "ogDesc": "Practice Fetal Circulation MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "ogDesc": "Revise fetal circulation with NEET PG, FMGE and INI-CET pediatrics MCQs on fetal shunts, transitional circulation and congenital heart physiology.",
       "twTitle": "Fetal Circulation MCQs | NEET PG &amp; FMGE",
-      "twDesc": "Practice Fetal Circulation MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "twDesc": "Revise fetal circulation with NEET PG, FMGE and INI-CET pediatrics MCQs on fetal shunts, transitional circulation and congenital heart physiology.",
       "schemaCount": 3,
       "schemaValid": true,
       "internalLinkCount": 93
@@ -9337,14 +9222,14 @@
     {
       "file": "subjects/pediatrics/polio-and-aids/index.html",
       "title": "Polio and AIDS MCQs | NEET PG &amp; FMGE",
-      "description": "Practice Polio and AIDS MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "description": "Practice pediatrics MCQs on poliomyelitis and pediatric HIV/AIDS for NEET PG, FMGE and INI-CET, with clinical concepts and explained answers.",
       "canonical": "https://medladder.top/subjects/pediatrics/polio-and-aids",
       "h1": 1,
-      "descriptionLength": 116,
+      "descriptionLength": 141,
       "ogTitle": "Polio and AIDS MCQs | NEET PG &amp; FMGE",
-      "ogDesc": "Practice Polio and AIDS MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "ogDesc": "Practice pediatrics MCQs on poliomyelitis and pediatric HIV/AIDS for NEET PG, FMGE and INI-CET, with clinical concepts and explained answers.",
       "twTitle": "Polio and AIDS MCQs | NEET PG &amp; FMGE",
-      "twDesc": "Practice Polio and AIDS MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "twDesc": "Practice pediatrics MCQs on poliomyelitis and pediatric HIV/AIDS for NEET PG, FMGE and INI-CET, with clinical concepts and explained answers.",
       "schemaCount": 3,
       "schemaValid": true,
       "internalLinkCount": 93
@@ -9472,14 +9357,14 @@
     {
       "file": "subjects/pharmacology/anti-diuretics/index.html",
       "title": "Anti-diuretics MCQs | NEET PG &amp; FMGE",
-      "description": "Practice Anti-diuretics MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "description": "Study antidiuretic drugs with NEET PG, FMGE and INI-CET pharmacology MCQs on vasopressin, desmopressin, indications and adverse effects.",
       "canonical": "https://medladder.top/subjects/pharmacology/anti-diuretics",
       "h1": 1,
-      "descriptionLength": 116,
+      "descriptionLength": 136,
       "ogTitle": "Anti-diuretics MCQs | NEET PG &amp; FMGE",
-      "ogDesc": "Practice Anti-diuretics MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "ogDesc": "Study antidiuretic drugs with NEET PG, FMGE and INI-CET pharmacology MCQs on vasopressin, desmopressin, indications and adverse effects.",
       "twTitle": "Anti-diuretics MCQs | NEET PG &amp; FMGE",
-      "twDesc": "Practice Anti-diuretics MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "twDesc": "Study antidiuretic drugs with NEET PG, FMGE and INI-CET pharmacology MCQs on vasopressin, desmopressin, indications and adverse effects.",
       "schemaCount": 3,
       "schemaValid": true,
       "internalLinkCount": 90
@@ -9502,14 +9387,14 @@
     {
       "file": "subjects/pharmacology/anti-epileptics-i/index.html",
       "title": "Anti-epileptics I MCQs | NEET PG &amp; FMGE",
-      "description": "Practice Anti-epileptics I MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "description": "Practice antiepileptic drug MCQs for NEET PG, FMGE and INI-CET. Revise mechanisms, seizure indications, adverse effects and important interactions.",
       "canonical": "https://medladder.top/subjects/pharmacology/anti-epileptics-i",
       "h1": 1,
-      "descriptionLength": 119,
+      "descriptionLength": 147,
       "ogTitle": "Anti-epileptics I MCQs | NEET PG &amp; FMGE",
-      "ogDesc": "Practice Anti-epileptics I MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "ogDesc": "Practice antiepileptic drug MCQs for NEET PG, FMGE and INI-CET. Revise mechanisms, seizure indications, adverse effects and important interactions.",
       "twTitle": "Anti-epileptics I MCQs | NEET PG &amp; FMGE",
-      "twDesc": "Practice Anti-epileptics I MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "twDesc": "Practice antiepileptic drug MCQs for NEET PG, FMGE and INI-CET. Revise mechanisms, seizure indications, adverse effects and important interactions.",
       "schemaCount": 3,
       "schemaValid": true,
       "internalLinkCount": 90
@@ -9532,14 +9417,14 @@
     {
       "file": "subjects/pharmacology/anti-manic-drugs/index.html",
       "title": "Anti-manic Drugs MCQs | NEET PG &amp; FMGE",
-      "description": "Practice Anti-manic Drugs MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "description": "Revise antimanic drugs with NEET PG, FMGE and INI-CET MCQs on lithium, valproate, carbamazepine, monitoring and adverse effects.",
       "canonical": "https://medladder.top/subjects/pharmacology/anti-manic-drugs",
       "h1": 1,
-      "descriptionLength": 118,
+      "descriptionLength": 128,
       "ogTitle": "Anti-manic Drugs MCQs | NEET PG &amp; FMGE",
-      "ogDesc": "Practice Anti-manic Drugs MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "ogDesc": "Revise antimanic drugs with NEET PG, FMGE and INI-CET MCQs on lithium, valproate, carbamazepine, monitoring and adverse effects.",
       "twTitle": "Anti-manic Drugs MCQs | NEET PG &amp; FMGE",
-      "twDesc": "Practice Anti-manic Drugs MCQs for NEET PG, FMGE and INI-CET. Review core concepts and explained answers on MedLadder.",
+      "twDesc": "Revise antimanic drugs with NEET PG, FMGE and INI-CET MCQs on lithium, valproate, carbamazepine, monitoring and adverse effects.",
       "schemaCount": 3,
       "schemaValid": true,
       "internalLinkCount": 90
@@ -12832,14 +12717,14 @@
     {
       "file": "subjects/surgery/hernia/index.html",
       "title": "Hernia MCQs | NEET PG, FMGE &amp; INI-CET 2027",
-      "description": "Practice Hernia MCQs for NEET PG, FMGE and INI-CET. Revise surgery with answers and explanations on MedLadder.",
+      "description": "Prepare hernia surgery with NEET PG, FMGE and INI-CET MCQs on inguinal anatomy, types of hernia, complications and operative management.",
       "canonical": "https://medladder.top/subjects/surgery/hernia",
       "h1": 1,
-      "descriptionLength": 110,
+      "descriptionLength": 136,
       "ogTitle": "Hernia MCQs | NEET PG, FMGE &amp; INI-CET 2027",
-      "ogDesc": "Practice Hernia MCQs for NEET PG, FMGE and INI-CET. Revise surgery with answers and explanations on MedLadder.",
+      "ogDesc": "Prepare hernia surgery with NEET PG, FMGE and INI-CET MCQs on inguinal anatomy, types of hernia, complications and operative management.",
       "twTitle": "Hernia MCQs | NEET PG, FMGE &amp; INI-CET 2027",
-      "twDesc": "Practice Hernia MCQs for NEET PG, FMGE and INI-CET. Revise surgery with answers and explanations on MedLadder.",
+      "twDesc": "Prepare hernia surgery with NEET PG, FMGE and INI-CET MCQs on inguinal anatomy, types of hernia, complications and operative management.",
       "schemaCount": 3,
       "schemaValid": true,
       "internalLinkCount": 90
