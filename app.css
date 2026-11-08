@@ -947,3 +947,16 @@ body:has(#app.screen-quiz:not(.screen-results), #app.screen-setup, #app .pyq-set
 .seo-full-bank-actions .btn{white-space:nowrap;text-align:center;text-decoration:none;font-size:13px;padding:11px 16px;cursor:pointer}
 .seo-full-bank-primary{background:linear-gradient(100deg,#9d69ff,#f05bb8);color:#fff;border:0}
 @media(max-width:640px){.seo-full-bank-cta{width:calc(100% - 28px);margin:8px auto 26px;padding:18px 16px;display:block}.seo-full-bank-actions{margin-top:14px;display:grid;grid-template-columns:1fr}.seo-full-bank-actions .btn{width:100%;white-space:normal}}
+
+
+/* PYQ-to-question-bank conversion panel */
+.pyq-subject-bank-cta{width:min(920px,calc(100% - 32px));margin:28px auto;padding:22px 24px;border:1px solid rgba(168,105,255,.38);border-left:4px solid var(--accent,#9b5cff);border-radius:18px;background:linear-gradient(115deg,rgba(126,75,230,.16),rgba(238,76,175,.09));box-shadow:0 12px 34px rgba(0,0,0,.14);display:flex;align-items:center;justify-content:space-between;gap:20px;text-align:left}
+.pyq-subject-bank-copy{min-width:0;flex:1}
+.pyq-subject-bank-eyebrow{display:block;margin-bottom:7px;font-size:10px;font-weight:900;letter-spacing:.13em;color:var(--accent-deep,#b78cff)}
+.pyq-subject-bank-cta h2{margin:0 0 7px;font-size:clamp(18px,2.5vw,23px);line-height:1.25;color:var(--ink)}
+.pyq-subject-bank-cta p{margin:0;color:var(--ink-soft);font-size:14px;line-height:1.6}
+.pyq-subject-bank-cta p strong{color:var(--ink)}
+.pyq-subject-bank-actions{display:flex;flex-direction:column;align-items:stretch;gap:9px;flex-shrink:0}
+.pyq-subject-bank-actions .btn{white-space:nowrap;text-align:center;text-decoration:none;font-size:13px;padding:11px 16px}
+.pyq-subject-bank-primary{background:linear-gradient(100deg,#9d69ff,#f05bb8);color:#fff;border:0}
+@media(max-width:640px){.pyq-subject-bank-cta{width:calc(100% - 28px);margin:22px auto;padding:18px 16px;display:block}.pyq-subject-bank-actions{margin-top:14px;display:grid;grid-template-columns:1fr}.pyq-subject-bank-actions .btn{width:100%;white-space:normal}}
