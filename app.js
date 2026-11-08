@@ -5438,6 +5438,22 @@ window.addEventListener('error', function (ev) {
           };
         }
 
+        // Static SEO pages keep their pre-rendered content. Inject the same
+        // context-aware directory used by SPA-rendered pages into their existing footer.
+        // The old keyword/footer link walls are removed separately at startup.
+        var staticFooter = document.querySelector('footer.credit');
+        var staticFooterContent = staticFooter && staticFooter.querySelector('.footer-content');
+        if (staticFooterContent && !staticFooterContent.querySelector('.footer-directory')) {
+          var footerTemplate = document.createElement('div');
+          footerTemplate.innerHTML = footerHtml();
+          var directory = footerTemplate.querySelector('.footer-directory');
+          var footerCopy = staticFooterContent.querySelector('.footer-copy');
+          if (directory) {
+            if (footerCopy) staticFooterContent.insertBefore(directory, footerCopy);
+            else staticFooterContent.appendChild(directory);
+          }
+        }
+
         // /subjects/* links (breadcrumb, related topics) are normal links: full load of the pre-rendered page.
       }
 
