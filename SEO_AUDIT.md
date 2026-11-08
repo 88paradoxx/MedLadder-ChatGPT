@@ -154,3 +154,133 @@ Updated the next 100 topic pages (topics 101–200 in the priority queue) on `se
 ### Status
 
 Committed to `seo/topic-pages-batch-2-2026` only. No merge or production deployment performed.
+
+
+## Feature-branch implementation update — topic SEO batch 3 (2026-11-08)
+
+### Scope
+
+Updated topic pages 201–300 on `seo/topic-pages-batch-3-2026`, branching from the completed batch 2 feature branch. This remains isolated from production.
+
+### Metadata changes
+
+- Rewrote topic titles for NEET PG, FMGE and INI-CET search intent.
+- Rewrote topic-specific meta descriptions and removed inherited/truncated generic copy.
+- Synchronized Open Graph and Twitter titles/descriptions.
+- Synchronized Quiz JSON-LD name and description.
+- Preserved canonical URLs, question banks, answers, explanations, page body, scripts and navigation.
+
+### Updated pages
+
+- `subjects/biochemistry/mixed-miscellaneous-topics/index.html`
+- `subjects/biochemistry/molecular-genetics-recombinant-dna-genomic-technology/index.html`
+- `subjects/biochemistry/porphyrins-and-bile-pigments/index.html`
+- `subjects/biochemistry/protein-structure-and-function/index.html`
+- `subjects/biochemistry/regulation-of-gene-expression/index.html`
+- `subjects/biochemistry/rna-synthesis-processing-and-modification/index.html`
+- `subjects/biochemistry/urea-cycle-and-its-disorders/index.html`
+- `subjects/dermatology/acne-rosacea-and-others/index.html`
+- `subjects/dermatology/anatomy-physiology-of-skin/index.html`
+- `subjects/dermatology/arthropod-and-parasitic-infections/index.html`
+- `subjects/dermatology/bacterial-infections/index.html`
+- `subjects/dermatology/connective-tissue-disorders/index.html`
+- `subjects/dermatology/dermatitis/index.html`
+- `subjects/dermatology/dermatopathology-of-skin-lesions/index.html`
+- `subjects/dermatology/disorders-of-hair-and-nails/index.html`
+- `subjects/dermatology/disorders-of-skin-pigmentation/index.html`
+- `subjects/dermatology/fungal-and-protozoal-infections/index.html`
+- `subjects/dermatology/genodermatoses-nutritional-disorders/index.html`
+- `subjects/dermatology/mixed-miscellaneous-topics/index.html`
+- `subjects/dermatology/morphology-and-investigations-of-skin-lesions/index.html`
+- `subjects/dermatology/mycobacterial-infections/index.html`
+- `subjects/dermatology/non-syphilitic-sexually-transmitted-diseases/index.html`
+- `subjects/dermatology/papulosquamous-disorders/index.html`
+- `subjects/dermatology/psoriasis/index.html`
+- `subjects/dermatology/reactive-skin-diseases-and-drug-eruptions/index.html`
+- `subjects/dermatology/skin-malignancies/index.html`
+- `subjects/dermatology/syphilis/index.html`
+- `subjects/dermatology/systemic-diseases-and-skin/index.html`
+- `subjects/dermatology/urticaria-angioedema/index.html`
+- `subjects/dermatology/vesiculobullous-diseases/index.html`
+- `subjects/dermatology/viral-infections/index.html`
+- `subjects/ent/adenoids/index.html`
+- `subjects/ent/anatomy-and-physiology-of-larynx/index.html`
+- `subjects/ent/anatomy-and-physiology-of-pharynx/index.html`
+- `subjects/ent/anatomy-of-external-ear/index.html`
+- `subjects/ent/anatomy-of-facial-nerve/index.html`
+- `subjects/ent/anatomy-of-inner-ear/index.html`
+- `subjects/ent/anatomy-of-mastoid/index.html`
+- `subjects/ent/anatomy-of-middle-ear/index.html`
+- `subjects/ent/anatomy-of-nose/index.html`
+- `subjects/ent/anatomy-of-paranasal-sinuses/index.html`
+- `subjects/ent/audiometric-tests-and-special-tests-of-hearing/index.html`
+- `subjects/ent/cholesteatoma-and-types-of-csom/index.html`
+- `subjects/ent/congenital-anomalies-of-nose-and-disease-of-nose/index.html`
+- `subjects/ent/csom-treatment-and-complications/index.html`
+- `subjects/ent/disorder-of-nasal-septum-and-nasal-polyposis/index.html`
+- `subjects/ent/disorders-of-external-ear/index.html`
+- `subjects/ent/embryology-of-ear-and-malformations/index.html`
+- `subjects/ent/epistaxis/index.html`
+- `subjects/ent/eustachian-tube/index.html`
+- `subjects/ent/facial-nerve-disorders/index.html`
+- `subjects/ent/laryngeal-carcinoma/index.html`
+- `subjects/ent/meniere-s-disease/index.html`
+- `subjects/ent/mixed-miscellaneous-topics/index.html`
+- `subjects/ent/nasopharyngeal-angiofibroma/index.html`
+- `subjects/ent/nasopharyngeal-carcinoma/index.html`
+- `subjects/ent/otosclerosis/index.html`
+- `subjects/ent/physiology-of-hearing-and-tuning-fork-tests/index.html`
+- `subjects/ent/physiology-of-nose-and-paranasal-sinuses/index.html`
+- `subjects/ent/rhinitis/index.html`
+- `subjects/ent/sinusitis-and-its-complication/index.html`
+- `subjects/ent/stridor-and-congenital-conditions-of-larynx/index.html`
+- `subjects/ent/tonsils/index.html`
+- `subjects/ent/trauma-of-nose-and-face/index.html`
+- `subjects/ent/tumors-of-ear/index.html`
+- `subjects/ent/tumors-of-nose-and-pns/index.html`
+- `subjects/ent/voice-and-speech-disorders/index.html`
+- `subjects/forensic-medicine/alcohol-poisoning/index.html`
+- `subjects/forensic-medicine/bns-bnss-and-bsa/index.html`
+- `subjects/forensic-medicine/childhood-violence-infanticide-and-starvation/index.html`
+- `subjects/forensic-medicine/corrosives-and-asphyxiants/index.html`
+- `subjects/forensic-medicine/death-and-post-mortem-changes/index.html`
+- `subjects/forensic-medicine/drowning/index.html`
+- `subjects/forensic-medicine/fingerprint-and-tattoos/index.html`
+- `subjects/forensic-medicine/firearm-injuries-and-blast-injuries/index.html`
+- `subjects/forensic-medicine/inorganic-irritants-metallic-and-non-metallic/index.html`
+- `subjects/forensic-medicine/mechanical-asphyxia/index.html`
+- `subjects/forensic-medicine/mechanical-injuries/index.html`
+- `subjects/forensic-medicine/medico-legal-autopsy/index.html`
+- `subjects/forensic-medicine/mixed-miscellaneous-topics/index.html`
+- `subjects/forensic-medicine/organic-irritants-plant-and-animal-poisons/index.html`
+- `subjects/forensic-medicine/organophosphorus-poisoning/index.html`
+- `subjects/forensic-medicine/poisoning-general-considerations/index.html`
+- `subjects/forensic-medicine/race-sex-and-stature-determination/index.html`
+- `subjects/forensic-medicine/regional-injuries/index.html`
+- `subjects/forensic-medicine/sexual-offences-and-abortion/index.html`
+- `subjects/forensic-medicine/skeletal-and-dental-age-determination/index.html`
+- `subjects/forensic-medicine/thermal-injuries/index.html`
+- `subjects/medicine/antiphospholipid-antibody-syndrome/index.html`
+- `subjects/medicine/bronchiectasis-and-lung-abscess/index.html`
+- `subjects/medicine/cardiomyopathy-and-myocarditis/index.html`
+- `subjects/medicine/cerebrovascular-disease/index.html`
+- `subjects/medicine/clinical-hypotheses/index.html`
+- `subjects/medicine/cranial-nerve-disorders/index.html`
+- `subjects/medicine/cushing-syndrome/index.html`
+- `subjects/medicine/dermatomyositis-and-related-disorders/index.html`
+- `subjects/medicine/diagnosis-of-cardiovascular-disorders/index.html`
+- `subjects/medicine/disorders-of-anterior-pituitary/index.html`
+- `subjects/medicine/dvt-and-pulmonary-embolism/index.html`
+- `subjects/medicine/evaluation-of-jaundice/index.html`
+
+### Validation and limitations
+
+- Each of the 100 source HTML files was fetched from the feature branch before its metadata was changed.
+- Metadata replacements required the expected existing tags and Quiz JSON-LD fields; a missing field would have stopped the batch.
+- Title target was ≤68 characters and description target ≤160 characters.
+- No live deployment, browser test, Lighthouse run, Search Console URL Inspection or external schema validation was performed.
+- Keyword targeting is based on topic relevance and exam intent, not verified Search Console volume data.
+
+### Status
+
+Committed to `seo/topic-pages-batch-3-2026` only. No merge or production deployment performed.
