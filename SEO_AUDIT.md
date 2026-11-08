@@ -287,34 +287,123 @@ Committed to `seo/topic-pages-batch-3-2026` only. No merge or production deploym
 
 
 
-## SEO pass 4 — next topic-page review
+## SEO pass 4 — topics 301–400
 
-### Newly optimized pages
+### Scope and result
+
+- **100 topic-page HTML files changed** on `seo/topic-pages-batch-4-2026`.
+- Updated topic-specific page titles and meta descriptions, Open Graph metadata, Twitter metadata, and Quiz JSON-LD name/description where a Quiz object exists.
+- Preserved canonical URLs, question banks, answer keys, explanations, page content, scripts and navigation.
+- Pages without a Quiz JSON-LD object were not given a new schema object as part of this metadata-only pass.
+
+### Changed topic pages
 
 - `subjects/anatomy/abdominal-cavity-and-peritoneum/index.html`
 - `subjects/biochemistry/amino-acid-metabolism/index.html`
+- `subjects/medicine/supraventricular-arrhythmias/index.html`
+- `subjects/medicine/types-of-assessment-for-diagnosis/index.html`
 - `subjects/microbiology/applied-microbiology/index.html`
 - `subjects/microbiology/arboviruses-and-picorna-viruses/index.html`
+- `subjects/microbiology/clostridium-and-bacillus/index.html`
 - `subjects/microbiology/components-of-immune-system/index.html`
+- `subjects/microbiology/corynebacterium-listeria-and-actinomyces/index.html`
+- `subjects/microbiology/escherichia-proteus-and-klebsiella/index.html`
+- `subjects/microbiology/general-microbiology/index.html`
+- `subjects/microbiology/general-parasitology/index.html`
+- `subjects/microbiology/general-properties-of-viruses/index.html`
+- `subjects/microbiology/gram-negative-cocci/index.html`
+- `subjects/microbiology/haemophilus/index.html`
+- `subjects/microbiology/helminthology-cestodes-trematodes/index.html`
+- `subjects/microbiology/helminthology-nematodes/index.html`
+- `subjects/microbiology/hepatitis/index.html`
+- `subjects/microbiology/hypersensitivity/index.html`
+- `subjects/microbiology/miscellaneous-bacteria-yersinia-brucella-bartonella-legionella/index.html`
+- `subjects/microbiology/miscellaneous-viruses-rubella-coronaviruses-prions-rotavirus-filovirus-zika-virus-and-nipah-virus/index.html`
 - `subjects/microbiology/mixed-miscellaneous-topics/index.html`
+- `subjects/microbiology/opportunistic-mycoses/index.html`
+- `subjects/microbiology/other-mycobacteria/index.html`
+- `subjects/microbiology/protozoology-amoebae-ciliates-flagellates/index.html`
+- `subjects/microbiology/protozoology-sporozoa/index.html`
+- `subjects/microbiology/pseudomonas-and-burkholderiales/index.html`
+- `subjects/microbiology/rickettsia-chlamydia-and-mycoplasma/index.html`
+- `subjects/microbiology/shigella-and-salmonella/index.html`
+- `subjects/microbiology/spirochetes/index.html`
+- `subjects/microbiology/streptococci-and-enterococci/index.html`
+- `subjects/microbiology/structure-and-functions-of-the-immune-system-immune-response/index.html`
+- `subjects/microbiology/superficial-and-systemic-mycoses/index.html`
+- `subjects/microbiology/vibrio-and-campylobacterales/index.html`
+- `subjects/ob-g/abnormal-labour/index.html`
+- `subjects/ob-g/abortion-and-medical-termination-of-pregnancy/index.html`
+- `subjects/ob-g/anatomy-of-female-pelvic-organs/index.html`
+- `subjects/ob-g/antenatal-investigations/index.html`
+- `subjects/ob-g/caesarean-section-and-vaginal-birth-after-caesarean-vbac/index.html`
+- `subjects/ob-g/contraception-and-sterilization/index.html`
+- `subjects/ob-g/disorders-of-menstruation/index.html`
+- `subjects/ob-g/disorders-of-ovary/index.html`
+- `subjects/ob-g/endometriosis-and-adenomyosis/index.html`
+- `subjects/ob-g/fibroid/index.html`
+- `subjects/ob-g/gestational-trophoblastic-diseases/index.html`
+- `subjects/ob-g/hypertensive-disorders-in-pregnancy/index.html`
+- `subjects/ob-g/infertility/index.html`
+- `subjects/ob-g/maternal-pelvis-and-fetal-skull/index.html`
 - `subjects/ob-g/mixed-miscellaneous-topics/index.html`
+- `subjects/ob-g/obstetrical-imaging/index.html`
+- `subjects/ob-g/ovarian-tumors/index.html`
+- `subjects/ob-g/pelvic-inflammatory-disease/index.html`
+- `subjects/ob-g/perimenopause-menopause-and-post-menopausal-bleeding/index.html`
+- `subjects/ob-g/placenta-and-fetal-membranes/index.html`
+- `subjects/ob-g/prolapse/index.html`
+- `subjects/ob-g/sexual-development-puberty-and-adolescence/index.html`
+- `subjects/ob-g/the-physiology-of-conception/index.html`
+- `subjects/ob-g/vaginal-infections/index.html`
+- `subjects/ob-g/vulval-infections/index.html`
+- `subjects/ob-g/vulval-vaginal-malignancy/index.html`
 - `subjects/ophthalmology/anatomy-and-development-of-eye/index.html`
 - `subjects/ophthalmology/astigmatism-and-errors-of-accomodation/index.html`
+- `subjects/ophthalmology/basics-of-cornea-and-infectious-keratitis/index.html`
+- `subjects/ophthalmology/conjunctiva/index.html`
+- `subjects/ophthalmology/diseases-of-the-orbit/index.html`
+- `subjects/ophthalmology/disorders-of-lacrimal-apparatus-and-glands-of-the-eye/index.html`
+- `subjects/ophthalmology/disorders-of-optic-nerve-and-gaze-palsies/index.html`
+- `subjects/ophthalmology/disorders-of-the-eyelid/index.html`
+- `subjects/ophthalmology/disorders-of-visual-pathway-and-pupillary-reflexes/index.html`
+- `subjects/ophthalmology/elementary-optics-and-physiology-of-vision/index.html`
+- `subjects/ophthalmology/glaucoma/index.html`
+- `subjects/ophthalmology/lens-cataract-surgery-complications-and-iols/index.html`
+- `subjects/ophthalmology/lens-introduction-types-of-cataract-and-clinical-features/index.html`
+- `subjects/ophthalmology/macular-disorders-retinal-dystrophies-and-vitreal-disorders/index.html`
 - `subjects/ophthalmology/mixed-miscellaneous-topics/index.html`
+- `subjects/ophthalmology/myopia-and-hypermetropia/index.html`
+- `subjects/ophthalmology/non-infectious-disorders-of-cornea/index.html`
+- `subjects/ophthalmology/orbit-anatomy-and-ocular-injuries/index.html`
+- `subjects/ophthalmology/practical-ophthalmology/index.html`
+- `subjects/ophthalmology/retinal-vascular-disorders-and-retinal-detachment/index.html`
+- `subjects/ophthalmology/sclera/index.html`
+- `subjects/ophthalmology/strabismus-introduction-symptomatology-and-evaluation/index.html`
+- `subjects/ophthalmology/strabismus-types-and-treatment/index.html`
+- `subjects/ophthalmology/tumors-of-eye/index.html`
+- `subjects/ophthalmology/uveitis-anterior-and-intermediate/index.html`
+- `subjects/ophthalmology/uveitis-posterior-and-panuveitis/index.html`
+- `subjects/orthopaedics/avn-and-regional-conditions-of-lower-limb/index.html`
 - `subjects/orthopaedics/basics-of-fracture-and-its-management/index.html`
-
-### Changes
-
-- Replaced generic page titles and descriptions with topic- and exam-specific metadata.
-- Synchronized Open Graph and Twitter title/description tags.
-- Synchronized Quiz JSON-LD name and description where the page included that Quiz object.
-- Preserved canonical URLs, MCQ data, answer keys, explanations, page content, scripts and navigation.
-- Pages already carrying specific NEET PG / FMGE / INI-CET metadata were left unchanged. Existing metadata accidentally touched during initial screening was restored from the preceding feature branch before this pass was finalized.
+- `subjects/orthopaedics/benign-tumors-of-bone/index.html`
+- `subjects/orthopaedics/complications-of-fracture/index.html`
+- `subjects/orthopaedics/congenital-malformations-perthes-disease-and-scfe/index.html`
+- `subjects/orthopaedics/ctev-genu-varum-and-valgum/index.html`
+- `subjects/orthopaedics/dislocations-of-the-hip-joint/index.html`
+- `subjects/orthopaedics/fractures-in-children/index.html`
+- `subjects/orthopaedics/fractures-of-femur/index.html`
+- `subjects/orthopaedics/infections-of-the-bone/index.html`
+- `subjects/orthopaedics/injuries-of-clavicle-shoulder-and-arm/index.html`
+- `subjects/orthopaedics/injuries-of-elbow-and-forearm/index.html`
+- `subjects/orthopaedics/injuries-of-hand/index.html`
+- `subjects/orthopaedics/injuries-of-knee-leg-and-foot/index.html`
 
 ### Validation and limitations
 
-- Source HTML was checked for the expected metadata tags before replacements.
-- This was a source-level SEO pass only; no live deployment, browser test, Lighthouse run, Search Console URL Inspection or external schema validation was performed.
+- GitHub compare confirms 100 subject-topic HTML files changed relative to the Batch 3 head.
+- Source-level checks confirmed the expected title and meta tags before replacement. Quiz JSON-LD was synchronized only where present.
+- No live deployment, browser test, Lighthouse run, Search Console URL Inspection or external schema validation was performed.
 - Keyword targeting is based on topic relevance and exam intent, not verified Search Console volume data.
 
 ### Status
