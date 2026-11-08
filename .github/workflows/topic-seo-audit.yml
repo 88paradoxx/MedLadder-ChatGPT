@@ -2,6 +2,11 @@ name: Topic SEO audit
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/seo-topic-audit.mjs'
+      - '.github/workflows/topic-seo-audit.yml'
 
 permissions:
   contents: read
