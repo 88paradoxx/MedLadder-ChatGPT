@@ -164,7 +164,9 @@ window.addEventListener('error', function (ev) {
       applyTheme();
       wireThemeBtn();
 
-      var setupChoice = { pool: null, quizType: 'practice', count: 'all', customCount: 50, timeLimit: 0, customTime: 30, orderMode: 'structured', pyqYear: null };
+      var setupChoice = { pool: null, quizType: 'practice', count: 'all', customCount: 50, timeLimit: 0, customTime: 30, orderMode: 'structured', pyqYear: null, pyqSubject: '', pyqModuleId: '' };
+      var pendingPyqDeepLink = null;
+      var pendingPyqLaunchStarted = false;
       var state = {
         screen: 'home', subjectId: null, moduleId: null, poolTitle: '', order: [], questions: [], idx: 0,
         answers: {}, quizType: 'practice', timeLimit: 0, remaining: 0, timerId: null, progressKey: null,
@@ -292,6 +294,70 @@ window.addEventListener('error', function (ev) {
         }
       ];
       var pyqExpanded = false;
+
+      function findPyqSubject(value) {
+        if (!value) return null;
+        var wanted = slugifySeo(value);
+        return SUBJECT_INDEX.find(function (s) {
+          return String(s.subjectId) === String(value) || slugifySeo(s.name) === wanted;
+        }) || null;
+      }
+
+      function findPyqModule(subject, value) {
+        if (!subject || !value) return null;
+        var wanted = slugifySeo(value);
+        return (subject.modules || []).find(function (m) {
+          return String(m.moduleId) === String(value) || String(m.id) === String(value) || slugifySeo(m.name) === wanted;
+        }) || null;
+      }
+
+      function capturePyqDeepLink() {
+        try {
+          var params = new URLSearchParams(window.location.search || '');
+          if (params.get('action') !== 'pyq') return false;
+          var examValue = params.get('exam') || 'NEET PG';
+          var exam = PYQ_EXAMS.find(function (e) {
+            return slugifySeo(e.id) === slugifySeo(examValue) || slugifySeo(e.name) === slugifySeo(examValue);
+          });
+          if (!exam) return false;
+          pendingPyqDeepLink = {
+            examId: exam.id,
+            year: params.get('year') || '',
+            subject: params.get('subject') || '',
+            topic: params.get('topic') || ''
+          };
+          sessionStorage.setItem('medladder_pending_pyq_deeplink', JSON.stringify(pendingPyqDeepLink));
+          return true;
+        } catch (e) { return false; }
+      }
+
+      function processPendingPyqDeepLink() {
+        if (!pendingPyqDeepLink) {
+          try {
+            var saved = sessionStorage.getItem('medladder_pending_pyq_deeplink');
+            if (saved) pendingPyqDeepLink = JSON.parse(saved);
+          } catch (e) {}
+        }
+        if (!pendingPyqDeepLink || pendingPyqLaunchStarted) return;
+        var link = pendingPyqDeepLink;
+        var exam = PYQ_EXAMS.find(function (e) { return e.id === link.examId; });
+        if (!exam) return;
+        var years = exam.years || [];
+        var requestedYear = String(link.year || '');
+        setupChoice.pyqYear = years.find(function (y) {
+          return slugifySeo(y) === slugifySeo(requestedYear);
+        }) || (years.length ? years[0] : null);
+        var subject = findPyqSubject(link.subject);
+        setupChoice.pyqSubject = subject ? String(subject.subjectId) : '';
+        var module = subject ? findPyqModule(subject, link.topic) : null;
+        setupChoice.pyqModuleId = module ? String(module.moduleId) : '';
+        pendingPyqLaunchStarted = true;
+        if (currentUser) {
+          pendingPyqDeepLink = null;
+          try { sessionStorage.removeItem('medladder_pending_pyq_deeplink'); } catch (e) {}
+        }
+        renderPYQSetup(link.examId);
+      }
 
       function getSelectedPlan() {
         return PRO_PLANS.find(function (p) { return p.id === selectedPlanId; }) || PRO_PLANS[2];
@@ -2742,9 +2808,12 @@ window.addEventListener('error', function (ev) {
               setAuthAlert('error', 'This reset link is invalid or has expired. Request a new one.');
             }
           }
+        }).then(function () {
+          processPendingPyqDeepLink();
         }).catch(function (err) {
           console.warn('Session check error:', err);
           updateMastheadAuth();
+          processPendingPyqDeepLink();
         });
 
         supabaseClient.auth.onAuthStateChange(function (event, session) {
@@ -3393,6 +3462,28 @@ window.addEventListener('error', function (ev) {
           setupChoice.pyqYear = yearsList[0];
         }
 
+        var selectedPyqSubject = findPyqSubject(setupChoice.pyqSubject);
+        if (!selectedPyqSubject) {
+          setupChoice.pyqSubject = '';
+          setupChoice.pyqModuleId = '';
+        } else if (setupChoice.pyqModuleId && !findPyqModule(selectedPyqSubject, setupChoice.pyqModuleId)) {
+          setupChoice.pyqModuleId = '';
+        }
+        var subjectFilterHtml = '<option value="">All subjects</option>' + SUBJECT_INDEX.map(function (s) {
+          return '<option value="' + esc(String(s.subjectId)) + '"' + (selectedPyqSubject && String(selectedPyqSubject.subjectId) === String(s.subjectId) ? ' selected' : '') + '>' + esc(s.name) + '</option>';
+        }).join('');
+        var topicFilterHtml = '<option value="">All topics in selected subject</option>' +
+          (selectedPyqSubject ? (selectedPyqSubject.modules || []).map(function (m) {
+            return '<option value="' + esc(String(m.moduleId)) + '"' + (String(setupChoice.pyqModuleId) === String(m.moduleId) ? ' selected' : '') + '>' + esc(m.name) + '</option>';
+          }).join('') : '');
+        var pyqFilterHtml =
+          '<div class="setup-section pyq-filter-section">' +
+          '<div class="setup-label">Optional subject and topic filters</div>' +
+          '<div class="pyq-filter-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;">' +
+          '<label style="display:flex;flex-direction:column;gap:7px;font-size:13px;font-weight:600;">Subject<select id="pyqSubjectFilter" class="form-select" style="width:100%;padding:12px;border-radius:10px;background:var(--surface);color:var(--ink);border:1px solid var(--border);">' + subjectFilterHtml + '</select></label>' +
+          '<label style="display:flex;flex-direction:column;gap:7px;font-size:13px;font-weight:600;">Topic<select id="pyqTopicFilter" class="form-select" style="width:100%;padding:12px;border-radius:10px;background:var(--surface);color:var(--ink);border:1px solid var(--border);"' + (selectedPyqSubject ? '' : ' disabled') + '>' + topicFilterHtml + '</select></label>' +
+          '</div><p class="pyq-source-note">Filters narrow the selected exam paper to matching subject or topic questions.</p></div>';
+
         var yearsHtml = yearsList.map(function (y) {
           var activeCls = (setupChoice.pyqYear === y) ? 'active' : '';
           return '<button class="pyq-year-pill ' + activeCls + '" data-year="' + esc(y) + '">' + esc(y) + '</button>';
@@ -3450,6 +3541,7 @@ window.addEventListener('error', function (ev) {
           '<div class="pyq-years-scroll" id="yearRow">' + yearsHtml + '</div>' +
           '<div class="pyq-source-note">💡 Each year session is an independent full paper with authentic recall questions and explanations</div>' +
           '</div>' +
+          pyqFilterHtml +
           '<div class="setup-section">' +
           '<div class="setup-label">Test Format</div>' +
           '<div class="pyq-single-test-card glass">' +
@@ -3474,6 +3566,18 @@ window.addEventListener('error', function (ev) {
 
         wireTopBar(goHomeFromSeo);
         wireRipples('.type-card, .pill-choice, .pyq-year-pill, .btn, .auth-btn');
+
+        var pyqSubjectFilter = document.getElementById('pyqSubjectFilter');
+        if (pyqSubjectFilter) pyqSubjectFilter.addEventListener('change', function () {
+          setupChoice.pyqSubject = pyqSubjectFilter.value;
+          setupChoice.pyqModuleId = '';
+          renderPYQSetup(examId);
+        });
+        var pyqTopicFilter = document.getElementById('pyqTopicFilter');
+        if (pyqTopicFilter) pyqTopicFilter.addEventListener('change', function () {
+          setupChoice.pyqModuleId = pyqTopicFilter.value;
+          renderPYQSetup(examId);
+        });
 
         app.querySelectorAll('#yearRow .pyq-year-pill').forEach(function (btn) {
           btn.addEventListener('click', function () {
@@ -3549,12 +3653,23 @@ window.addEventListener('error', function (ev) {
         wireTopBar(function () { renderPYQSetup(examId); });
 
         // Query Supabase: filter by is_pyq = true AND pyq_exam = examId
-        var query = supabaseClient.from('questions').select('id,question_num,question_text,option_a,option_b,option_c,option_d,option_e,answer,explanation,subject,pyq_year')
+        var query = supabaseClient.from('questions').select('id,question_num,question_text,option_a,option_b,option_c,option_d,option_e,answer,explanation,subject,pyq_year,module_id')
           .eq('is_pyq', true)
           .eq('pyq_exam', examId);
 
         if (!isAll) {
           query = query.eq('pyq_year', selectedYear);
+        }
+        var pyqSubject = findPyqSubject(setupChoice.pyqSubject);
+        if (pyqSubject) {
+          var subjectModules = getSubjectModules(pyqSubject.subjectId) || [];
+          if (setupChoice.pyqModuleId) {
+            var selectedModule = findPyqModule(pyqSubject, setupChoice.pyqModuleId);
+            if (selectedModule && selectedModule.id) query = query.eq('module_id', selectedModule.id);
+          } else {
+            var subjectModuleIds = subjectModules.map(function (m) { return m.id; }).filter(Boolean);
+            if (subjectModuleIds.length) query = query.in('module_id', subjectModuleIds);
+          }
         }
 
         query.order('id', { ascending: true }).then(function (res) {
@@ -5498,10 +5613,10 @@ window.addEventListener('error', function (ev) {
         var path = window.location.pathname.replace(/\/$/, '').toLowerCase();
         // Pre-rendered PYQ pages (/pyqs/*) ship full static HTML: leave them alone.
         if (path === '/pyqs' || path.indexOf('/pyqs/') === 0) {
-          // Mark this an SEO page, not home: otherwise the logged-in
-          // progress refresh (loadUserProgress) treats this document as
-          // the SPA home and renderHome() bounces it back to '/'.
+          // Keep the static recall preview visible, but allow app deep links to launch
+          // the authenticated, Pro-gated question bank with the requested filters.
           state.screen = 'seo';
+          capturePyqDeepLink();
           return;
         }
         // Other pre-rendered static pages ship full HTML too: leave them alone.
@@ -5570,7 +5685,10 @@ window.addEventListener('error', function (ev) {
 
         if (window.location.search && typeof URLSearchParams !== 'undefined') {
           var sp = new URLSearchParams(window.location.search);
-          if (sp.get('screen') === 'pyq') {
+          if (sp.get('action') === 'pyq') {
+            capturePyqDeepLink();
+            return;
+          } else if (sp.get('screen') === 'pyq') {
             setTimeout(function () {
               var wrap = document.getElementById('pyqCardsWrap');
               var btn = document.getElementById('pyqBankToggle');
