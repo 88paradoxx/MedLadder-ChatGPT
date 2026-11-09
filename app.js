@@ -316,8 +316,10 @@ window.addEventListener('error', function (ev) {
           var params = new URLSearchParams(window.location.search || '');
           if (params.get('action') !== 'pyq') return false;
           var examValue = params.get('exam') || 'NEET PG';
+          var examSlug = slugifySeo(examValue);
+          if (examSlug === 'ini-cet') examSlug = 'inicet';
           var exam = PYQ_EXAMS.find(function (e) {
-            return slugifySeo(e.id) === slugifySeo(examValue) || slugifySeo(e.name) === slugifySeo(examValue);
+            return slugifySeo(e.id) === examSlug || slugifySeo(e.name) === examSlug;
           });
           if (!exam) return false;
           pendingPyqDeepLink = {
@@ -3423,6 +3425,12 @@ window.addEventListener('error', function (ev) {
         if (!quizStylesReady) {
           await ensureQuizStyles();
           return renderPYQSetup(examId);
+        }
+        // Clear the one-shot link after an email/password sign-in completes in-place.
+        if (currentUser && pendingPyqDeepLink && pendingPyqDeepLink.examId === examId) {
+          pendingPyqDeepLink = null;
+          pendingPyqLaunchStarted = false;
+          try { sessionStorage.removeItem('medladder_pending_pyq_deeplink'); } catch (e) {}
         }
         clearTimer();
         releaseQuizPayload();
