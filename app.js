@@ -164,7 +164,9 @@ window.addEventListener('error', function (ev) {
       applyTheme();
       wireThemeBtn();
 
-      var setupChoice = { pool: null, quizType: 'practice', count: 'all', customCount: 50, timeLimit: 0, customTime: 30, orderMode: 'structured', pyqYear: null };
+      var setupChoice = { pool: null, quizType: 'practice', count: 'all', customCount: 50, timeLimit: 0, customTime: 30, orderMode: 'structured', pyqYear: null,  };
+      var pendingPyqDeepLink = null;
+      var pendingPyqLaunchStarted = false;
       var state = {
         screen: 'home', subjectId: null, moduleId: null, poolTitle: '', order: [], questions: [], idx: 0,
         answers: {}, quizType: 'practice', timeLimit: 0, remaining: 0, timerId: null, progressKey: null,
@@ -292,6 +294,50 @@ window.addEventListener('error', function (ev) {
         }
       ];
       var pyqExpanded = false;
+
+      function capturePyqDeepLink() {
+        try {
+          var params = new URLSearchParams(window.location.search || '');
+          if (params.get('action') !== 'pyq') return false;
+          var examValue = params.get('exam') || 'NEET PG';
+          var examSlug = slugifySeo(examValue);
+          if (examSlug === 'ini-cet') examSlug = 'inicet';
+          var exam = PYQ_EXAMS.find(function (e) {
+            return slugifySeo(e.id) === examSlug || slugifySeo(e.name) === examSlug;
+          });
+          if (!exam) return false;
+          pendingPyqDeepLink = {
+            examId: exam.id,
+            year: params.get('year') || '',
+          };
+          sessionStorage.setItem('medladder_pending_pyq_deeplink', JSON.stringify(pendingPyqDeepLink));
+          return true;
+        } catch (e) { return false; }
+      }
+
+      function processPendingPyqDeepLink() {
+        if (!pendingPyqDeepLink) {
+          try {
+            var saved = sessionStorage.getItem('medladder_pending_pyq_deeplink');
+            if (saved) pendingPyqDeepLink = JSON.parse(saved);
+          } catch (e) {}
+        }
+        if (!pendingPyqDeepLink || pendingPyqLaunchStarted) return;
+        var link = pendingPyqDeepLink;
+        var exam = PYQ_EXAMS.find(function (e) { return e.id === link.examId; });
+        if (!exam) return;
+        var years = exam.years || [];
+        var requestedYear = String(link.year || '');
+        setupChoice.pyqYear = years.find(function (y) {
+          return slugifySeo(y) === slugifySeo(requestedYear);
+        }) || (years.length ? years[0] : null);
+        pendingPyqLaunchStarted = true;
+        if (currentUser) {
+          pendingPyqDeepLink = null;
+          try { sessionStorage.removeItem('medladder_pending_pyq_deeplink'); } catch (e) {}
+        }
+        renderPYQSetup(link.examId);
+      }
 
       function getSelectedPlan() {
         return PRO_PLANS.find(function (p) { return p.id === selectedPlanId; }) || PRO_PLANS[2];
@@ -2520,7 +2566,8 @@ window.addEventListener('error', function (ev) {
         var origText = btn.innerHTML;
         btn.innerHTML = '<span class="auth-spinner"></span> Creating account...';
 
-        var redirectUrl = window.location.origin + window.location.pathname;
+        // Preserve a PYQ exam/year deep link when email confirmation opens in a new tab.
+        var redirectUrl = window.location.origin + window.location.pathname + (window.location.search || '');
         supabaseClient.auth.signUp({
           email: email,
           password: password,
@@ -2742,9 +2789,12 @@ window.addEventListener('error', function (ev) {
               setAuthAlert('error', 'This reset link is invalid or has expired. Request a new one.');
             }
           }
+        }).then(function () {
+          processPendingPyqDeepLink();
         }).catch(function (err) {
           console.warn('Session check error:', err);
           updateMastheadAuth();
+          processPendingPyqDeepLink();
         });
 
         supabaseClient.auth.onAuthStateChange(function (event, session) {
@@ -3355,6 +3405,12 @@ window.addEventListener('error', function (ev) {
           await ensureQuizStyles();
           return renderPYQSetup(examId);
         }
+        // Clear the one-shot link after an email/password sign-in completes in-place.
+        if (currentUser && pendingPyqDeepLink && pendingPyqDeepLink.examId === examId) {
+          pendingPyqDeepLink = null;
+          pendingPyqLaunchStarted = false;
+          try { sessionStorage.removeItem('medladder_pending_pyq_deeplink'); } catch (e) {}
+        }
         clearTimer();
         releaseQuizPayload();
         scrollToPageTop();
@@ -3549,7 +3605,7 @@ window.addEventListener('error', function (ev) {
         wireTopBar(function () { renderPYQSetup(examId); });
 
         // Query Supabase: filter by is_pyq = true AND pyq_exam = examId
-        var query = supabaseClient.from('questions').select('id,question_num,question_text,option_a,option_b,option_c,option_d,option_e,answer,explanation,subject,pyq_year')
+        var query = supabaseClient.from('questions').select('id,question_num,question_text,option_a,option_b,option_c,option_d,option_e,answer,explanation,subject,pyq_year,module_id')
           .eq('is_pyq', true)
           .eq('pyq_exam', examId);
 
@@ -5279,6 +5335,12 @@ window.addEventListener('error', function (ev) {
         return '/subjects/' + slugifySeo(subject.name);
       }
 
+      function pyqDeepLinkUrl(examId, subject, topic) {
+        return '/?action=pyq&exam=' + encodeURIComponent(examId || 'NEET PG') +
+          (subject ? '&subject=' + encodeURIComponent(subject) : '') +
+          (topic ? '&topic=' + encodeURIComponent(topic) : '');
+      }
+
       function renderSeoLanding(type, item) {
         state.screen = 'seo';
         scrollToPageTop();
@@ -5361,6 +5423,9 @@ window.addEventListener('error', function (ev) {
           : subject
             ? '⚡ ' + esc(item.name) + ' QBank'
             : '⚡ ' + esc(item.name) + ' Question Bank & PYQs';
+        var pyqActionLink = (subject || topic)
+          ? '<a class="btn secondary" href="' + pyqDeepLinkUrl('NEET PG', subj.name, topic ? mod.name : '') + '" style="font-size:14px;padding:14px 20px;text-decoration:none;">Practice ' + esc(topic ? mod.name : subj.name) + ' PYQs</a>'
+          : '';
 
         app.innerHTML =
           topBar('Home', function () { goHomeFromSeo(); }) +
@@ -5377,6 +5442,7 @@ window.addEventListener('error', function (ev) {
           '<div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin:22px 0 6px;">' +
           '<button id="seoStartBtn" class="btn" style="font-size:15px;padding:14px 28px;cursor:pointer;">' + esc(startLabel) + '</button>' +
           '<a href="/" id="seoHomeBottom" class="btn secondary" style="font-size:15px;padding:14px 24px;text-decoration:none;">Back to Home</a>' +
+          pyqActionLink +
           '</div>' +
           '</div>' +
           '<section aria-labelledby="seoTopics" style="margin-top:28px;"><h2 id="seoTopics" class="seo-section-title">What you can practise</h2>' +
@@ -5426,6 +5492,18 @@ window.addEventListener('error', function (ev) {
         var bottomHome = document.getElementById('seoHomeBottom');
         if (bottomHome) bottomHome.addEventListener('click', function(e){ e.preventDefault(); goHomeFromSeo(); });
         var startBtn = document.getElementById('seoStartBtn');
+        if ((subject || topic) && !document.getElementById('seoPyqDeepLink')) {
+          var heroActions = document.querySelector('.seo-main .hero-wrap div[style*="display:flex"]');
+          if (heroActions) {
+            var pyqLink = document.createElement('a');
+            pyqLink.id = 'seoPyqDeepLink';
+            pyqLink.className = 'btn secondary';
+            pyqLink.href = pyqDeepLinkUrl('NEET PG', subj.name, topic ? mod.name : '');
+            pyqLink.textContent = 'Practice ' + (topic ? mod.name : subj.name) + ' PYQs';
+            pyqLink.style.cssText = 'font-size:14px;padding:14px 20px;text-decoration:none;';
+            heroActions.appendChild(pyqLink);
+          }
+        }
         if (startBtn) {
           startBtn.onclick = function () {
             if (topic) {
@@ -5498,10 +5576,10 @@ window.addEventListener('error', function (ev) {
         var path = window.location.pathname.replace(/\/$/, '').toLowerCase();
         // Pre-rendered PYQ pages (/pyqs/*) ship full static HTML: leave them alone.
         if (path === '/pyqs' || path.indexOf('/pyqs/') === 0) {
-          // Mark this an SEO page, not home: otherwise the logged-in
-          // progress refresh (loadUserProgress) treats this document as
-          // the SPA home and renderHome() bounces it back to '/'.
+          // Keep the static recall preview visible, but allow app deep links to launch
+          // the authenticated, Pro-gated question bank with the requested filters.
           state.screen = 'seo';
+          capturePyqDeepLink();
           return;
         }
         // Other pre-rendered static pages ship full HTML too: leave them alone.
@@ -5570,7 +5648,10 @@ window.addEventListener('error', function (ev) {
 
         if (window.location.search && typeof URLSearchParams !== 'undefined') {
           var sp = new URLSearchParams(window.location.search);
-          if (sp.get('screen') === 'pyq') {
+          if (sp.get('action') === 'pyq') {
+            capturePyqDeepLink();
+            return;
+          } else if (sp.get('screen') === 'pyq') {
             setTimeout(function () {
               var wrap = document.getElementById('pyqCardsWrap');
               var btn = document.getElementById('pyqBankToggle');
