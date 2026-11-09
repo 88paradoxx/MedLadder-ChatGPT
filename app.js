@@ -5394,6 +5394,12 @@ window.addEventListener('error', function (ev) {
         return '/subjects/' + slugifySeo(subject.name);
       }
 
+      function pyqDeepLinkUrl(examId, subject, topic) {
+        return '/?action=pyq&exam=' + encodeURIComponent(examId || 'NEET PG') +
+          (subject ? '&subject=' + encodeURIComponent(subject) : '') +
+          (topic ? '&topic=' + encodeURIComponent(topic) : '');
+      }
+
       function renderSeoLanding(type, item) {
         state.screen = 'seo';
         scrollToPageTop();
@@ -5476,6 +5482,9 @@ window.addEventListener('error', function (ev) {
           : subject
             ? '⚡ ' + esc(item.name) + ' QBank'
             : '⚡ ' + esc(item.name) + ' Question Bank & PYQs';
+        var pyqActionLink = (subject || topic)
+          ? '<a class="btn secondary" href="' + pyqDeepLinkUrl('NEET PG', subj.name, topic ? mod.name : '') + '" style="font-size:14px;padding:14px 20px;text-decoration:none;">Practice ' + esc(topic ? mod.name : subj.name) + ' PYQs</a>'
+          : '';
 
         app.innerHTML =
           topBar('Home', function () { goHomeFromSeo(); }) +
@@ -5492,6 +5501,7 @@ window.addEventListener('error', function (ev) {
           '<div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin:22px 0 6px;">' +
           '<button id="seoStartBtn" class="btn" style="font-size:15px;padding:14px 28px;cursor:pointer;">' + esc(startLabel) + '</button>' +
           '<a href="/" id="seoHomeBottom" class="btn secondary" style="font-size:15px;padding:14px 24px;text-decoration:none;">Back to Home</a>' +
+          pyqActionLink +
           '</div>' +
           '</div>' +
           '<section aria-labelledby="seoTopics" style="margin-top:28px;"><h2 id="seoTopics" class="seo-section-title">What you can practise</h2>' +
@@ -5541,6 +5551,18 @@ window.addEventListener('error', function (ev) {
         var bottomHome = document.getElementById('seoHomeBottom');
         if (bottomHome) bottomHome.addEventListener('click', function(e){ e.preventDefault(); goHomeFromSeo(); });
         var startBtn = document.getElementById('seoStartBtn');
+        if ((subject || topic) && !document.getElementById('seoPyqDeepLink')) {
+          var heroActions = document.querySelector('.seo-main .hero-wrap div[style*="display:flex"]');
+          if (heroActions) {
+            var pyqLink = document.createElement('a');
+            pyqLink.id = 'seoPyqDeepLink';
+            pyqLink.className = 'btn secondary';
+            pyqLink.href = pyqDeepLinkUrl('NEET PG', subj.name, topic ? mod.name : '');
+            pyqLink.textContent = 'Practice ' + (topic ? mod.name : subj.name) + ' PYQs';
+            pyqLink.style.cssText = 'font-size:14px;padding:14px 20px;text-decoration:none;';
+            heroActions.appendChild(pyqLink);
+          }
+        }
         if (startBtn) {
           startBtn.onclick = function () {
             if (topic) {
